@@ -1,0 +1,22 @@
+<html>
+
+{{$head}}
+
+<link href="{{{ assetPath }}}stylesheets/style.css" media="screen" rel="stylesheet" type="text/css"/>
+{{/head}}
+
+{{$bodyStart}}
+{{>googleTagManager}}
+{{/bodyStart}}
+
+{{$content}}
+<main id="content">
+{{$applicationContent}}{{/applicationContent}}
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+<script type="text/javascript" src="{{{ assetPath }}}javascript/main.js"></script>
+{{/bodyEnd}}
+
+</html>

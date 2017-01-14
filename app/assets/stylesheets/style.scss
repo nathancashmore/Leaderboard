@@ -1,0 +1,238 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+	font-family:"Minecraft Regular";
+	src:url("../fonts/Minecraft_Regular/minecraft_font_by_pwnage_block-d37t6nb.eot?") format("eot"),
+	url("../fonts/Minecraft_Regular/minecraft_font_by_pwnage_block-d37t6nb.woff") format("woff"),
+	url("../fonts/Minecraft_Regular/minecraft_font_by_pwnage_block-d37t6nb.ttf") format("truetype"),
+	url("../fonts/Minecraft_Regular/minecraft_font_by_pwnage_block-d37t6nb.svg#Minecraft") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family:"Minecraft Regular";
+	background-image: url('../images/obsidian_block.jpeg');
+	color: white;
+	text-align: center;
+}
+
+th {
+	display: none;
+}
+
+tr {
+	height: 110px;
+}
+
+td {
+	width: 25%;
+	font-size: x-large;
+}
+
+h1, h3, table { 
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+table {
+	width: 100%;
+}
+
+#loading {
+	font-size: x-large;
+}
+
+/* Achievements */
+
+.achievement {
+    display: inline-block;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-image: url('../images/InvSprite.png');
+    width: 32px;
+    height: 32px;	
+}
+
+.openInventory {
+    background-position: -832px -1088px;
+}
+
+.mineWood {
+	background-position: -928px -1024px;
+}
+
+.buildWorkBench {
+	background-position:-768px -1216px;
+}
+
+.buildPickAxe {
+	background-position: -384px -1216px;
+}
+
+.buildFurnace {
+	background-position: -960px -1216px;
+}
+
+.acquireIron {
+	background-position: -224px -1120px;
+}
+
+.buildHoe {
+	background-position: -352px -1216px;
+}
+
+.makeBread {
+	background-position: -704px -800px;
+}
+
+.bakeCake {
+	background-position: -640px -1216px;
+}
+
+.buildBetterPickaxe{
+	background-position: -256px -1216px;
+}
+
+.cookFish {
+	background-position: -832px -800px;
+}
+
+.onARail {
+	background-position: -640px -928px;
+}
+
+.buildSword {
+	background-position: -384px -1280px;
+}
+
+.killEnemy {
+	background-position: -800px -1088px
+}
+
+.killCow {
+	background-position: -256px -1120px;
+}
+
+.flyPig {
+	background-position: -128px -1216px
+}
+
+.snipeSkeleton {
+	background-position: -992px -1248px;
+}
+
+.diamonds {
+	background-position: -704px -992px;
+}
+
+.portal {
+    background-position: -896px -960px;
+
+}
+
+.ghast {
+    background-position: -544px -640px;
+}
+
+.blazeRod {
+    background-position: -448px -640px;
+}
+
+.potion {
+    background-position: -832px -1056px;
+}
+
+.theEnd{
+    background-position: -640px -1184px;
+}
+
+.theEnd2{
+    background-position: -992px -768px;
+}
+
+.enchantments{
+    background-position: -896px -1216px;
+}
+
+.overkill{
+    background-position: -192px -1280px;
+}
+
+.bookcase{
+    background-position: -96px -864px;
+}
+
+.exploreAllBiomes {
+	background-position: -800px -0px;
+}
+
+.spawnWither{
+    background-position: -224px -960px;
+}
+
+.killWither{
+	background-position: -352px -1120px;
+}
+
+.fullBeacon{
+	background-position: -544px -1216px;
+}
+
+.breedCow{
+    background-position: -544px -832px;
+}
+
+.diamondsToYou{
+    background-position: -992px -1088px;
+}
+
+.overpowered{
+    background-position: -32px -832px;
+}
+
+.made_nut_crackers_achievement{
+	background-position: 705px, 1343px;
+}
+
+.made_nut_crackers_achievement {
+	background-position: -715px -1344px;
+}
+
+.cracked_a_hard_nut_achievement {
+	background-position: -751px -1349px;
+}
+
+.golden_nut_acheivement {
+	background-position: -680px -1345px;
+}
+
+.forged_a_farm_achievement {
+	background-position: -643px -1344px;
+}
+
+/* Stats */
+
+.stat {
+    display: inline-block;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-image: url('../images/StatSpriteMap.png');
+    width: 64px;
+    height: 64px;    
+}
+
+.playerKills {
+  background-position: 0px 0px;
+}
+
+.useItem_minecraft_diamond_sword {
+  background-position: -64px -0px;
+}
+
+.deaths {
+  background-position: -128px -0px;
+}
+
+
+
+

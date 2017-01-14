@@ -1,0 +1,58 @@
+{
+  "name": "minecraft-leaderboard",
+  "version": "0.0.1",
+  "description": "A Minecraft leaderboard which associates achievements with points",
+  "keywords": [
+    "leaderboard",
+    "minecraft"
+  ],
+  "repository": "https://github.com/nathancashmore/leaderboard.git",
+  "homepage": "http://staticvoid.no-ip.info/staticvoidmods/leaderboard/",
+  "author": "MajorSlackmore <MajorSlackmore@staticvoid.co.uk>",
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "body-parser": "~1.13",
+    "browserify": "^13.0.1",
+    "consolidate": "~0.14",
+    "cookie-parser": "~1.3",
+    "debug": "~2.2",
+    "express": "~4.13",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "hogan.js": "~3.0",
+    "logger": "0.0.1",
+    "morgan": "~1.6",
+    "properties": ">=1.2.1",
+    "serve-favicon": "~2.3",
+    "vinyl-source-stream": "^1.1.0",
+    "winston": "^2.2.0"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">= 6.1.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^2.4.5",
+    "should": "^8.2.2",
+    "zombie": "^5.0.5"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "compile": "gulp javascript css",
+    "watch": "gulp watch",
+    "lint": "eslint .",
+    "pretest": "eslint . && npm run compile",
+    "test-mocha": "mocha",
+    "test": "NODE_ENV=test npm run test-mocha"
+  }
+}
