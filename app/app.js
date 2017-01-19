@@ -6,6 +6,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const indexController = require('./controllers/index-controller');
+const informationController = require('./controllers/information-controller');
+
+const config = require('getconfig');
 
 const app = express();
 
@@ -17,9 +20,11 @@ app.set('view engine', 'mustache');
 app.set('views', path.join(__dirname, 'views'));
 
 // run the whole application in a directory
-const basePath = app.locals.basePath = process.env.EXPRESS_BASE_PATH || '';
+const basePath = app.locals.basePath = config.EXPRESS_BASE_PATH || '';
 const assetPath = `${basePath}/`;
-const googleTagManagerId = process.env.GOOGLE_TAG_MANAGER_ID;
+const googleTagManagerId = config.GOOGLE_TAG_MANAGER_ID;
+
+app.locals.mcServerPath = config.MC_SERVER_PATH || '../MinecraftServer/';
 
 // Middleware to set default layouts.
 // This must be done per request (and not via app.locals) as the Consolidate.js
@@ -52,6 +57,7 @@ app.use(assetPath, express.static(path.join(__dirname, '..', 'dist', 'public')))
 
 app.use(`${basePath}/`, indexController);
 app.use(`${basePath}/leaderboard`, indexController);
+app.use(`${basePath}/information`, informationController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
