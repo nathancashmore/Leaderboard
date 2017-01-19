@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const helper = require('../test-helper');
 
-const endpointHelper = helper.informationEndpoint;
+const endpointHelper = helper.serverEndpoint;
 
 describe('Information', () => {
   before(() =>
