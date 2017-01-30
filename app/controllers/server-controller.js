@@ -5,7 +5,7 @@ const logger = require('winston');
 
 const router = new express.Router();
 
-router.get('/server-details', (req, res) => {
+router.get('/details', (req, res) => {
   const propsFile = `${req.app.locals.mcServerPath}/server.properties`;
 
   properties.parse(propsFile, { path: true }, (error, obj) => {

@@ -1,10 +1,10 @@
 const os = require('os');
 
-const InformationPage = function InformationPage(browser) {
+const ServerEndpoint = function ServerEndpoint(browser) {
   this.browser = browser;
   this.getOsHostname = () => os.hostname();
-  this.visit = () => this.browser.visit('/information/server-details');
+  this.visit = () => this.browser.visit('/server/details');
   this.getJsonResponse = () => JSON.parse(this.browser.response.body);
 };
 
-module.exports = InformationPage;
+module.exports = ServerEndpoint;
