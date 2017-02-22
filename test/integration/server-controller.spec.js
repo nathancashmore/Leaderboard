@@ -3,7 +3,7 @@ const helper = require('../test-helper');
 
 const endpointHelper = helper.serverEndpoint;
 
-describe('Information', () => {
+describe('Server Information', () => {
   before(() =>
     endpointHelper.visit()
   );
