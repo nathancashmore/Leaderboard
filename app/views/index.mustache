@@ -4,7 +4,7 @@
 
 <h1><img src="{{{ assetPath }}}images/leaderboard.png"></h1>
 
-<h3 id="server-details">A Minecraft Server : PORT</h3>
+<h3 data-test="server-details" id="server-details">{{serverDetails}}</h3>
 
 <div id="loading" style="display: none">
   <img src="{{{ assetPath }}}images/creeper.png" align="middle">
@@ -13,12 +13,14 @@
 </div>
 <div id="stats">
   <table>
-    <tr>
-      <td><img src="https://minotar.net/avatar/MajorSlackmore/100.png"></td>
-      <td>MajorSlackmore</td>
-      <td><span class="achievement overpowered"></span></td>
-      <td>100</td>
-    </tr>
+    {{#players}}
+      <tr>
+        <td><img data-test="avatar" src="https://minotar.net/avatar/{{name}}/100.png"></td>
+        <td data-test="player">{{name}}</td>
+        <td><span data-test="achievement" class="achievement {{achievements}}"></span></td>
+        <td data-test="score">{{score}}</td>
+      </tr>
+    {{/players}}
   </table>
 </div>
 
