@@ -4,9 +4,7 @@ const helper = require('../test-helper');
 const endpointHelper = helper.userEndpoint;
 
 describe('User Information', () => {
-  before(() =>
-    endpointHelper.visit()
-  );
+  before(() => endpointHelper.visit());
 
   it('should be successful', () =>
     expect(endpointHelper.browser.status).to.equal(200)
@@ -24,6 +22,7 @@ describe('User Information', () => {
           name: 'MiniSlackmore'
         }
       ];
+
 
     expect(JSON.stringify(endpointHelper.getJsonResponse()))
       .to.equal(JSON.stringify(expectedResult));
