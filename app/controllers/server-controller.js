@@ -1,22 +1,17 @@
 const express = require('express');
-const properties = require('properties');
+const PropertiesReader = require('properties-reader');
 const os = require('os');
-const logger = require('winston');
 
 const router = new express.Router();
 
 router.get('/details', (req, res) => {
   const propsFile = `${req.app.locals.mcServerPath}/server.properties`;
 
-  properties.parse(propsFile, { path: true }, (error, obj) => {
-    if (error) {
-      logger.log('error', error);
-    }
-    const ip = os.hostname();
-    const connecturl = `${ip}:${obj['server-port']}`;
+  const props = PropertiesReader(propsFile);
+  const ip = os.hostname();
+  const connecturl = `${ip}:${props.get('server-port')}`;
 
-    res.json(Object.assign(obj, { ip, connecturl }));
-  });
+  res.json(Object.assign(props.getAllProperties(), { ip, connecturl }));
 });
 
 module.exports = router;
