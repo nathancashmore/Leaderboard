@@ -7,7 +7,7 @@ describe('Home Page', () => {
   it('should display the correct server connection details', () =>
     indexPage.visit()
       .then(() => {
-        expect(indexPage.serverDetails()).to.equal('localhost:25566');
+        expect(indexPage.serverDetails()).to.equal(`${indexPage.getOsHostname()}:25565`);
       })
   );
 
