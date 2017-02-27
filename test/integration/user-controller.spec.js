@@ -29,17 +29,20 @@ describe('User', () => {
     });
   });
 
-  describe('Stats', () => {
-    before(() => endpointHelper.visitStats('879e207a-39a5-48df-ba7e-eb6089fe970c'));
+  describe('Achievements', () => {
+    before(() => endpointHelper.visitAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c'));
 
     it('should be successful', () =>
-          expect(endpointHelper.browser.status).to.equal(200)
+      expect(endpointHelper.browser.status).to.equal(200)
     );
 
-    it('should return user achievements', () => {
+    it('should return user achievements with score', () => {
       const expectedResult =
-        ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'];
-
+        {
+          achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
+          score: 50
+        }
+      ;
       expect(JSON.stringify(endpointHelper.getJsonResponse()))
         .to.equal(JSON.stringify(expectedResult));
     });

@@ -1,6 +1,9 @@
+const os = require('os');
+
 const IndexPage = function IndexPage(browser) {
   this.browser = browser;
 
+  this.getOsHostname = () => os.hostname();
   this.visit = () => browser.visit('/leaderboard');
   this.serverDetails = () => browser.text('[data-test="server-details"]');
   this.avatar = () => browser.query('[data-test="avatar"]').src;
