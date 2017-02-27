@@ -36,13 +36,13 @@ describe('User', () => {
       expect(endpointHelper.browser.status).to.equal(200)
     );
 
-    it('should return user achievements', () => {
-      const expectedResult = [
+    it('should return user achievements with score', () => {
+      const expectedResult =
         {
           achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
           score: 50
         }
-      ];
+      ;
       expect(JSON.stringify(endpointHelper.getJsonResponse()))
         .to.equal(JSON.stringify(expectedResult));
     });
