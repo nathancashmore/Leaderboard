@@ -8,16 +8,19 @@
 
 <div id="loading" style="display: none">
   <img src="{{{ assetPath }}}images/creeper.png" align="middle">
-
   <p>LOOKING FOR PLAYERS ....</p>
 </div>
 <div id="stats">
   <table>
     {{#players}}
-      <tr>
+      <tr data-test="player-{{name}}">
         <td><img data-test="avatar" src="https://minotar.net/avatar/{{name}}/100.png"></td>
-        <td data-test="player">{{name}}</td>
-        <td><span data-test="achievement" class="achievement {{achievements}}"></span></td>
+        <td data-test="player-name">{{name}}</td>
+        <td data-test="achievements">
+          {{#achievements}}
+            <span class="achievement {{class}}"></span>
+          {{/achievements}}
+        </td>
         <td data-test="score">{{score}}</td>
       </tr>
     {{/players}}
