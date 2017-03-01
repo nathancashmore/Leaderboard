@@ -38,7 +38,8 @@ router.get('/', (req, res) => {
 
       const pageData = {
         serverDetails: `${serverDetails.connecturl}`,
-        players: playerDataArray
+        players: playerDataArray,
+        waitingForPlayers: playerDataArray.length === 0
       };
 
       res.render('index', pageData);
