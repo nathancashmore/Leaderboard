@@ -1,4 +1,5 @@
 const Zombie = require('zombie');
+const os = require('os');
 
 Zombie.site = 'http://localhost:25566';
 const browser = new Zombie();
@@ -15,6 +16,7 @@ module.exports = {
   indexPage: new IndexPage(browser),
   serverEndpoint: new ServerEndpoint(browser),
   userEndpoint: new UserEndpoint(browser),
+  hostname: os.hostname(),
   browser,
 };
 
