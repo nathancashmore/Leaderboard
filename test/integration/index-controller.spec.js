@@ -3,7 +3,7 @@ const helper = require('../test-helper');
 
 const indexPage = helper.indexPage;
 
-describe('Home Page', () => {
+describe('Index Controller', () => {
   const expectedPlayer = 'MajorSlackmore';
 
   it('should display the correct server connection details', () =>

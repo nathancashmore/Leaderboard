@@ -3,8 +3,8 @@ const helper = require('../test-helper');
 
 const endpointHelper = helper.userEndpoint;
 
-describe('User', () => {
-  describe('Details', () => {
+describe('User Controller', () => {
+  describe('Details endpoint', () => {
     before(() => endpointHelper.visitDetails());
 
     it('should be successful', () =>
@@ -29,7 +29,7 @@ describe('User', () => {
     });
   });
 
-  describe('Achievements', () => {
+  describe('Achievements endpoint', () => {
     before(() => endpointHelper.visitAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c'));
 
     it('should be successful', () =>

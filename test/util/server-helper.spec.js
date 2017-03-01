@@ -6,15 +6,18 @@ const ServerHelper = require('../../app/util/server-helper');
 
 describe('Server Helper', () => {
   const serverHelper = new ServerHelper(config.MC_SERVER_PATH);
-  let detailsResult = {};
 
-  before(() => {
-    detailsResult = serverHelper.getDetails();
-  });
+  describe('Details', () => {
+    let detailsResult = {};
 
-  it('should return expected values', () => {
-    expect(detailsResult.ip).to.equal(helper.hostname);
-    expect(detailsResult.connecturl).to.equal(`${helper.hostname}:25565`);
-    expect(detailsResult.motd).to.equal('A Minecraft Server');
+    before(() => {
+      detailsResult = serverHelper.getDetails();
+    });
+
+    it('should return expected values', () => {
+      expect(detailsResult.ip).to.equal(helper.hostname);
+      expect(detailsResult.connecturl).to.equal(`${helper.hostname}:25565`);
+      expect(detailsResult.motd).to.equal('A Minecraft Server');
+    });
   });
 });
