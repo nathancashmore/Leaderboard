@@ -34,8 +34,8 @@ module.exports = class UserHelper {
       `${this.serverPath}world/stats/${userId}.json`;
 
     return jsonFile.readFile(statsDataFile).then((result) => {
-      const achievements = this.filterAchievements(result);
-      const score = this.calcScore(achievements);
+      const achievements = UserHelper.filterAchievements(result);
+      const score = UserHelper.calcScore(achievements);
 
       return Object.assign({ achievements, score });
     })
