@@ -20,9 +20,9 @@ describe('User Helper', () => {
           }
         ];
 
-      userHelper.getDetails().then((detailsResult) => {
-        expect(detailsResult).to.equal(expectedResult);
-      });
+      return userHelper.getDetails()
+        .then(detailsResult =>
+          expect(detailsResult).to.deep.equal(expectedResult));
     });
   });
 
@@ -34,9 +34,9 @@ describe('User Helper', () => {
           score: 50
         };
 
-      userHelper.getAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c').then((achievementsResult) => {
-        expect(achievementsResult).to.equal(expectedResult);
-      });
+      return userHelper.getAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c')
+        .then(achievementsResult =>
+          expect(achievementsResult).to.deep.equal(expectedResult));
     });
   });
 });
