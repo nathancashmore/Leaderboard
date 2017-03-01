@@ -1,42 +1,22 @@
 const express = require('express');
-const jsonFile = require('jsonfile-promised');
-const logger = require('winston');
-
-const points = require('../assets/json/points.json');
+const UserHelper = require('../util/user-helper');
 
 const router = new express.Router();
 
-function filterAchievements(stats) {
-  return Object.keys(stats)
-      .filter(x => x.indexOf('achievement') === 0)
-      .map(y => y.substring('achievement.'.length));
-}
-
-function calcScore(achievementList) {
-  return achievementList
-    .map(x => points[`achievement.${x}`])
-    .reduce((prev, curr) => prev + curr);
-}
-
 router.get('/details', (req, res) => {
-  const userDataFile = `${req.app.locals.mcServerPath}usercache.json`;
+  const userHelper = new UserHelper(req.app.locals.mcServerPath);
 
-  return jsonFile.readFile(userDataFile).then((result) => {
-    res.json(result.map(entry => ({ uuid: entry.uuid, name: entry.name })));
+  userHelper.getDetails().then((result) => {
+    res.json(result);
   });
 });
 
 router.get('/:userId/achievements', (req, res) => {
-  const statsDataFile =
-    `${req.app.locals.mcServerPath}world/stats/${req.params.userId}.json`;
+  const userHelper = new UserHelper(req.app.locals.mcServerPath);
 
-  return jsonFile.readFile(statsDataFile).then((result) => {
-    const achievements = filterAchievements(result);
-    const score = calcScore(achievements);
-
-    res.json(Object.assign({ achievements, score }));
-  })
-    .catch(e => logger.log('error', e));
+  userHelper.getAchievements(req.params.userId).then((result) => {
+    res.json(result);
+  });
 });
 
 module.exports = router;
