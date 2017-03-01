@@ -45,3 +45,11 @@ describe('Index Controller', () => {
       })
   );
 });
+
+describe('Index Controller - NoPlayers', () => {
+  it('should display Waiting if no players are found', () =>
+    indexPage.visit()
+      .then(() =>
+        expect(indexPage.amWaitingForPlayers()))
+  );
+});

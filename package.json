@@ -55,7 +55,10 @@
     "watch": "gulp watch",
     "lint": "eslint .",
     "pretest": "eslint . && npm run compile",
-    "test-mocha": "mocha",
-    "test": "NODE_ENV=test npm run test-mocha"
+    "test-mocha-with-players": "mocha --grep NoPlayers --invert",
+    "test-mocha-no-players": "mocha --grep NoPlayers",
+    "test-with-players": "NODE_ENV=test npm run test-mocha-with-players",
+    "test-no-players": "NODE_ENV=testNoPlayers npm run test-mocha-no-players",
+    "test": "npm run test-with-players && npm run test-no-players"
   }
 }
