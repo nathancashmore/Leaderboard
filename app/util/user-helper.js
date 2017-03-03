@@ -30,9 +30,10 @@ module.exports = class UserHelper {
   }
 
   getName(userId) {
-    return this.getDetails().then(details =>
-      details.filter(user => user.uuid === userId)[0].name
-    );
+    return this.getDetails().then(details => {
+      const user = details.filter(user => user.uuid === userId)[0]
+      return user ? user.name : userId.split('-')[0];
+    });
   }
 
   getAchievements(userId) {
