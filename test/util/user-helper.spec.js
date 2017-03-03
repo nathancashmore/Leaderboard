@@ -26,6 +26,12 @@ describe('User Helper', () => {
     });
   });
 
+  describe('Name', () => {
+    it('should return expected values', () => userHelper.getName('879e207a-39a5-48df-ba7e-eb6089fe970c')
+        .then(result =>
+          expect(result).to.equal('MajorSlackmore')));
+  });
+
   describe('Achievements', () => {
     it('should return user achievements with score', () => {
       const expectedResult =

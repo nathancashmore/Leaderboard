@@ -29,6 +29,12 @@ module.exports = class UserHelper {
       .catch(e => logger.log('error', e));
   }
 
+  getName(userId) {
+    return this.getDetails().then(details =>
+      details.filter(user => user.uuid === userId)[0].name
+    );
+  }
+
   getAchievements(userId) {
     const statsDataFile =
       `${this.serverPath}world/stats/${userId}.json`;
