@@ -5,7 +5,7 @@ This is calculated by assigning points to each achievement gained within Minecra
 
 ## Setup ##
 
-* Install [node](https://nodejs.org/en/)
+* Install [NodeJs](https://nodejs.org/en/) v6.1.0
 * Clone this project
 * Install dependencies
 
