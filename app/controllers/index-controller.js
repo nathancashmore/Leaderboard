@@ -11,26 +11,26 @@ router.get('/', (req, res) => {
 
   const serverDetails = serverHelper.getDetails();
 
-  userHelper.getDetails().then((users) => {
-    const achievementsPromises = [];
+  userHelper.getAllAchievements().then((users) => {
+    const userNamePromises = [];
 
     users.forEach((user) => {
-      achievementsPromises.push(
-        userHelper.getAchievements(user.uuid)
+      userNamePromises.push(
+        userHelper.getName(user.userId)
       );
     });
 
-    Promise.all(achievementsPromises).then((allAchievements) => {
+    Promise.all(userNamePromises).then((allNames) => {
       const playerDataArray = [];
 
       users.forEach((user, index) => {
-        const playerAchievements = allAchievements[index];
+        const playerName = allNames[index];
 
         const playerData =
           {
-            name: user.name,
-            achievements: playerAchievements.achievements.map(x => ({ class: x })),
-            score: playerAchievements.score
+            name: playerName,
+            achievements: user.achievements.map(x => ({ class: x })),
+            score: user.score
           };
 
         playerDataArray.push(Object.assign(playerData));

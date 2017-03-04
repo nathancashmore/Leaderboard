@@ -4,7 +4,7 @@ const config = require('getconfig');
 
 const ServerHelper = require('../../app/util/server-helper');
 
-describe('Server Helper', () => {
+describe('Server Helper - Default', () => {
   const serverHelper = new ServerHelper(config.MC_SERVER_PATH);
 
   describe('Details', () => {

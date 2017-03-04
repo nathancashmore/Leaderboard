@@ -3,7 +3,7 @@ const helper = require('../test-helper');
 
 const endpointHelper = helper.userEndpoint;
 
-describe('User Controller', () => {
+describe('User Controller - Default', () => {
   describe('Details endpoint', () => {
     before(() => endpointHelper.visitDetails());
 
@@ -39,6 +39,7 @@ describe('User Controller', () => {
     it('should return user achievements with score', () => {
       const expectedResult =
         {
+          userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
           achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
           score: 50
         }

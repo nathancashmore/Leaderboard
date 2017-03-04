@@ -3,7 +3,7 @@ const helper = require('../test-helper');
 
 const indexPage = helper.indexPage;
 
-describe('Index Controller', () => {
+describe('Index Controller - Default', () => {
   const expectedPlayer = 'MajorSlackmore';
 
   it('should display the correct server connection details', () =>
@@ -51,5 +51,13 @@ describe('Index Controller - NoPlayers', () => {
     indexPage.visit()
       .then(() =>
         expect(indexPage.amWaitingForPlayers()))
+  );
+});
+
+describe('Index Controller - WrongCache', () => {
+  it('should still display all players if cache is wrong', () =>
+    indexPage.visit()
+      .then(() =>
+        expect(indexPage.noOfPlayersShown(2)))
   );
 });
