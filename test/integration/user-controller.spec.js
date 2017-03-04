@@ -39,6 +39,7 @@ describe('User Controller', () => {
     it('should return user achievements with score', () => {
       const expectedResult =
         {
+          userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
           achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
           score: 50
         }
