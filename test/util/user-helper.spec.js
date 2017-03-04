@@ -3,7 +3,7 @@ const config = require('getconfig');
 
 const UserHelper = require('../../app/util/user-helper');
 
-describe('User Helper', () => {
+describe('User Helper - Default', () => {
   const userHelper = new UserHelper(config.MC_SERVER_PATH);
 
   describe('Details', () => {
@@ -74,11 +74,18 @@ describe('User Helper', () => {
           expect(result).to.deep.equal(expectedResult);
         });
     });
+  });
+});
 
-    it('should not fail when there are NoPlayers', () =>
+describe('User Helper - NoPlayers', () => {
+  describe('Achievements', () => {
+    const userHelper = new UserHelper(config.MC_SERVER_PATH);
+
+    it('should return empty array', () =>
       userHelper.getAllAchievements()
         .then(result =>
           expect(result).to.be.empty
         ));
   });
 });
+

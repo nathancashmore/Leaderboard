@@ -3,7 +3,7 @@ const helper = require('../test-helper');
 
 const endpointHelper = helper.userEndpoint;
 
-describe('User Controller', () => {
+describe('User Controller - Default', () => {
   describe('Details endpoint', () => {
     before(() => endpointHelper.visitDetails());
 
