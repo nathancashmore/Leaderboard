@@ -6,8 +6,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const indexController = require('./controllers/index-controller');
-const serverController = require('./controllers/server-controller');
-const userController = require('./controllers/user-controller');
 
 const config = require('getconfig');
 
@@ -58,8 +56,6 @@ app.use(assetPath, express.static(path.join(__dirname, '..', 'dist', 'public')))
 
 app.use(`${basePath}/`, indexController);
 app.use(`${basePath}/leaderboard`, indexController);
-app.use(`${basePath}/server`, serverController);
-app.use(`${basePath}/user`, userController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
