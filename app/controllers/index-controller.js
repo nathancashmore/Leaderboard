@@ -6,7 +6,7 @@ const UserHelper = require('../util/user-helper');
 const router = new express.Router();
 
 router.get('/', (req, res) => {
-  const serverHelper = new ServerHelper(req.app.locals.mcServerPath);
+  const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
   const userHelper = new UserHelper(req.app.locals.mcServerPath);
 
   const serverDetails = serverHelper.getDetails();
