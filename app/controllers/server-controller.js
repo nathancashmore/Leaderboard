@@ -4,7 +4,7 @@ const ServerHelper = require('../util/server-helper');
 const router = new express.Router();
 
 router.get('/details', (req, res) => {
-  const serverHelper = new ServerHelper(req.app.locals.mcServerPath);
+  const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
   res.json(serverHelper.getDetails());
 });
 

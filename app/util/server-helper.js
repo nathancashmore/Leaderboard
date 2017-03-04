@@ -1,19 +1,18 @@
 const PropertiesReader = require('properties-reader');
-const os = require('os');
 
 module.exports = class ServerHelper {
 
-  constructor(serverPath) {
+  constructor(serverPath, host) {
     this.serverPath = serverPath;
+    this.host = host;
   }
 
   getDetails() {
     const propsFile = `${this.serverPath}/server.properties`;
 
     const props = PropertiesReader(propsFile);
-    const ip = os.hostname();
-    const connecturl = `${ip}:${props.get('server-port')}`;
+    const connecturl = `${this.host}:${props.get('server-port')}`;
 
-    return Object.assign(props.getAllProperties(), { ip, connecturl });
+    return Object.assign(props.getAllProperties(), { ip: this.host, connecturl });
   }
 };

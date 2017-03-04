@@ -15,9 +15,9 @@ describe('Server Controller - Default', () => {
 
     it('should return expected values in json response', () => {
       expect(endpointHelper.getJsonResponse().ip)
-        .to.equal(endpointHelper.getOsHostname());
+        .to.equal(helper.browser.location.hostname);
       expect(endpointHelper.getJsonResponse().connecturl)
-        .to.equal(`${endpointHelper.getOsHostname()}:25565`);
+        .to.equal(`${helper.browser.location.hostname}:25565`);
       expect(endpointHelper.getJsonResponse().motd)
         .to.equal('A Minecraft Server');
     });

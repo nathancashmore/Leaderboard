@@ -1,11 +1,10 @@
 const expect = require('chai').expect;
 const helper = require('../test-helper');
-const config = require('getconfig');
 
 const ServerHelper = require('../../app/util/server-helper');
 
 describe('Server Helper - Default', () => {
-  const serverHelper = new ServerHelper(config.MC_SERVER_PATH);
+  const serverHelper = new ServerHelper(helper.config.MC_SERVER_PATH, 'myhostname.com');
 
   describe('Details', () => {
     let detailsResult = {};
@@ -15,8 +14,8 @@ describe('Server Helper - Default', () => {
     });
 
     it('should return expected values', () => {
-      expect(detailsResult.ip).to.equal(helper.hostname);
-      expect(detailsResult.connecturl).to.equal(`${helper.hostname}:25565`);
+      expect(detailsResult.ip).to.equal('myhostname.com');
+      expect(detailsResult.connecturl).to.equal('myhostname.com:25565');
       expect(detailsResult.motd).to.equal('A Minecraft Server');
     });
   });
