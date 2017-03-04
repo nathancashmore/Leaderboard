@@ -53,3 +53,11 @@ describe('Index Controller - NoPlayers', () => {
         expect(indexPage.amWaitingForPlayers()))
   );
 });
+
+describe('Index Controller - WrongCache', () => {
+  it('should still display all players if cache is wrong', () =>
+    indexPage.visit()
+      .then(() =>
+        expect(indexPage.noOfPlayersShown(2)))
+  );
+});
