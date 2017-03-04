@@ -74,5 +74,11 @@ describe('User Helper', () => {
           expect(result).to.deep.equal(expectedResult);
         });
     });
+
+    it('should not fail when there are NoPlayers', () =>
+      userHelper.getAllAchievements()
+        .then(result =>
+          expect(result).to.be.empty
+        ));
   });
 });

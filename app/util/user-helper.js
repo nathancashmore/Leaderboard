@@ -1,6 +1,7 @@
 const jsonFile = require('jsonfile-promised');
 const readfiles = require('node-readfiles');
 const logger = require('winston');
+const fs = require('fs');
 
 const points = require('../assets/json/points.json');
 
@@ -54,16 +55,19 @@ module.exports = class UserHelper {
     const achievementPromiseArray = [];
     const statsDirectory = `${this.serverPath}world/stats/`;
 
-    return readfiles(statsDirectory).then((filenameList) => {
-      const userIds = filenameList.map(filename => filename.replace('.json', ''));
+    if (fs.existsSync(statsDirectory)) {
+      return readfiles(statsDirectory).then((filenameList) => {
+        const userIds = filenameList.map(filename => filename.replace('.json', ''));
 
-      userIds.forEach((userId) => {
-        achievementPromiseArray.push(this.getAchievements(userId));
-      });
+        userIds.forEach((userId) => {
+          achievementPromiseArray.push(this.getAchievements(userId));
+        });
 
-      return Promise.all(achievementPromiseArray).then(result => result)
+        return Promise.all(achievementPromiseArray).then(result => result)
+          .catch(e => logger.log('error', e));
+      })
         .catch(e => logger.log('error', e));
-    })
-      .catch(e => logger.log('error', e));
+    }
+    return new Promise(resolve => resolve([]));
   }
 };
