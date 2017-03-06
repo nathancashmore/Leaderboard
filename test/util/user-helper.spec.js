@@ -32,12 +32,6 @@ describe('User Helper - Default', () => {
         .then(result =>
           expect(result).to.equal('MajorSlackmore'))
     );
-
-    it('should return start of uuid if no name can be found', () =>
-      userHelper.getName('cce091ad-6b3e-40db-87c9-6f6ace04ac95')
-        .then(result =>
-          expect(result).to.equal('cce091ad'))
-    );
   });
 
   describe('Achievements', () => {
@@ -86,6 +80,18 @@ describe('User Helper - NoPlayers', () => {
         .then(result =>
           expect(result).to.be.empty
         ));
+  });
+});
+
+describe('User Helper - WrongCache', () => {
+  describe('Name', () => {
+    const userHelper = new UserHelper(config.MC_SERVER_PATH);
+
+    it('should return correct name when not found in cache ', () =>
+      userHelper.getName('879e207a-39a5-48df-ba7e-eb6089fe970c')
+        .then(result =>
+          expect(result).to.equal('MajorSlackmore'))
+    );
   });
 });
 

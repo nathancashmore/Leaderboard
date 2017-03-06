@@ -2,6 +2,8 @@ const jsonFile = require('jsonfile-promised');
 const readfiles = require('node-readfiles');
 const logger = require('winston');
 const fs = require('fs');
+const rp = require('request-promise');
+const HTMLParser = require('fast-html-parser');
 
 const points = require('../assets/json/points.json');
 
@@ -23,6 +25,15 @@ module.exports = class UserHelper {
       .reduce((prev, curr) => prev + curr);
   }
 
+  static getNameFromExternal(userId) {
+    logger.log('INFO', `Attempting to lookup name via https://namemc.com/profile/${userId}`);
+
+    return rp(`https://namemc.com/profile/${userId}`).then((result) => {
+      const root = HTMLParser.parse(result);
+      return root.querySelector('.minecraft-name').text;
+    });
+  }
+
   getDetails() {
     const userDataFile = `${this.serverPath}usercache.json`;
 
@@ -34,7 +45,7 @@ module.exports = class UserHelper {
   getName(userId) {
     return this.getDetails().then((details) => {
       const userDetail = details.filter(user => user.uuid === userId)[0];
-      return userDetail ? userDetail.name : userId.split('-')[0];
+      return userDetail ? userDetail.name : UserHelper.getNameFromExternal(userId);
     });
   }
 
