@@ -7,6 +7,8 @@ const HTMLParser = require('fast-html-parser');
 
 const points = require('../assets/json/points.json');
 
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getNameFromExternal"] }] */
+
 module.exports = class UserHelper {
 
   constructor(serverPath) {
@@ -25,13 +27,18 @@ module.exports = class UserHelper {
       .reduce((prev, curr) => prev + curr);
   }
 
-  static getNameFromExternal(userId) {
-    logger.log('INFO', `Attempting to lookup name via https://namemc.com/profile/${userId}`);
+  getNameFromExternal(userId) {
+    logger.log('info', `Attempting to lookup name via https://namemc.com/profile/${userId}`);
 
     return rp(`https://namemc.com/profile/${userId}`).then((result) => {
       const root = HTMLParser.parse(result);
-      return root.querySelector('.minecraft-name').text;
-    });
+      const name = root.querySelector('.minecraft-name').text;
+
+      logger.log('info', `${userId} >> ${name}`);
+
+      return name;
+    })
+      .catch(e => logger.log('ERROR', e));
   }
 
   getDetails() {
@@ -45,7 +52,7 @@ module.exports = class UserHelper {
   getName(userId) {
     return this.getDetails().then((details) => {
       const userDetail = details.filter(user => user.uuid === userId)[0];
-      return userDetail ? userDetail.name : UserHelper.getNameFromExternal(userId);
+      return userDetail ? userDetail.name : this.getNameFromExternal(userId);
     });
   }
 

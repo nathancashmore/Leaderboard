@@ -1,11 +1,10 @@
 const express = require('express');
-const logger = require('winston');
 const ServerHelper = require('../util/server-helper');
 const UserHelper = require('../util/user-helper');
 
 const router = new express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
   const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
   const userHelper = new UserHelper(req.app.locals.mcServerPath);
 
@@ -43,8 +42,8 @@ router.get('/', (req, res) => {
       };
 
       res.render('index', pageData);
-    }).catch(e => logger.log('error', e));
-  }).catch(e => logger.log('error', e));
+    }).catch(e => next(e));
+  }).catch(e => next(e));
 });
 
 module.exports = router;
