@@ -61,12 +61,12 @@
     "pretest": "eslint . && npm run compile",
     "test-mocha-no-players": "mocha --grep NoPlayers",
     "test-mocha-with-players": "mocha --grep Default",
-    "test-mocha-wrong-cache": "mocha --grep WrongCache",
+    "test-mocha-no-cache": "mocha --grep NoCache",
     "test-mocha-no-internet": "mocha --grep NoInternet",
     "test-with-players": "NODE_ENV=test npm run test-mocha-with-players",
     "test-no-players": "NODE_ENV=testNoPlayers npm run test-mocha-no-players",
-    "test-wrong-cache": "NODE_ENV=testWrongCache npm run test-mocha-wrong-cache",
+    "test-no-cache": "NODE_ENV=testNoCache npm run test-mocha-no-cache",
     "test-no-internet": "NODE_ENV=testNoInternet npm run test-mocha-no-internet",
-    "test": "npm run test-with-players && npm run test-no-players && npm run test-wrong-cache && npm run test-no-internet"
+    "test": "npm run test-with-players && npm run test-no-players && npm run test-no-cache && npm run test-no-internet"
   }
 }

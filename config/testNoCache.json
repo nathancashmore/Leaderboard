@@ -1,0 +1,4 @@
+{
+  "MC_SERVER_PATH": "./test/data/serverNoCache/",
+  "REPLAY": "replay"
+}

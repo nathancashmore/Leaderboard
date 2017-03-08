@@ -40,7 +40,7 @@ module.exports = class UserHelper {
     })
       .catch(() => {
         logger.log('error', `Unable to get name externally.. using ${userId} instead.`);
-        return userId.split('-')[0];
+        return 'UNKNOWN';
       });
   }
 

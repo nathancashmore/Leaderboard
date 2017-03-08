@@ -25,9 +25,11 @@ router.get('/', (req, res, next) => {
       users.forEach((user, index) => {
         const playerName = allNames[index];
 
+        const offline = playerName === 'UNKNOWN';
+
         const playerData =
           {
-            name: playerName,
+            name: offline ? user.userId.split('-')[0] : playerName,
             achievements: user.achievements.map(x => ({ class: x })),
             score: user.score
           };

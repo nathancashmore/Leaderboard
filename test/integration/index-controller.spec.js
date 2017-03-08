@@ -54,10 +54,18 @@ describe('Index Controller - NoPlayers', () => {
   );
 });
 
-describe('Index Controller - WrongCache', () => {
+describe('Index Controller - NoCache', () => {
   it('should still display all players if cache is wrong', () =>
     indexPage.visit()
       .then(() =>
         expect(indexPage.noOfPlayersShown(2)))
+  );
+
+  it('should display the correct avatar', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.avatar('MajorSlackmore')).to.equal('https://minotar.net/avatar/MajorSlackmore/100.png');
+        expect(indexPage.avatar('MiniSlackmore')).to.equal('https://minotar.net/avatar/MiniSlackmore/100.png');
+      })
   );
 });
