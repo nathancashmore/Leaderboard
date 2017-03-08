@@ -95,3 +95,15 @@ describe('User Helper - WrongCache', () => {
   });
 });
 
+describe('User Helper - NoInternet', () => {
+  describe('Name', () => {
+    const userHelper = new UserHelper(config.MC_SERVER_PATH);
+
+    it('should return correct name when no internet', () =>
+      userHelper.getName('6eb35f96-c2c7-4332-b0b9-3d1981edae78')
+        .then(result =>
+          expect(result).to.equal('6eb35f96'))
+    );
+  });
+});
+

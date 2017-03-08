@@ -4,10 +4,12 @@ const favicon = require('serve-favicon');
 const logger = require('./../logger');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const config = require('getconfig');
+const Replay = require('replay');
 
 const indexController = require('./controllers/index-controller');
 
-const config = require('getconfig');
+Replay.mode = process.env.REPLAY || config.REPLAY || 'bloody';
 
 const app = express();
 

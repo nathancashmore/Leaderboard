@@ -38,7 +38,10 @@ module.exports = class UserHelper {
 
       return name;
     })
-      .catch(e => logger.log('ERROR', e));
+      .catch(() => {
+        logger.log('error', `Unable to get name externally.. using ${userId} instead.`);
+        return userId.split('-')[0];
+      });
   }
 
   getDetails() {
