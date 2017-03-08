@@ -54,10 +54,34 @@ describe('Index Controller - NoPlayers', () => {
   );
 });
 
-describe('Index Controller - WrongCache', () => {
+describe('Index Controller - NoCache', () => {
   it('should still display all players if cache is wrong', () =>
     indexPage.visit()
       .then(() =>
         expect(indexPage.noOfPlayersShown(2)))
   );
+
+  it('should display the correct avatar', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.avatar('MajorSlackmore')).to.equal('https://minotar.net/avatar/MajorSlackmore/100.png');
+      })
+  );
 });
+
+describe('Index Controller - NoInternet', () => {
+  it('should display the default avatar', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.avatar('6eb35f96')).to.equal('http://localhost:25566/images/defaultAvatar.png');
+      })
+  );
+
+  it('should display the default player name', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.player('6eb35f96')).to.equal('6eb35f96');
+      })
+  );
+});
+
