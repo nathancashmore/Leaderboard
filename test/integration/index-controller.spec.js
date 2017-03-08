@@ -65,7 +65,23 @@ describe('Index Controller - NoCache', () => {
     indexPage.visit()
       .then(() => {
         expect(indexPage.avatar('MajorSlackmore')).to.equal('https://minotar.net/avatar/MajorSlackmore/100.png');
-        expect(indexPage.avatar('MiniSlackmore')).to.equal('https://minotar.net/avatar/MiniSlackmore/100.png');
       })
   );
 });
+
+describe('Index Controller - NoInternet', () => {
+  it('should display the default avatar', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.avatar('6eb35f96')).to.equal('http://localhost:25566/images/defaultAvatar.png');
+      })
+  );
+
+  it('should display the default player name', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.player('6eb35f96')).to.equal('6eb35f96');
+      })
+  );
+});
+

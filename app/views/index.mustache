@@ -17,7 +17,10 @@
     <table>
         {{#players}}
             <tr data-test="player-{{name}}" data-test-2="player">
-                <td><img data-test="avatar" src="https://minotar.net/avatar/{{name}}/100.png"></td>
+                <td>
+                    {{#offline}}<img data-test="avatar" src="/images/defaultAvatar.png">{{/offline}}
+                    {{^offline}}<img data-test="avatar" src="https://minotar.net/avatar/{{name}}/100.png">{{/offline}}
+                </td>
                 <td data-test="player-name">{{name}}</td>
                 <td data-test="achievements">
                     {{#achievements}}

@@ -31,7 +31,8 @@ router.get('/', (req, res, next) => {
           {
             name: offline ? user.userId.split('-')[0] : playerName,
             achievements: user.achievements.map(x => ({ class: x })),
-            score: user.score
+            score: user.score,
+            offline
           };
 
         playerDataArray.push(Object.assign(playerData));
