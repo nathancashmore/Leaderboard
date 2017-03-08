@@ -52,15 +52,15 @@ describe('User Helper - Default', () => {
       const expectedResult =
         [
           {
-            userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',
-            achievements: ['openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
-            score: 40
-          },
-          {
             userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
             achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
             score: 50
           },
+          {
+            userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',
+            achievements: ['openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
+            score: 40
+          }
         ];
 
       return userHelper.getAllAchievements()

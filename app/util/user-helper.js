@@ -84,8 +84,8 @@ module.exports = class UserHelper {
           achievementPromiseArray.push(this.getAchievements(userId));
         });
 
-        return Promise.all(achievementPromiseArray).then(result => result)
-          .catch(e => logger.log('error', e));
+        return Promise.all(achievementPromiseArray).then(result =>
+          result.sort((a, b) => b.score - a.score));
       })
         .catch(e => logger.log('error', e));
     }

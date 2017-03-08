@@ -44,6 +44,14 @@ describe('Index Controller - Default', () => {
         expect(indexPage.score(expectedPlayer)).to.equal('50');
       })
   );
+
+  it('should display the players in the correct order', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.playerInPosition(0)).to.equal('MajorSlackmore');
+        expect(indexPage.playerInPosition(1)).to.equal('MiniSlackmore');
+      })
+  );
 });
 
 describe('Index Controller - NoPlayers', () => {
