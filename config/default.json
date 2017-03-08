@@ -1,3 +1,4 @@
 {
-  "MC_SERVER_PATH": "../MinecraftServer/"
+  "MC_SERVER_PATH": "../MinecraftServer/",
+  "REPLAY": "bloody"
 }

@@ -1,3 +1,4 @@
 {
-  "MC_SERVER_PATH": "./test/data/minecraftServer/"
+  "MC_SERVER_PATH": "./test/data/minecraftServer/",
+  "REPLAY": "replay"
 }

@@ -33,6 +33,7 @@
     "morgan": "~1.6",
     "node-readfiles": "^0.2.0",
     "properties-reader": "0.0.15",
+    "replay": "^2.1.2",
     "request-promise": "^4.1.1",
     "serve-favicon": "~2.3",
     "vinyl-source-stream": "^1.1.0",
@@ -61,9 +62,11 @@
     "test-mocha-no-players": "mocha --grep NoPlayers",
     "test-mocha-with-players": "mocha --grep Default",
     "test-mocha-wrong-cache": "mocha --grep WrongCache",
+    "test-mocha-no-internet": "mocha --grep NoInternet",
     "test-with-players": "NODE_ENV=test npm run test-mocha-with-players",
     "test-no-players": "NODE_ENV=testNoPlayers npm run test-mocha-no-players",
     "test-wrong-cache": "NODE_ENV=testWrongCache npm run test-mocha-wrong-cache",
-    "test": "npm run test-with-players && npm run test-no-players && npm run test-wrong-cache"
+    "test-no-internet": "NODE_ENV=testNoInternet npm run test-mocha-no-internet",
+    "test": "npm run test-with-players && npm run test-no-players && npm run test-wrong-cache && npm run test-no-internet"
   }
 }

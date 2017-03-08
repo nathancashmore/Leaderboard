@@ -1,0 +1,178 @@
+GET /profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78
+host: namemc.com
+
+HTTP/1.1 404 Not Found
+date: Wed, 08 Mar 2017 18:14:16 GMT
+content-type: text/html; charset=utf-8
+transfer-encoding: chunked
+connection: close
+set-cookie: __cfduid=d09cf076dfcf8d6fda8365fe6fdf941b61488996856; expires=Thu, 08-Mar-18 18:14:16 GMT; path=/; domain=.namemc.com; HttpOnly
+x-powered-by: Express
+x-frame-options: SAMEORIGIN
+server: cloudflare-nginx
+cf-ray: 33c7c5ef9ded0ca1-AMS
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="og:site_name" content="NameMC">
+    <!--meta(name='theme-color', content='#000000')-->
+    <title>Error – NameMC</title>
+    <meta name="og:title" content="Error">
+    <meta name="twitter:title" content="Error">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" sizes="16x16" href="https://static.namemc.com/i/favicon-16.png">
+    <link rel="shortcut icon" sizes="128x128" href="https://static.namemc.com/i/favicon-128.png">
+    <link rel="shortcut icon" sizes="192x192" href="https://static.namemc.com/i/favicon-192.png">
+    <meta name="og:image" content="https://static.namemc.com/i/favicon-128.png">
+    <meta name="twitter:image" content="https://static.namemc.com/i/favicon-128.png">
+    <meta name="og:locale" content="en">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@namemc_">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+UI:400,400italic,700,700italic|Noto+Sans+Symbols:400">
+    <link rel="stylesheet" href="/css/style.css?v=27">
+    <link rel="stylesheet" href="/css/side-ad.css?v=5">
+    <link rel="stylesheet" href="https://static.namemc.com/css/flags.css">
+    <link rel="canonical" href="https://namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="id" href="https://id.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="ms" href="https://ms.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="cs" href="https://cs.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="da" href="https://da.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="de" href="https://de.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="et" href="https://et.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="en" href="https://namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="es" href="https://es.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="fr" href="https://fr.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="hr" href="https://hr.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="it" href="https://it.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="lv" href="https://lv.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="lt" href="https://lt.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="hu" href="https://hu.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="nl" href="https://nl.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="no" href="https://no.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="pl" href="https://pl.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="pt" href="https://pt.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="ro" href="https://ro.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="sk" href="https://sk.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="sl" href="https://sl.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="fi" href="https://fi.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="sv" href="https://sv.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="vi" href="https://vi.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="tr" href="https://tr.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="el" href="https://el.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="bg" href="https://bg.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="ru" href="https://ru.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="uk" href="https://uk.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="he" href="https://he.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="ar" href="https://ar.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="th" href="https://th.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="ko" href="https://ko.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="ja" href="https://ja.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="zh-cn" href="https://zh-cn.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <link rel="alternate" hreflang="zh-tw" href="https://zh-tw.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-59421471-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div>
+          <nav class="navbar navbar-full navbar-dark py-q bg-inverse">
+            <div class="container"><a class="navbar-brand hidden-md-down" href="/">NameMC</a>
+              <ul class="nav navbar-nav hidden-md-down">
+                <li class="nav-item"><a class="nav-link" href="https://community.namemc.com">Community</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Names</a>
+                  <div class="dropdown-menu"><a class="dropdown-item" href="/upcoming">Upcoming Names</a><a class="dropdown-item" href="/recent">Recent Names</a></div>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skins</a>
+                  <div class="dropdown-menu"><a class="dropdown-item" href="/minecraft-skins/trending">Trending Skins<img class="emoji" draggable="false" src="https://twemoji.maxcdn.com/2/svg/1f525.svg" alt="🔥"></a><a class="dropdown-item" href="/minecraft-skins/top">Top Skins</a><a class="dropdown-item" href="/minecraft-skins/new">New Skins</a></div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/capes">Capes</a></li>
+                <li class="nav-item"><a class="nav-link" href="/minecraft-servers">Minecraft Servers</a></li>
+                <li class="nav-item"><a class="nav-link" href="/search-box">Search Box</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#faq">FAQ</a></li>
+              </ul>
+              <ul class="nav navbar-nav hidden-lg-up">
+                <li class="nav-item dropdown"><a class="navbar-brand dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NameMC</a>
+                  <div class="dropdown-menu"><a class="dropdown-item" href="/">Homepage</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="https://community.namemc.com">Community</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="/upcoming">Upcoming Names</a><a class="dropdown-item" href="/recent">Recent Names</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="/minecraft-skins/trending">Trending Skins<img class="emoji" draggable="false" src="https://twemoji.maxcdn.com/2/svg/1f525.svg" alt="🔥"></a><a class="dropdown-item" href="/minecraft-skins/top">Top Skins</a><a class="dropdown-item" href="/minecraft-skins/new">New Skins</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="/capes">Capes</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="/minecraft-servers">Minecraft Servers</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="/search-box">Search Box</a><a class="dropdown-item" href="/#faq">FAQ</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav float-xs-right">
+                <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="flag flag-us" src="https://static.namemc.com/i/blank.png" alt="en" title="English"></a>
+                  <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item text-center" href="https://crowdin.com/project/namemc" target="_blank" title="Contribute"><img style="display:block;margin:auto" src="https://d322cqt584bo4o.cloudfront.net/namemc/localized.svg"></a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="https://id.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('id');" title="Bahasa Indonesia"><img class="flag mr-h flag-id" src="https://static.namemc.com/i/blank.png" alt="Bahasa Indonesia">Bahasa Indonesia</a><a class="dropdown-item" href="https://ms.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('ms');" title="Bahasa Malaysia"><img class="flag mr-h flag-my" src="https://static.namemc.com/i/blank.png" alt="Bahasa Malaysia">Bahasa Malaysia</a><a class="dropdown-item" href="https://cs.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('cs');" title="čeština"><img class="flag mr-h flag-cz" src="https://static.namemc.com/i/blank.png" alt="čeština">čeština</a><a class="dropdown-item" href="https://da.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('da');" title="Dansk"><img class="flag mr-h flag-dk" src="https://static.namemc.com/i/blank.png" alt="Dansk">Dansk</a><a class="dropdown-item" href="https://de.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('de');" title="Deutsch"><img class="flag mr-h flag-de" src="https://static.namemc.com/i/blank.png" alt="Deutsch">Deutsch</a><a class="dropdown-item" href="https://et.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('et');" title="Eesti"><img class="flag mr-h flag-ee" src="https://static.namemc.com/i/blank.png" alt="Eesti">Eesti</a><a class="dropdown-item" href="https://namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('en');" title="English"><img class="flag mr-h flag-us" src="https://static.namemc.com/i/blank.png" alt="English">English<span class="ml-h">✔</span></a><a class="dropdown-item" href="https://es.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('es');" title="español"><img class="flag mr-h flag-es" src="https://static.namemc.com/i/blank.png" alt="español">español</a><a class="dropdown-item" href="https://fr.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('fr');" title="français"><img class="flag mr-h flag-fr" src="https://static.namemc.com/i/blank.png" alt="français">français</a><a class="dropdown-item" href="https://hr.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('hr');" title="hrvatski"><img class="flag mr-h flag-hr" src="https://static.namemc.com/i/blank.png" alt="hrvatski">hrvatski</a><a class="dropdown-item" href="https://it.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('it');" title="italiano"><img class="flag mr-h flag-it" src="https://static.namemc.com/i/blank.png" alt="italiano">italiano</a><a class="dropdown-item" href="https://lv.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('lv');" title="Latviešu"><img class="flag mr-h flag-lv" src="https://static.namemc.com/i/blank.png" alt="Latviešu">Latviešu</a><a class="dropdown-item" href="https://lt.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('lt');" title="Lietuvių"><img class="flag mr-h flag-lt" src="https://static.namemc.com/i/blank.png" alt="Lietuvių">Lietuvių</a><a class="dropdown-item" href="https://hu.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('hu');" title="Magyar"><img class="flag mr-h flag-hu" src="https://static.namemc.com/i/blank.png" alt="Magyar">Magyar</a><a class="dropdown-item" href="https://nl.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('nl');" title="Nederlands"><img class="flag mr-h flag-nl" src="https://static.namemc.com/i/blank.png" alt="Nederlands">Nederlands</a><a class="dropdown-item" href="https://no.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('no');" title="norsk"><img class="flag mr-h flag-no" src="https://static.namemc.com/i/blank.png" alt="norsk">norsk</a><a class="dropdown-item" href="https://pl.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('pl');" title="polski"><img class="flag mr-h flag-pl" src="https://static.namemc.com/i/blank.png" alt="polski">polski</a><a class="dropdown-item" href="https://pt.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('pt');" title="português"><img class="flag mr-h flag-br" src="https://static.namemc.com/i/blank.png" alt="português">português</a><a class="dropdown-item" href="https://ro.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('ro');" title="română"><img class="flag mr-h flag-ro" src="https://static.namemc.com/i/blank.png" alt="română">română</a><a class="dropdown-item" href="https://sk.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('sk');" title="Slovenčina"><img class="flag mr-h flag-sk" src="https://static.namemc.com/i/blank.png" alt="Slovenčina">Slovenčina</a><a class="dropdown-item" href="https://sl.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('sl');" title="Slovenščina"><img class="flag mr-h flag-si" src="https://static.namemc.com/i/blank.png" alt="Slovenščina">Slovenščina</a><a class="dropdown-item" href="https://fi.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('fi');" title="suomi"><img class="flag mr-h flag-fi" src="https://static.namemc.com/i/blank.png" alt="suomi">suomi</a><a class="dropdown-item" href="https://sv.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('sv');" title="svenska"><img class="flag mr-h flag-se" src="https://static.namemc.com/i/blank.png" alt="svenska">svenska</a><a class="dropdown-item" href="https://vi.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('vi');" title="tiếng việt"><img class="flag mr-h flag-vn" src="https://static.namemc.com/i/blank.png" alt="tiếng việt">tiếng việt</a><a class="dropdown-item" href="https://tr.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('tr');" title="Türkçe"><img class="flag mr-h flag-tr" src="https://static.namemc.com/i/blank.png" alt="Türkçe">Türkçe</a><a class="dropdown-item" href="https://el.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('el');" title="Ελληνικά"><img class="flag mr-h flag-gr" src="https://static.namemc.com/i/blank.png" alt="Ελληνικά">Ελληνικά</a><a class="dropdown-item" href="https://bg.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('bg');" title="български"><img class="flag mr-h flag-bg" src="https://static.namemc.com/i/blank.png" alt="български">български</a><a class="dropdown-item" href="https://ru.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('ru');" title="русский"><img class="flag mr-h flag-ru" src="https://static.namemc.com/i/blank.png" alt="русский">русский</a><a class="dropdown-item" href="https://uk.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('uk');" title="українська"><img class="flag mr-h flag-ua" src="https://static.namemc.com/i/blank.png" alt="українська">українська</a><a class="dropdown-item" href="https://he.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('he');" title="עברית"><img class="flag mr-h flag-il" src="https://static.namemc.com/i/blank.png" alt="עברית">עברית</a><a class="dropdown-item" href="https://ar.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('ar');" title="العربية"><img class="flag mr-h flag-sa" src="https://static.namemc.com/i/blank.png" alt="العربية">العربية</a><a class="dropdown-item" href="https://th.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('th');" title="ภาษาไทย"><img class="flag mr-h flag-th" src="https://static.namemc.com/i/blank.png" alt="ภาษาไทย">ภาษาไทย</a><a class="dropdown-item" href="https://ko.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('ko');" title="한국어"><img class="flag mr-h flag-kr" src="https://static.namemc.com/i/blank.png" alt="한국어">한국어</a><a class="dropdown-item" href="https://ja.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('ja');" title="日本語"><img class="flag mr-h flag-jp" src="https://static.namemc.com/i/blank.png" alt="日本語">日本語</a><a class="dropdown-item" href="https://zh-cn.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('zh-cn');" title="简体中文"><img class="flag mr-h flag-cn" src="https://static.namemc.com/i/blank.png" alt="简体中文">简体中文</a><a class="dropdown-item" href="https://zh-tw.namemc.com/profile/6eb35f96-c2c7-4332-b0b9-3d1981edae78" onclick="return setLang('zh-tw');" title="繁體中文"><img class="flag mr-h flag-tw" src="https://static.namemc.com/i/blank.png" alt="繁體中文">繁體中文</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="bg-inverse">
+            <div class="container">
+              <form id="search-form" method="GET" action="/search">
+                <div class="input-group input-group-lg" style="margin-bottom:0.75rem">
+                  <input class="py-h form-control" id="search-box" name="q" type="search" placeholder="Name / UUID / Server" autocomplete="off" spellcheck="false" onfocus="this.select();"><span class="input-group-btn">
+                    <button class="btn btn-primary py-h" type="submit" title="Search"><i class="fa fa-search"></i></button></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-1" id="content">
+        <div class="container">
+          <h1>404 Not Found</h1>
+        </div>
+      </div>
+      <div class="bg-faded" id="footer">
+        <div class="container">
+          <div class="row text-center pt-1" style="font-size:smaller">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-1">Check the availability of Minecraft names</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-1">Determine when upcoming names will become available</div>
+            <div class="hidden-md-up clearfix"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-1">Search for Minecraft players by name</div>
+            <div class="hidden-lg-up hidden-sm-down clearfix"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-1">Look up the name history, skin history, and UUID of accounts</div>
+            <div class="hidden-md-up clearfix"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-1">View Minecraft skins and capes in 3D</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-1">Browse and download the latest trending skins</div>
+          </div>
+          <hr class="mt-0">
+          <div class="row pb-1">
+            <div class="col-sm-3 text-center" style="font-size:smaller"><a href="/cdn-cgi/l/email-protection#afccc0c1dbceccdbefc1cec2cac2cc81ccc0c2"><span class="__cf_email__" data-cfemail="34575b5a40555740745a55595159571a575b59">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></div>
+            <div class="col-sm-3 text-center" style="font-size:smaller"><a href="/privacy">Privacy</a></div>
+            <div class="col-sm-3 text-center" style="font-size:smaller">Emojis by <a href="https://twitter.github.io/twemoji/" target="_blank">Twem❤ji</a>
+            </div>
+            <div class="col-sm-3 text-center" style="font-size:smaller"><span>Copyright © 2017</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js?v=26"></script>
+    <script src="/js/namemc-skins.js?v=13"></script>
+  <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>

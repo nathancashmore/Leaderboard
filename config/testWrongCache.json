@@ -1,3 +1,4 @@
 {
-  "MC_SERVER_PATH": "./test/data/serverWrongCache/"
+  "MC_SERVER_PATH": "./test/data/serverWrongCache/",
+  "REPLAY": "replay"
 }
