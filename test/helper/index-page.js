@@ -12,6 +12,10 @@ const IndexPage = function IndexPage(browser) {
   this.score = playerName => browser.text(`[data-test="player-${playerName}"] [data-test="score"]`);
 
   this.noOfPlayersShown = number => browser.assert.elements('[data-test-2="player"]', number);
+  this.playerInPosition = ((number) => {
+    const players = browser.text('[data-test-2="player"] [data-test="player-name"]');
+    return players.split(' ')[number];
+  });
 };
 
 module.exports = IndexPage;
