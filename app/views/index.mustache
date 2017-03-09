@@ -13,7 +13,9 @@
     </div>
 {{/waitingForPlayers}}
 {{^waitingForPlayers}}
-  {{<stats}}{{/stats}}
+    <div id="stats">
+        {{<achievementTable}}{{/achievementTable}}
+    </div>
 {{/waitingForPlayers}}
 
 {{/applicationContent}}

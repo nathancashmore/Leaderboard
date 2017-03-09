@@ -27,6 +27,7 @@
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "hogan.js": "~3.0",
+    "jquery": "^3.1.1",
     "jsonfile": "^2.4.0",
     "jsonfile-promised": "0.0.1",
     "logger": "0.0.1",
