@@ -1,4 +1,6 @@
 {
   "MC_SERVER_PATH": "../MinecraftServer/",
-  "REPLAY": "bloody"
+  "PORT": 25566,
+  "REPLAY": "bloody",
+  "BASE_PATH": ""
 }

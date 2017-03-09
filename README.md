@@ -21,15 +21,9 @@ npm run watch
 ```
 
 ## Start up - Custom ##
-To change the location of the Minecraft server edit the default configuration file
+You can change any of the run parameters on the command line at startup:
 ```
-config/default.json
-```
-
-To start the application on an alternative port do the following:
-
-```
-PORT=9999 npm run watch
+MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" npm run watch
 ```
 
 ## Use ##

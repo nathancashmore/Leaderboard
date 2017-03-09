@@ -1,4 +1,5 @@
 {
   "MC_SERVER_PATH": "./test/data/serverNoCache/",
-  "REPLAY": "replay"
+  "REPLAY": "replay",
+  "PORT": 25599
 }

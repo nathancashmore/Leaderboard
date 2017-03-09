@@ -9,7 +9,7 @@ const Replay = require('replay');
 
 const indexController = require('./controllers/index-controller');
 
-Replay.mode = process.env.REPLAY || config.REPLAY || 'bloody';
+Replay.mode = process.env.REPLAY || config.REPLAY;
 
 const app = express();
 
@@ -21,11 +21,11 @@ app.set('view engine', 'mustache');
 app.set('views', path.join(__dirname, 'views'));
 
 // run the whole application in a directory
-const basePath = app.locals.basePath = config.EXPRESS_BASE_PATH || '';
+const basePath = app.locals.basePath = process.env.BASE_PATH || config.BASE_PATH;
 const assetPath = `${basePath}/`;
-const googleTagManagerId = config.GOOGLE_TAG_MANAGER_ID;
+const googleTagManagerId = process.env.GOOGLE_TAG_MANAGER_ID || config.GOOGLE_TAG_MANAGER_ID;
 
-app.locals.mcServerPath = config.MC_SERVER_PATH || '../MinecraftServer/';
+app.locals.mcServerPath = process.env.MC_SERVER_PATH || config.MC_SERVER_PATH;
 
 // Middleware to set default layouts.
 // This must be done per request (and not via app.locals) as the Consolidate.js
