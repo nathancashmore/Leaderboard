@@ -3,6 +3,7 @@ const IndexPage = function IndexPage(browser) {
   this.browser = browser;
 
   this.visit = () => browser.visit('/leaderboard');
+  this.visitStats = () => browser.visit('/leaderboard/stats');
   this.serverDetails = () => browser.text('[data-test="server-details"]');
   this.amWaitingForPlayers = () => browser.assert.element('[data-test="waiting-for-players"]');
 

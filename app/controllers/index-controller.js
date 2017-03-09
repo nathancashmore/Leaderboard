@@ -4,13 +4,8 @@ const UserHelper = require('../util/user-helper');
 
 const router = new express.Router();
 
-router.get('/', (req, res, next) => {
-  const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
-  const userHelper = new UserHelper(req.app.locals.mcServerPath);
-
-  const serverDetails = serverHelper.getDetails();
-
-  userHelper.getAllAchievements().then((users) => {
+function getUserData(userHelper) {
+  return userHelper.getAllAchievements().then((users) => {
     const userNamePromises = [];
 
     users.forEach((user) => {
@@ -19,7 +14,7 @@ router.get('/', (req, res, next) => {
       );
     });
 
-    Promise.all(userNamePromises).then((allNames) => {
+    return Promise.all(userNamePromises).then((allNames) => {
       const playerDataArray = [];
 
       users.forEach((user, index) => {
@@ -34,16 +29,33 @@ router.get('/', (req, res, next) => {
 
         playerDataArray.push(Object.assign(playerData));
       });
+      return playerDataArray;
+    });
+  });
+}
 
-      const pageData = {
-        serverDetails: `${serverDetails.connecturl}`,
-        players: playerDataArray,
-        waitingForPlayers: playerDataArray.length === 0
-      };
+router.get('/', (req, res, next) => {
+  const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
+  const userHelper = new UserHelper(req.app.locals.mcServerPath);
 
-      res.render('index', pageData);
-    }).catch(e => next(e));
-  }).catch(e => next(e));
+  const serverDetails = serverHelper.getDetails();
+
+  return getUserData(userHelper).then((userData) => {
+    res.render('index', Object.assign(
+      { players: userData },
+      { serverDetails: `${serverDetails.connecturl}` },
+      { waitingForPlayers: userData.length === 0 }));
+  })
+    .catch(e => next(e));
+});
+
+router.get('/stats', (req, res, next) => {
+  const userHelper = new UserHelper(req.app.locals.mcServerPath);
+
+  return getUserData(userHelper).then((userData) => {
+    res.render('achievements', { players: userData });
+  })
+    .catch(e => next(e));
 });
 
 module.exports = router;
