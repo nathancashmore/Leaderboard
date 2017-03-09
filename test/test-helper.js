@@ -1,6 +1,6 @@
 const Zombie = require('zombie');
 
-Zombie.site = 'http://localhost:25566';
+Zombie.site = 'http://localhost:25599';
 const browser = new Zombie();
 
 const IndexPage = require('./helper/index-page');

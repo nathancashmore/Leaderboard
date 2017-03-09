@@ -81,7 +81,7 @@ describe('Index Controller - NoInternet', () => {
   it('should display the default avatar', () =>
     indexPage.visit()
       .then(() => {
-        expect(indexPage.avatar('6eb35f96')).to.equal('http://localhost:25566/images/defaultAvatar.png');
+        expect(indexPage.avatar('6eb35f96')).contains('/images/defaultAvatar.png');
       })
   );
 
