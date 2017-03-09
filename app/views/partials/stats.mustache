@@ -1,0 +1,20 @@
+<div id="stats">
+  <table>
+    {{#players}}
+      <tr data-test="player-{{name}}" data-test-2="player">
+        <td>
+          <object data-test="avatar" data="https://minotar.net/avatar/{{name}}/100.png" type="image/png">
+            <img src="/images/defaultAvatar.png" />
+          </object>
+        </td>
+        <td data-test="player-name">{{name}} </td>
+        <td data-test="achievements">
+          {{#achievements}}
+            <span class="achievement {{class}}"></span>
+          {{/achievements}}
+        </td>
+        <td data-test="score">{{score}}</td>
+      </tr>
+    {{/players}}
+  </table>
+</div>

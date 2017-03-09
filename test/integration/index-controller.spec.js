@@ -78,13 +78,6 @@ describe('Index Controller - NoCache', () => {
 });
 
 describe('Index Controller - NoInternet', () => {
-  it('should display the default avatar', () =>
-    indexPage.visit()
-      .then(() => {
-        expect(indexPage.avatar('6eb35f96')).contains('/images/defaultAvatar.png');
-      })
-  );
-
   it('should display the default player name', () =>
     indexPage.visit()
       .then(() => {
