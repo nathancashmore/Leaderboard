@@ -5,6 +5,7 @@ const IndexPage = function IndexPage(browser) {
   this.visit = () => browser.visit('/leaderboard');
   this.visitStats = () => browser.visit('/leaderboard/stats');
   this.serverDetails = () => browser.text('[data-test="server-details"]');
+  this.messageOfTheDay = () => browser.text('[data-test="motd"]');
   this.amWaitingForPlayers = () => browser.assert.element('[data-test="waiting-for-players"]');
 
   this.avatar = playerName => browser.query(`[data-test="player-${playerName}"] [data-test="avatar"]`).data;

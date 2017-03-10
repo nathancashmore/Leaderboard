@@ -6,6 +6,13 @@ const indexPage = helper.indexPage;
 describe('Index Controller - Default', () => {
   const expectedPlayer = 'MajorSlackmore';
 
+  it('should display the message of the day', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.messageOfTheDay()).to.equal('A Minecraft Server');
+      })
+  );
+
   it('should display the correct server connection details', () =>
     indexPage.visit()
       .then(() => {

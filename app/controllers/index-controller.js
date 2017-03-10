@@ -43,7 +43,7 @@ router.get('/', (req, res, next) => {
   return getUserData(userHelper).then((userData) => {
     res.render('index', Object.assign(
       { players: userData },
-      { serverDetails: `${serverDetails.connecturl}` },
+      { serverDetails },
       { waitingForPlayers: userData.length === 0 }));
   })
     .catch(e => next(e));
