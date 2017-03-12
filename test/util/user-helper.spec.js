@@ -68,6 +68,14 @@ describe('User Helper - Default', () => {
           expect(result).to.deep.equal(expectedResult);
         });
     });
+
+    it('should function even when there is no trailing space on MC_SERVER_PATH', () => {
+      const userHelperNoTrailingSpace = new UserHelper('./test/data/minecraftServer', 'world');
+
+      return userHelperNoTrailingSpace.getAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c')
+        .then(achievementsResult =>
+          expect(achievementsResult).to.exist);
+    });
   });
 });
 

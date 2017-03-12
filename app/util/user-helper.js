@@ -46,7 +46,7 @@ module.exports = class UserHelper {
   }
 
   getDetails() {
-    const userDataFile = `${this.serverPath}usercache.json`;
+    const userDataFile = `${this.serverPath}/usercache.json`;
 
     return jsonFile.readFile(userDataFile).then(result =>
       result.map(entry => ({ uuid: entry.uuid, name: entry.name })))
@@ -62,7 +62,7 @@ module.exports = class UserHelper {
 
   getAchievements(userId) {
     const statsDataFile =
-      `${this.serverPath}${this.levelName}/stats/${userId}.json`;
+      `${this.serverPath}/${this.levelName}/stats/${userId}.json`;
 
     return jsonFile.readFile(statsDataFile).then((result) => {
       const achievements = UserHelper.filterAchievements(result);
@@ -75,7 +75,7 @@ module.exports = class UserHelper {
 
   getAllAchievements() {
     const achievementPromiseArray = [];
-    const statsDirectory = `${this.serverPath}${this.levelName}/stats/`;
+    const statsDirectory = `${this.serverPath}/${this.levelName}/stats/`;
 
     if (fs.existsSync(statsDirectory)) {
       return readfiles(statsDirectory).then((filenameList) => {
