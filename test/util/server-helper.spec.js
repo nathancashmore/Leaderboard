@@ -17,6 +17,7 @@ describe('Server Helper - Default', () => {
       expect(detailsResult.ip).to.equal('myhostname.com');
       expect(detailsResult.connecturl).to.equal('myhostname.com:25565');
       expect(detailsResult.motd).to.equal('A Minecraft Server');
+      expect(detailsResult['level-name']).to.equal('world');
     });
   });
 });

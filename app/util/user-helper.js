@@ -11,8 +11,9 @@ const points = require('../assets/json/points.json');
 
 module.exports = class UserHelper {
 
-  constructor(serverPath) {
+  constructor(serverPath, levelName) {
     this.serverPath = serverPath;
+    this.levelName = levelName;
   }
 
   static filterAchievements(stats) {
@@ -39,7 +40,7 @@ module.exports = class UserHelper {
       return name;
     })
       .catch(() => {
-        logger.log('error', `Unable to get name externally.. using ${userId} instead.`);
+        logger.log('info', `Unable to get name externally.. using ${userId} instead.`);
         return 'UNKNOWN';
       });
   }
@@ -61,7 +62,7 @@ module.exports = class UserHelper {
 
   getAchievements(userId) {
     const statsDataFile =
-      `${this.serverPath}world/stats/${userId}.json`;
+      `${this.serverPath}${this.levelName}/stats/${userId}.json`;
 
     return jsonFile.readFile(statsDataFile).then((result) => {
       const achievements = UserHelper.filterAchievements(result);
@@ -74,7 +75,7 @@ module.exports = class UserHelper {
 
   getAllAchievements() {
     const achievementPromiseArray = [];
-    const statsDirectory = `${this.serverPath}world/stats/`;
+    const statsDirectory = `${this.serverPath}${this.levelName}/stats/`;
 
     if (fs.existsSync(statsDirectory)) {
       return readfiles(statsDirectory).then((filenameList) => {
