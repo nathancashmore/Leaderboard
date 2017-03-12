@@ -4,7 +4,7 @@ const config = require('getconfig');
 const UserHelper = require('../../app/util/user-helper');
 
 describe('User Helper - Default', () => {
-  const userHelper = new UserHelper(config.MC_SERVER_PATH);
+  const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
 
   describe('Details', () => {
     it('should return expected values', () => {
@@ -68,12 +68,20 @@ describe('User Helper - Default', () => {
           expect(result).to.deep.equal(expectedResult);
         });
     });
+
+    it('should function even when there is no trailing space on MC_SERVER_PATH', () => {
+      const userHelperNoTrailingSpace = new UserHelper('./test/data/minecraftServer', 'world');
+
+      return userHelperNoTrailingSpace.getAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c')
+        .then(achievementsResult =>
+          expect(achievementsResult).to.exist);
+    });
   });
 });
 
 describe('User Helper - NoPlayers', () => {
   describe('Achievements', () => {
-    const userHelper = new UserHelper(config.MC_SERVER_PATH);
+    const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
 
     it('should return empty array', () =>
       userHelper.getAllAchievements()
@@ -85,7 +93,7 @@ describe('User Helper - NoPlayers', () => {
 
 describe('User Helper - NoCache', () => {
   describe('Name', () => {
-    const userHelper = new UserHelper(config.MC_SERVER_PATH);
+    const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
 
     it('should return correct name when not found in cache ', () =>
       userHelper.getName('879e207a-39a5-48df-ba7e-eb6089fe970c')
@@ -97,7 +105,7 @@ describe('User Helper - NoCache', () => {
 
 describe('User Helper - NoInternet', () => {
   describe('Name', () => {
-    const userHelper = new UserHelper(config.MC_SERVER_PATH);
+    const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
 
     it('should return correct name when no internet', () =>
       userHelper.getName('6eb35f96-c2c7-4332-b0b9-3d1981edae78')

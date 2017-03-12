@@ -36,9 +36,9 @@ function getUserData(userHelper) {
 
 router.get('/', (req, res, next) => {
   const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
-  const userHelper = new UserHelper(req.app.locals.mcServerPath);
-
   const serverDetails = serverHelper.getDetails();
+
+  const userHelper = new UserHelper(req.app.locals.mcServerPath, serverDetails['level-name']);
 
   return getUserData(userHelper).then((userData) => {
     res.render('index', Object.assign(
@@ -50,7 +50,10 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/stats', (req, res, next) => {
-  const userHelper = new UserHelper(req.app.locals.mcServerPath);
+  const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
+  const serverDetails = serverHelper.getDetails();
+
+  const userHelper = new UserHelper(req.app.locals.mcServerPath, serverDetails['level-name']);
 
   return getUserData(userHelper).then((userData) => {
     res.render('achievements', { players: userData });

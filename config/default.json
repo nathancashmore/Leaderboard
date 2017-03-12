@@ -1,5 +1,5 @@
 {
-  "MC_SERVER_PATH": "../MinecraftServer/",
+  "MC_SERVER_PATH": "../MinecraftServer",
   "PORT": 25566,
   "REPLAY": "bloody",
   "BASE_PATH": ""
