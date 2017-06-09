@@ -10,7 +10,7 @@ const IndexPage = function IndexPage(browser) {
 
   this.avatar = playerName => browser.query(`[data-test="player-${playerName}"] [data-test="avatar"]`).data;
   this.player = playerName => browser.text(`[data-test="player-${playerName}"] [data-test="player-name"]`);
-  this.achievements = playerName => browser.query(`[data-test="player-${playerName}"] [data-test="achievements"]`).innerHTML;
+  this.advancements = playerName => browser.query(`[data-test="player-${playerName}"] [data-test="advancements"]`).innerHTML;
   this.score = playerName => browser.text(`[data-test="player-${playerName}"] [data-test="score"]`);
 
   this.noOfPlayersShown = number => browser.assert.elements('[data-test-2="player"]', number);

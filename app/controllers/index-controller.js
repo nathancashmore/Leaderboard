@@ -5,7 +5,7 @@ const UserHelper = require('../util/user-helper');
 const router = new express.Router();
 
 function getUserData(userHelper) {
-  return userHelper.getAllAchievements().then((users) => {
+  return userHelper.getAllAdvancements().then((users) => {
     const userNamePromises = [];
 
     users.forEach((user) => {
@@ -23,7 +23,7 @@ function getUserData(userHelper) {
         const playerData =
           {
             name: playerName === 'UNKNOWN' ? user.userId.split('-')[0] : playerName,
-            achievements: user.achievements.map(x => ({ class: x })),
+            advancements: user.advancements.map(x => ({ class: x.replace(':', '-').replace('/', '-') })),
             score: user.score
           };
 
@@ -56,7 +56,7 @@ router.get('/stats', (req, res, next) => {
   const userHelper = new UserHelper(req.app.locals.mcServerPath, serverDetails['level-name']);
 
   return getUserData(userHelper).then((userData) => {
-    res.render('achievements', { players: userData });
+    res.render('advancements', { players: userData });
   })
     .catch(e => next(e));
 });

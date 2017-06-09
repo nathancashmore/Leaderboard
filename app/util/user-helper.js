@@ -16,15 +16,17 @@ module.exports = class UserHelper {
     this.levelName = levelName;
   }
 
-  static filterAchievements(stats) {
-    return Object.keys(stats)
-      .filter(x => x.indexOf('achievement') === 0)
-      .map(y => y.substring('achievement.'.length));
+  static filterAdvancements(advancements) {
+    return Object.keys(advancements)
+      .map(key => Object.assign({ name: key, done: advancements[key].done }))
+      .filter(y => y.done === true)
+      .filter(x => x.name.includes(':story') || x.name.includes(':adventure'))
+      .map(z => z.name);
   }
 
   static calcScore(achievementList) {
     return achievementList
-      .map(x => points[`achievement.${x}`])
+      .map(x => points[`${x}`])
       .reduce((prev, curr) => prev + curr);
   }
 
@@ -60,29 +62,29 @@ module.exports = class UserHelper {
     });
   }
 
-  getAchievements(userId) {
+  getAdvancements(userId) {
     const statsDataFile =
-      `${this.serverPath}/${this.levelName}/stats/${userId}.json`;
+      `${this.serverPath}/${this.levelName}/advancements/${userId}.json`;
 
     return jsonFile.readFile(statsDataFile).then((result) => {
-      const achievements = UserHelper.filterAchievements(result);
-      const score = UserHelper.calcScore(achievements);
+      const advancements = UserHelper.filterAdvancements(result);
+      const score = UserHelper.calcScore(advancements);
 
-      return Object.assign({ userId, achievements, score });
+      return Object.assign({ userId, advancements, score });
     })
       .catch(e => logger.log('error', e));
   }
 
-  getAllAchievements() {
+  getAllAdvancements() {
     const achievementPromiseArray = [];
-    const statsDirectory = `${this.serverPath}/${this.levelName}/stats/`;
+    const advancementDirectory = `${this.serverPath}/${this.levelName}/advancements/`;
 
-    if (fs.existsSync(statsDirectory)) {
-      return readfiles(statsDirectory).then((filenameList) => {
+    if (fs.existsSync(advancementDirectory)) {
+      return readfiles(advancementDirectory).then((filenameList) => {
         const userIds = filenameList.map(filename => filename.replace('.json', ''));
 
         userIds.forEach((userId) => {
-          achievementPromiseArray.push(this.getAchievements(userId));
+          achievementPromiseArray.push(this.getAdvancements(userId));
         });
 
         return Promise.all(achievementPromiseArray).then(result =>

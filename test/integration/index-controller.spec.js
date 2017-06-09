@@ -34,29 +34,26 @@ describe('Index Controller - Default', () => {
       })
   );
 
-  it('should display the correct achievements', () =>
+  it('should display the correct advancements', () =>
     indexPage.visit()
       .then(() => {
-        expect(indexPage.achievements(expectedPlayer)).to.contain('buildPickaxe');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('openInventory');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('buildWorkBench');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('mineWood');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('exploreAllBiomes');
+        expect(indexPage.advancements(expectedPlayer)).to.contain('minecraft-story-root');
+        expect(indexPage.advancements(expectedPlayer)).to.contain('minecraft-story-mine_stone');
       })
   );
 
   it('should display the correct score', () =>
     indexPage.visit()
       .then(() => {
-        expect(indexPage.score(expectedPlayer)).to.equal('50');
+        expect(indexPage.score(expectedPlayer)).to.equal('20');
       })
   );
 
   it('should display the players in the correct order', () =>
     indexPage.visit()
       .then(() => {
-        expect(indexPage.playerInPosition(0)).to.equal('MajorSlackmore');
-        expect(indexPage.playerInPosition(1)).to.equal('MiniSlackmore');
+        expect(indexPage.playerInPosition(0)).to.equal('MiniSlackmore');
+        expect(indexPage.playerInPosition(1)).to.equal('MajorSlackmore');
       })
   );
 });
@@ -78,29 +75,26 @@ describe('Index Controller Stats Only - Default', () => {
       })
   );
 
-  it('should display the correct achievements', () =>
+  it('should display the correct advancements', () =>
     indexPage.visitStats()
       .then(() => {
-        expect(indexPage.achievements(expectedPlayer)).to.contain('buildPickaxe');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('openInventory');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('buildWorkBench');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('mineWood');
-        expect(indexPage.achievements(expectedPlayer)).to.contain('exploreAllBiomes');
+        expect(indexPage.advancements(expectedPlayer)).to.contain('minecraft-story-root');
+        expect(indexPage.advancements(expectedPlayer)).to.contain('minecraft-story-mine_stone');
       })
   );
 
   it('should display the correct score', () =>
     indexPage.visitStats()
       .then(() => {
-        expect(indexPage.score(expectedPlayer)).to.equal('50');
+        expect(indexPage.score(expectedPlayer)).to.equal('20');
       })
   );
 
   it('should display the players in the correct order', () =>
     indexPage.visitStats()
       .then(() => {
-        expect(indexPage.playerInPosition(0)).to.equal('MajorSlackmore');
-        expect(indexPage.playerInPosition(1)).to.equal('MiniSlackmore');
+        expect(indexPage.playerInPosition(0)).to.equal('MiniSlackmore');
+        expect(indexPage.playerInPosition(1)).to.equal('MajorSlackmore');
       })
   );
 });
