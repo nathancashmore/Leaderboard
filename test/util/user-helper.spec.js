@@ -34,36 +34,49 @@ describe('User Helper - Default', () => {
     );
   });
 
-  describe('Achievements', () => {
-    it('should return user achievements by user with score', () => {
+  describe('Advancements', () => {
+    it('should return user advancements by user with score', () => {
       const expectedResult =
         {
           userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
-          achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
-          score: 50
+          advancements: [
+            'minecraft:story/root',
+            'minecraft:story/mine_stone',
+          ],
+          score: 20
         };
 
-      return userHelper.getAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c')
+      return userHelper.getAdvancements('879e207a-39a5-48df-ba7e-eb6089fe970c')
         .then(achievementsResult =>
           expect(achievementsResult).to.deep.equal(expectedResult));
     });
 
-    it('should return achievements for all known stats', () => {
+    it('should return advancements for all known', () => {
       const expectedResult =
         [
           {
-            userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
-            achievements: ['buildPickaxe', 'openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
-            score: 50
+            userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',
+            advancements: [
+              'minecraft:adventure/kill_a_mob',
+              'minecraft:story/mine_stone',
+              'minecraft:adventure/root',
+              'minecraft:adventure/shoot_arrow',
+              'minecraft:story/upgrade_tools',
+              'minecraft:story/root',
+            ],
+            score: 60
           },
           {
-            userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',
-            achievements: ['openInventory', 'buildWorkBench', 'mineWood', 'exploreAllBiomes'],
-            score: 40
-          }
+            userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
+            advancements: [
+              'minecraft:story/root',
+              'minecraft:story/mine_stone',
+            ],
+            score: 20
+          },
         ];
 
-      return userHelper.getAllAchievements()
+      return userHelper.getAllAdvancements()
         .then((result) => {
           expect(result).to.deep.equal(expectedResult);
         });
@@ -72,9 +85,9 @@ describe('User Helper - Default', () => {
     it('should function even when there is no trailing space on MC_SERVER_PATH', () => {
       const userHelperNoTrailingSpace = new UserHelper('./test/data/minecraftServer', 'world');
 
-      return userHelperNoTrailingSpace.getAchievements('879e207a-39a5-48df-ba7e-eb6089fe970c')
-        .then(achievementsResult =>
-          expect(achievementsResult).to.exist);
+      return userHelperNoTrailingSpace.getAdvancements('879e207a-39a5-48df-ba7e-eb6089fe970c')
+        .then(advancementResult =>
+          expect(advancementResult).to.exist);
     });
   });
 });
@@ -84,7 +97,7 @@ describe('User Helper - NoPlayers', () => {
     const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
 
     it('should return empty array', () =>
-      userHelper.getAllAchievements()
+      userHelper.getAllAdvancements()
         .then(result =>
           expect(result).to.be.empty
         ));

@@ -39,7 +39,7 @@ app.use((req, res, next) => {
     partials: {
       layout: 'layouts/main',
       googleTagManager: 'partials/google-tag-manager',
-      achievementTable: 'partials/achievement-table'
+      advancementTable: 'partials/advancement-table',
     },
   });
   next();
