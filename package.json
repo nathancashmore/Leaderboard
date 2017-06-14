@@ -64,10 +64,12 @@
     "test-mocha-with-players": "mocha --grep Default",
     "test-mocha-no-cache": "mocha --grep NoCache",
     "test-mocha-no-internet": "mocha --grep NoInternet",
+    "test-mocha-no-advancements": "mocha --grep NoAdvancements",
     "test-with-players": "NODE_ENV=test npm run test-mocha-with-players",
     "test-no-players": "NODE_ENV=testNoPlayers npm run test-mocha-no-players",
     "test-no-cache": "NODE_ENV=testNoCache npm run test-mocha-no-cache",
     "test-no-internet": "NODE_ENV=testNoInternet npm run test-mocha-no-internet",
-    "test": "npm run test-with-players && npm run test-no-players && npm run test-no-cache && npm run test-no-internet"
+    "test-no-advancements": "NODE_ENV=testNoAdvancements npm run test-mocha-no-advancements",
+    "test": "npm run test-with-players && npm run test-no-players && npm run test-no-cache && npm run test-no-internet && npm run test-mocha-no-advancements"
   }
 }

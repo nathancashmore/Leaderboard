@@ -25,9 +25,12 @@ module.exports = class UserHelper {
   }
 
   static calcScore(achievementList) {
+    if (achievementList.length === 0) {
+      return 0;
+    }
     return achievementList
-      .map(x => points[`${x}`])
-      .reduce((prev, curr) => prev + curr);
+        .map(x => points[`${x}`])
+        .reduce((prev, curr) => prev + curr);
   }
 
   getNameFromExternal(userId) {

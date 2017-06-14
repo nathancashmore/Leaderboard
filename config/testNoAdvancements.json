@@ -1,0 +1,5 @@
+{
+  "MC_SERVER_PATH": "./test/data/serverNoAdvancements/",
+  "REPLAY": "replay",
+  "PORT": 25599
+}

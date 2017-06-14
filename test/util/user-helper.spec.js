@@ -104,6 +104,28 @@ describe('User Helper - NoPlayers', () => {
   });
 });
 
+describe('User Helper - NoAdvancements', () => {
+  describe('Advancements', () => {
+    const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
+
+    it('should return zero score', () => {
+      const expectedResult =
+        [
+          {
+            userId: '879e207a-39a5-48df-ba7e-eb6089fe970c',
+            advancements: [],
+            score: 0
+          },
+        ];
+
+      userHelper.getAllAdvancements()
+        .then(result =>
+          expect(result).to.equal(expectedResult)
+        );
+    });
+  });
+});
+
 describe('User Helper - NoCache', () => {
   describe('Name', () => {
     const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
