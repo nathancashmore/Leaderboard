@@ -67,11 +67,12 @@ table {
 
 .advancement {
   display: inline-block;
-  vertical-align: text-top;
   background-repeat: no-repeat;
   background-image: url('../images/InvSprite.png');
-  width: 34px;
-  height: 34px;
+  background-color: RGB(170, 126, 15);
+  width: 32px;
+  height: 32px;
+  vertical-align: super;
 }
 
 .minecraft-story-root{
@@ -122,6 +123,7 @@ table {
 .minecraft-story-enter_the_end{
   background-position:-64px -800px;
 }
+
 .minecraft-adventure-root{
   background-position:-576px -1184px;
 }
@@ -152,6 +154,97 @@ table {
 .minecraft-adventure-sniper_duel{
   background-position:-576px -1248px;
 }
+
+.minecraft-nether-root{
+  background-position:-704px -1344px;
+}
+.minecraft-nether-fast_travel{
+  background-position:-576px -1184px;
+}
+.minecraft-nether-find_fortress{
+  background-position:-320px -992px;
+}
+.minecraft-nether-return_to_sender{
+  background-position:-672px -1184px;
+}
+.minecraft-nether-obtain_blaze_rod{
+  background-position:-448px -640px;
+}
+.minecraft-nether-get_wither_skull{
+  background-position:-224px -960px;
+}
+.minecraft-nether-uneasy_alliance{
+  background-position:-544px -640px;
+}
+.minecraft-nether-brew_potion{
+  background-position:-96px -1088px;
+}
+.minecraft-nether-summon_wither{
+  background-position:-352px -1120px;
+}
+.minecraft-nether-all_potions{
+  background-position:-928px -640px;
+}
+.minecraft-nether-create_beacon{
+  background-position:-544px -1216px;
+}
+.minecraft-nether-all_effects{
+  background-position:-864px -640px;
+}
+.minecraft-nether-create_full_beacon{
+  background-position:-544px -1216px;
+}
+
+.minecraft-end-root{
+  background-position:-64px -800px;
+}
+.minecraft-end-kill_dragon{
+  background-position:-128px -960px;
+}
+.minecraft-end-dragon_egg{
+  background-position:-992px -768px;
+}
+.minecraft-end-enter_end_gateway{
+  background-position:-32px -1120px;
+}
+.minecraft-end-respawn_dragon{
+  background-position:-448px -1344px;
+}
+.minecraft-end-dragon_breath{
+  background-position:-864px -1056px;
+}
+.minecraft-end-find_end_city{
+  background-position:-416px -896px;
+}
+.minecraft-end-elytra{
+  background-position:-384px -1344px;
+}
+.minecraft-end-levitate{
+  background-position:-32px -1408px;
+}
+
+.minecraft-husbandry-root{
+  background-position:-832px -864px;
+}
+.minecraft-husbandry-breed_an_animal{
+  background-position:-544px -832px;
+}
+.minecraft-husbandry-tame_an_animal{
+  background-position:-32px -1216px;
+}
+.minecraft-husbandry-plant_seed{
+  background-position:-544px -832px;
+}
+.minecraft-husbandry-breed_all_animals{
+  background-position:-640px -640px;
+}
+.minecraft-husbandry-balanced_diet{
+  background-position:-672px -800px;
+}
+.minecraft-husbandry-break_diamond_hoe{
+  background-position:-480px -1184px;
+}
+
 
 /* Stats */
 

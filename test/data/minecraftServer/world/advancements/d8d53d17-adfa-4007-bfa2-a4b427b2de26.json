@@ -1,0 +1,333 @@
+{
+  "minecraft:story/root": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_stone": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/upgrade_tools": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/iron_tools": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/deflect_arrow": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enchant_item": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/cure_zombie_villager": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/follow_ender_eye": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_end": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/fast_travel": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/return_to_sender": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/get_wither_skull": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/uneasy_alliance": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/brew_potion": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/summon_wither": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/all_potions": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_beacon": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/all_effects": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_full_beacon": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/root": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/kill_dragon": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/dragon_egg": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/enter_end_gateway": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/respawn_dragon": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/dragon_breath": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/find_end_city": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/levitate": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/trade": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/sleep_in_bed": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/totem_of_undying": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/summon_iron_golem": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/sniper_duel": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/breed_an_animal": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/plant_seed": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/breed_all_animals": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/break_diamond_hoe": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  }
+}
+

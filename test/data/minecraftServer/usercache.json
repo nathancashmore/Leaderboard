@@ -8,5 +8,10 @@
     "name": "MiniSlackmore",
     "uuid": "6eb35f96-c2c7-4332-b0b9-3d1981edae78",
     "expiresOn": "2017-07-09 10:06:35 +0100"
+  },
+  {
+    "name": "MinorSlackmore",
+    "uuid": "d8d53d17-adfa-4007-bfa2-a4b427b2de26",
+    "expiresOn": "2017-07-09 10:07:35 +0100"
   }
 ]

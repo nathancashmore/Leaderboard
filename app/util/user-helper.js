@@ -20,7 +20,12 @@ module.exports = class UserHelper {
     return Object.keys(advancements)
       .map(key => Object.assign({ name: key, done: advancements[key].done }))
       .filter(y => y.done === true)
-      .filter(x => x.name.includes(':story') || x.name.includes(':adventure'))
+      .filter(x =>
+      x.name.includes(':story') ||
+      x.name.includes(':adventure') ||
+      x.name.includes(':husbandry') ||
+      x.name.includes(':nether') ||
+      x.name.includes(':end'))
       .map(z => z.name);
   }
 
