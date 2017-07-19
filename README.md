@@ -1,4 +1,5 @@
 ![leaderboard logo](https://github.com/nathancashmore/Leaderboard/blob/master/app/assets/images/leaderboard.png "Leaderboard Logo")
+test
 
 This project has been created to provide a leaderboard for your Minecraft server.  
 This is calculated by assigning points to each achievement gained within Minecraft.
