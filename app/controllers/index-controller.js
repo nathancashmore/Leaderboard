@@ -4,6 +4,11 @@ const UserHelper = require('../util/user-helper');
 
 const router = new express.Router();
 
+const achRegEx = /(.*):(.*)\/(.*)/;
+const GAME = 1;
+const TYPE = 2;
+const NAME = 3;
+
 function getUserData(userHelper) {
   return userHelper.getAllAdvancements().then((users) => {
     const userNamePromises = [];
@@ -23,7 +28,10 @@ function getUserData(userHelper) {
         const playerData =
           {
             name: playerName === 'UNKNOWN' ? user.userId.split('-')[0] : playerName,
-            advancements: user.advancements.map(x => ({ class: x.replace(':', '-').replace('/', '-') })),
+            advancements: user.advancements.map((x) => {
+              const achMap = x.match(achRegEx);
+              return { class: `${achMap[GAME]}-${achMap[TYPE]}-${achMap[NAME]}` };
+            }),
             score: user.score
           };
 
