@@ -1,5 +1,7 @@
 const expect = require('chai').expect;
 const helper = require('../test-helper');
+const links = require('../../app/assets/json/link');
+const content = require('../../app/locales/en');
 
 const indexPage = helper.indexPage;
 
@@ -34,13 +36,25 @@ describe('Index Controller - Default', () => {
       })
   );
 
-  it('should display the correct advancements', () =>
-    indexPage.visit()
-      .then(() => {
-        expect(indexPage.advancements(expectedPlayer)).to.contain('minecraft-story-root');
-        expect(indexPage.advancements(expectedPlayer)).to.contain('minecraft-story-mine_stone');
-      })
-  );
+  [
+    { name: 'advancement-minecraft-story-root', link: 'minecraft-story', content: ['minecraft', 'story', 'root'] },
+    { name: 'advancement-minecraft-story-mine_stone', link: 'minecraft-story', content: ['minecraft', 'story', 'mine_stone'] }
+  ]
+    .forEach((adv) => {
+      it(`should display the advancement ${adv.name}`, () =>
+      indexPage.visit()
+        .then(() => {
+          const advancement = indexPage.advancement(expectedPlayer, adv.name);
+          const titleContent =
+            content.advancement.title[adv.content[0]][adv.content[1]][adv.content[2]];
+          const descriptionContent =
+            content.advancement.description[adv.content[0]][adv.content[1]][adv.content[2]];
+
+          expect(advancement.href).to.equal(links[adv.link]);
+          expect(advancement.title).to.equal(`${titleContent} : ${descriptionContent}`);
+        })
+    );
+    });
 
   it('should display the correct score', () =>
     indexPage.visit()

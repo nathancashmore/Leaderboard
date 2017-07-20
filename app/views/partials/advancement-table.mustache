@@ -9,7 +9,7 @@
         <td data-test="player-name">{{name}} </td>
         <td data-test="advancements">
           {{#advancements}}
-            <span class="advancement {{class}}"></span>
+            <a href="{{link}}" target="_blank" class="advancement {{class}}" title="{{title}} : {{description}}" data-test="{{ref}}"></a>
           {{/advancements}}
         </td>
         <td data-test="score">{{score}}</td>

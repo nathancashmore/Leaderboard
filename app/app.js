@@ -6,12 +6,14 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const config = require('getconfig');
 const Replay = require('replay');
+const i18n = require('./middleware/i18n');
 
 const indexController = require('./controllers/index-controller');
 
 Replay.mode = process.env.REPLAY || config.REPLAY;
 
 const app = express();
+i18n(app);
 
 // view engine setup
 const cons = require('consolidate');

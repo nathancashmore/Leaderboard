@@ -1,8 +1,15 @@
 const express = require('express');
+const i18n = require('i18n');
 const ServerHelper = require('../util/server-helper');
 const UserHelper = require('../util/user-helper');
+const link = require('../assets/json/link');
 
 const router = new express.Router();
+
+const achRegEx = /(.*):(.*)\/(.*)/;
+const GAME = 1;
+const TYPE = 2;
+const NAME = 3;
 
 function getUserData(userHelper) {
   return userHelper.getAllAdvancements().then((users) => {
@@ -23,7 +30,18 @@ function getUserData(userHelper) {
         const playerData =
           {
             name: playerName === 'UNKNOWN' ? user.userId.split('-')[0] : playerName,
-            advancements: user.advancements.map(x => ({ class: x.replace(':', '-').replace('/', '-') })),
+            advancements: user.advancements.map((x) => {
+              const achMap = x.match(achRegEx);
+              return {
+                class: `${achMap[GAME]}-${achMap[TYPE]}-${achMap[NAME]}`,
+                // eslint-disable-next-line no-underscore-dangle
+                title: i18n.__(`advancement.title.${achMap[GAME]}.${achMap[TYPE]}.${achMap[NAME]}`),
+                // eslint-disable-next-line no-underscore-dangle
+                description: i18n.__(`advancement.description.${achMap[GAME]}.${achMap[TYPE]}.${achMap[NAME]}`),
+                link: link[`${achMap[GAME]}-${achMap[TYPE]}`],
+                ref: `advancement-${achMap[GAME]}-${achMap[TYPE]}-${achMap[NAME]}`
+              };
+            }),
             score: user.score
           };
 
