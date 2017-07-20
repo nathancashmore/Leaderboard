@@ -1,0 +1,142 @@
+{
+  "advancement": {
+    "title": {
+      "minecraft": {
+        "story": {
+          "root": "Minecraft",
+          "mine_stone": "Stone Age",
+          "upgrade_tools": "Getting an Upgrade",
+          "smelt_iron": "Acquire Hardware",
+          "obtain_armor": "Suit Up",
+          "lava_bucket": "Hot Stuff",
+          "iron_tools": "Isn't It Iron Pick",
+          "deflect_arrow": "Not Today, Thank You",
+          "form_obsidian": "Ice Bucket Challenge",
+          "mine_diamond": "Diamonds!",
+          "enter_the_nether": "We Need to Go Deeper",
+          "shiny_gear": "Cover Me With Diamonds",
+          "enchant_item": "Enchanter",
+          "cure_zombie_villager": "Zombie Doctor",
+          "follow_ender_eye": "Eye Spy",
+          "enter_the_end": "The End?"
+        },
+        "nether": {
+          "root": "Nether​",
+          "fast_travel": "Subspace Bubble​",
+          "find_fortress": "A Terrible Fortress​",
+          "return_to_sender": "Return to Sender​",
+          "obtain_blaze_rod": "Into Fire​",
+          "get_wither_skull": "Spooky Scary Skeleton​",
+          "uneasy_alliance": "Uneasy Alliance​",
+          "brew_potion": "Local Brewery​",
+          "summon_wither": "Withering Heights​",
+          "all_potions": "A Furious Cocktail​",
+          "create_beacon": "Bring Home the Beacon​",
+          "all_effects": "How Did We Get Here?​",
+          "create_full_beacon": "Beaconator​"
+        },
+        "end": {
+          "root":"The End​",
+          "kill_dragon":"Free the End​",
+          "dragon_egg":"The Next Generation​",
+          "enter_end_gateway":"  Remote Getaway​",
+          "respawn_dragon":"The End... Again...​",
+          "dragon_breath":" You Need a Mint​",
+          "find_end_city":" The City at the End of the Game​",
+          "elytra":"Sky's the Limit​",
+          "levitate":"Great View From Up Here​"
+        },
+        "adventure": {
+          "root":"Adventure​",
+          "kill_a_mob":"Monster Hunter​",
+          "trade":"What a Deal!​",
+          "sleep_in_bed":"Sweet dreams​",
+          "shoot_arrow":"Take Aim​",
+          "kill_all_mobs":"Monsters Hunted​",
+          "totem_of_undying":"Postmortal​",
+          "summon_iron_golem":"Hired Help​",
+          "adventuring_time":"Adventuring Time​",
+          "sniper_duel":"Sniper duel​"
+        },
+        "husbandry": {
+          "root":"Husbandry​",
+          "breed_an_animal":"The Parrots and the Bats​",
+          "tame_an_animal":"Best Friends Forever​",
+          "plant_seed":"A Seedy Place​",
+          "breed_all_animals":"Two by Two​",
+          "balanced_diet":"A Balanced Diet​",
+          "break_diamond_hoe":"Serious Dedication​"
+        }
+      }
+    },
+    "description": {
+      "minecraft": {
+        "story": {
+          "root": "The heart and story of the game",
+          "mine_stone": "Mine stone with your new pickaxe",
+          "upgrade_tools": "Construct a better pickaxe",
+          "smelt_iron": "Smelt an iron ingot",
+          "obtain_armor": "Protect yourself with a piece of iron armor",
+          "lava_bucket": "Fill a bucket with lava",
+          "iron_tools": "Upgrade your pickaxe",
+          "deflect_arrow": "Deflect an arrow with a shield",
+          "form_obsidian": "Form and mine a block of Obsidian",
+          "mine_diamond": "Acquire diamonds",
+          "enter_the_nether": "Build, light and enter a Nether Portal",
+          "shiny_gear": "Diamond armor saves lives",
+          "enchant_item": "Enchant an item at an Enchanting Table",
+          "cure_zombie_villager": "Weaken and then cure a zombie villager",
+          "follow_ender_eye": "Follow an Ender Eye",
+          "enter_the_end": "Enter the End Portal"
+        },
+        "nether": {
+          "root": "Bring summer clothes​",
+          "fast_travel": "Use the Nether to travel 7km in the Overworld​",
+          "find_fortress": "Break your way into a Nether Fortress​",
+          "return_to_sender": "Destroy a Ghast with a fireball​",
+          "obtain_blaze_rod": "Relieve a Blaze of its rod​",
+          "get_wither_skull": "Obtain a wither skeleton's skull​",
+          "uneasy_alliance": "Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it.",
+          "brew_potion": "Brew a potion",
+          "summon_wither": "Summon the Wither",
+          "all_potions": "Have every potion effect applied at the same time​",
+          "create_beacon": "Construct and place a Beacon​",
+          "all_effects": "Have every effect applied at the same time​",
+          "create_full_beacon": "Bring a beacon to full power"
+        },
+        "end": {
+          "root": "Or the beginning?​",
+          "kill_dragon": "Good luck​",
+          "dragon_egg": "Hold the Dragon Egg​",
+          "enter_end_gateway": "Escape the island​",
+          "respawn_dragon": "Respawn the ender dragon.​",
+          "dragon_breath": "Collect dragon's breath in a glass bottle.",
+          "find_end_city": "Go on in, what could happen?​",
+          "elytra": "Find an Elytra​",
+          "levitate": "Levitate up 50 blocks from the attacks of a Shulker"
+        },
+        "adventure": {
+          "root": "Adventure, exploration, and combat​",
+          "kill_a_mob": "Kill any hostile monster​",
+          "trade": "Successfully trade with a Villager​",
+          "sleep_in_bed": "Change your respawn point​",
+          "shoot_arrow": "Shoot something with a bow and arrow​",
+          "kill_all_mobs": "Kill one of every hostile monster​",
+          "totem_of_undying": "Use a Totem of Undying to cheat death​",
+          "summon_iron_golem": "Summon an Iron Golem to help defend a village​",
+          "adventuring_time": "Discover every biome​",
+          "sniper_duel": "Kill a skeleton with an arrow from more than 50 meters"
+        },
+        "husbandry": {
+          "root": "The world is full of friends and food​",
+          "breed_an_animal": "Breed two animals together​",
+          "tame_an_animal": "Tame an animal​",
+          "plant_seed": "Plant a seed and watch it grow​",
+          "breed_all_animals": "Breed all the animals!​",
+          "balanced_diet": "Eat everything that is edible, even if it's not good for you​",
+          "break_diamond_hoe": "Completely use up a diamond hoe, and then reevaluate your life choices"
+        }
+      }
+    }
+  }
+}
