@@ -1,5 +1,7 @@
 const PropertiesReader = require('properties-reader');
 
+const colorCharRegEx = /\\u00A7./g;
+
 module.exports = class ServerHelper {
 
   constructor(serverPath, host) {
@@ -12,7 +14,8 @@ module.exports = class ServerHelper {
 
     const props = PropertiesReader(propsFile);
     const connecturl = `${this.host}:${props.get('server-port')}`;
+    const motd = props.get('motd').replace(colorCharRegEx, '');
 
-    return Object.assign(props.getAllProperties(), { ip: this.host, connecturl });
+    return Object.assign(props.getAllProperties(), { ip: this.host, connecturl, motd });
   }
 };
