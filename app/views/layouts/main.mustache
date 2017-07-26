@@ -4,9 +4,8 @@
 <link href="{{{ assetPath }}}stylesheets/style.css" media="screen" rel="stylesheet" type="text/css"/>
 {{/head}}
 
-{{$bodyStart}}
+<body class="{{backgroundStyle}}">
 {{>googleTagManager}}
-{{/bodyStart}}
 
 {{$content}}
 <main id="content">
@@ -14,9 +13,8 @@
 </main>
 {{/content}}
 
-{{$bodyEnd}}
 <script type="text/javascript" src="{{{ assetPath }}}javascript/main.js"></script>
-{{/bodyEnd}}
+</body>
 
 <footer class="copyright">
     <object data="http://staticvoid.no-ip.info/copyright/leaderboard.png" type="image/png">

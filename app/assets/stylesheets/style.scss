@@ -11,8 +11,6 @@
 
 body {
   font-family: "Minecraft Regular";
-  background-image: url('../images/obsidian_block.jpeg');
-  color: white;
   text-align: center;
 }
 
@@ -43,12 +41,7 @@ table {
 }
 
 .copyright {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
+  margin: 100px 30px;
 }
 
 .copyright p {
@@ -61,6 +54,49 @@ table {
   height: 200px;
   border: solid 1px #000;
   position: relative;
+}
+
+.waiting {
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  padding-top: 320px;
+}
+
+/* Background */
+.obsidian {
+  background-image: url('../images/obsidian_block.jpeg');
+  color: white;
+}
+
+.obsidian .waiting {
+  background-image: url('../images/creeper_green.png');
+}
+
+.netherrack {
+  background-image: url('../images/netherrack_block.png');
+  color: white;
+}
+
+.netherrack .waiting {
+  background-image: url('../images/creeper_blue.png');
+}
+
+.prismarine {
+  background-image: url('../images/prismarine_block.png');
+  color: white;
+}
+
+.prismarine .waiting {
+  background-image: url('../images/creeper_blue.png');
+}
+
+.lapis {
+  background-image: url('../images/lapis_block.jpeg');
+  color: white;
+}
+
+.lapis .waiting {
+  background-image: url('../images/creeper_red.png');
 }
 
 /* Advancements */

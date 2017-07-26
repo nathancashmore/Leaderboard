@@ -14,7 +14,10 @@ npm install
 ```
 
 ## Start up - Quick ##
-To start the application which will run on a default port of **```25566```** and looks for a server in the directory **```../MinecraftServer```**
+To start the application with the default values:
+* PORT = ```25566```
+* MC_SERVER_PATH = ```../MinecraftServer```
+* BACKGROUND = ```obsidian```
 
 ```
 npm run watch
@@ -23,7 +26,7 @@ npm run watch
 ## Start up - Custom ##
 You can change any of the run parameters on the command line at startup:
 ```
-MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" npm run watch
+MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" npm run watch
 ```
 
 ## Use ##
@@ -35,7 +38,14 @@ View the leaderboard by going to the hostname and port it started on.
 
 * Points for the achievements can be changed by altering ```app/assets/json/points.json```
 * Banner on the leaderboard can be changed by changing ```app/assets/images/banner.png```
-
+* BACKGROUND start parameter can be any of the following:
+```
+obsidian
+lapis
+netherrack
+prismarine
+```
+ 
 ## Release (< 1.11) ##
 The latest code works with Minecraft 1.12 and Advancements.  
 For earlier Minecraft servers use the [v1.11 release](https://github.com/nathancashmore/Leaderboard/releases/tag/v1.11).

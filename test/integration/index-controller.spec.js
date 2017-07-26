@@ -8,6 +8,13 @@ const indexPage = helper.indexPage;
 describe('Index Controller - Default', () => {
   const expectedPlayer = 'MajorSlackmore';
 
+  it('should display the correct template', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.backgroundStyle()).to.equal('obsidian');
+      })
+  );
+
   it('should display the message of the day', () =>
     indexPage.visit()
       .then(() => {
