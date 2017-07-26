@@ -1,5 +1,6 @@
 {
   "MC_SERVER_PATH": "./test/data/minecraftServer/",
   "REPLAY": "replay",
-  "PORT": 25599
+  "PORT": 25599,
+  "BACKGROUND": "obsidian"
 }
