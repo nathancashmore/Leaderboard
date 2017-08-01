@@ -5,7 +5,10 @@
 <h1><img src="{{{ assetPath }}}images/leaderboard.png"></h1>
 
 <h2 data-test="motd">{{serverDetails.motd}}</h2>
+
+{{#displayServerDetails}}
 <h3 data-test="server-details" id="server-details">{{serverDetails.connecturl}}</h3>
+{{/displayServerDetails}}
 
 {{#waitingForPlayers}}
     <div data-test="waiting-for-players" class="waiting">

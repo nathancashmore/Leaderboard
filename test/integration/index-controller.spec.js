@@ -154,3 +154,10 @@ describe('Index Controller - NoInternet', () => {
   );
 });
 
+describe('Index Controller - OtherConfig', () => {
+  it('should NOT display the server connection details', () =>
+    indexPage.visit()
+      .then(() => expect(indexPage.serverDetails()).to.be.empty)
+  );
+});
+

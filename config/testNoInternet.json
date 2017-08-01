@@ -2,5 +2,6 @@
   "MC_SERVER_PATH": "./test/data/serverNoInternet/",
   "REPLAY": "replay",
   "PORT": 25599,
-  "BACKGROUND": "obsidian"
+  "BACKGROUND": "obsidian",
+  "DISPLAY_SERVERNAME": true
 }

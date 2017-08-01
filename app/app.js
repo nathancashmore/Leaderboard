@@ -27,6 +27,7 @@ const basePath = app.locals.basePath = process.env.BASE_PATH || config.BASE_PATH
 const assetPath = `${basePath}/`;
 const googleTagManagerId = process.env.GOOGLE_TAG_MANAGER_ID || config.GOOGLE_TAG_MANAGER_ID;
 const backgroundStyle = process.env.BACKGROUND || config.BACKGROUND;
+const displayServerDetails = process.env.DISPLAY_SERVERNAME || config.DISPLAY_SERVERNAME;
 
 app.locals.mcServerPath = process.env.MC_SERVER_PATH || config.MC_SERVER_PATH;
 
@@ -40,6 +41,7 @@ app.use((req, res, next) => {
     basePath,
     googleTagManagerId,
     backgroundStyle,
+    displayServerDetails,
     partials: {
       layout: 'layouts/main',
       googleTagManager: 'partials/google-tag-manager',
