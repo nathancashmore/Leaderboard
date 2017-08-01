@@ -3,5 +3,6 @@
   "PORT": 25566,
   "REPLAY": "bloody",
   "BASE_PATH": "",
-  "BACKGROUND": "obsidian"
+  "BACKGROUND": "obsidian",
+  "DISPLAY_SERVERNAME": true
 }

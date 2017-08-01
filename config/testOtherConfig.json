@@ -3,5 +3,5 @@
   "REPLAY": "replay",
   "PORT": 25599,
   "BACKGROUND": "obsidian",
-  "DISPLAY_SERVERNAME": true
+  "DISPLAY_SERVERNAME": false
 }
