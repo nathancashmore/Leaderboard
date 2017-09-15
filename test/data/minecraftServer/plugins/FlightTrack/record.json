@@ -1,0 +1,15 @@
+[
+  {
+    "course": "TestCourse",
+    "courseTimeList": [
+      {
+        "player": "MajorSlackmore",
+        "time": 10000
+      },
+      {
+        "player": "MiniSlackmore",
+        "time": 9000
+      }
+    ]
+  }
+]

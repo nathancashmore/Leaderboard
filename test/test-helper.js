@@ -4,6 +4,7 @@ Zombie.site = 'http://localhost:25599';
 const browser = new Zombie();
 
 const IndexPage = require('./helper/index-page');
+const FlightTrackPage = require('./helper/flight-track-page');
 
 const config = require('getconfig');
 
@@ -13,6 +14,7 @@ require('../bin/www'); // This starts the web server, and ensures it is only
 
 module.exports = {
   indexPage: new IndexPage(browser),
+  flightTrackPage: new FlightTrackPage(browser),
   browser,
   config
 };
