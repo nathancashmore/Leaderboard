@@ -9,6 +9,7 @@ const Replay = require('replay');
 const i18n = require('./middleware/i18n');
 
 const indexController = require('./controllers/index-controller');
+const flightTrackController = require('./controllers/flight-track-controller');
 
 Replay.mode = process.env.REPLAY || config.REPLAY;
 
@@ -65,6 +66,7 @@ app.use(assetPath, express.static(path.join(__dirname, '..', 'dist', 'public')))
 
 app.use(`${basePath}/`, indexController);
 app.use(`${basePath}/leaderboard`, indexController);
+app.use(`${basePath}/flight-track`, flightTrackController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

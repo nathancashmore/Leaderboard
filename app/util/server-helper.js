@@ -1,4 +1,5 @@
 const PropertiesReader = require('properties-reader');
+const readFile = require('fs-readfile-promise');
 
 const colorCharRegEx = /\\u00A7./g;
 
@@ -17,5 +18,13 @@ module.exports = class ServerHelper {
     const motd = props.get('motd').replace(colorCharRegEx, '');
 
     return Object.assign(props.getAllProperties(), { ip: this.host, connecturl, motd });
+  }
+
+  getFlightTrackRecords() {
+    const pathToData = `${this.serverPath}plugins/FlightTrack/record.json`;
+
+    return readFile(pathToData)
+      .then(data => JSON.parse(data))
+      .catch(() => []);
   }
 };
