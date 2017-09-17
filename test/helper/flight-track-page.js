@@ -3,6 +3,7 @@ const FlightTrackPage = function FlightTrackPage(browser) {
   this.browser = browser;
 
   this.visit = course => browser.visit(`/flight-track/${course}`);
+  this.refresh = course => browser.visit(`/flight-track/${course}?refresh=true`);
   this.course = () => browser.text('[data-test="course"]');
   this.playerInPosition = ((number) => {
     const players = browser.text('[data-test="player-name"]');
@@ -13,6 +14,7 @@ const FlightTrackPage = function FlightTrackPage(browser) {
     return players.split(' ')[number];
   });
   this.noRecords = () => browser.assert.element('[data-test="no-records"]');
+  this.hasNotLoadedMainContent = () => browser.assert.elements('[data-test="main-content"]', 0);
 };
 
 module.exports = FlightTrackPage;

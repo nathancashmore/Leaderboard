@@ -14,6 +14,13 @@ describe('FlightTrack Controller - Default', () => {
         expect(flightTrackPage.timeInPosition(1)).to.equal('9000');
       })
   );
+
+  it('should only display part of the page if refresh', () =>
+    flightTrackPage.refresh('TestCourse')
+      .then(() => {
+        expect(flightTrackPage.hasNotLoadedMainContent());
+      })
+  )
 });
 
 describe('FlightTrack Controller - NoAdvancements', () => {

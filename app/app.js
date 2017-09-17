@@ -47,6 +47,7 @@ app.use((req, res, next) => {
       layout: 'layouts/main',
       googleTagManager: 'partials/google-tag-manager',
       advancementTable: 'partials/advancement-table',
+      flightTrackDetail: 'partials/flight-track-detail',
     },
   });
   next();
