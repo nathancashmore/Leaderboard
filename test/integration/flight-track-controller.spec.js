@@ -21,6 +21,13 @@ describe('FlightTrack Controller - Default', () => {
         expect(flightTrackPage.hasNotLoadedMainContent());
       })
   );
+
+  it('should only display part of the page if refresh', () =>
+    flightTrackPage.refresh('TestCourse')
+      .then(() => {
+        expect(flightTrackPage.hasNotLoadedMainContent());
+      })
+  )
 });
 
 describe('FlightTrack Controller - NoAdvancements', () => {

@@ -21,10 +21,7 @@ router.get('/:course', (req, res) => {
             .map(ct => ({ player: ct.player, time: moment(ct.time).format('mm:ss.SSS') }));
         }
       }
-
-      if (isRefresh) {
-        res.render('flight-track-detail', { course, times: courseTimes });
-      } else {
+if(isRefresh) {      res.render('flight-track-detail', { course, times: courseTimes });} else {
         res.render('flight-track', { course, times: courseTimes });
       }
     });
