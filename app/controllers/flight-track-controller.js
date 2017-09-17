@@ -1,4 +1,5 @@
 const express = require('express');
+const moment = require('moment');
 
 const ServerHelper = require('../util/server-helper');
 
@@ -16,11 +17,12 @@ router.get('/:course', (req, res) => {
         const courseRecord = records.find(cr => cr.course === course);
 
         if (courseRecord) {
-          courseTimes = courseRecord.courseTimeList;
+          courseTimes = courseRecord.courseTimeList
+            .map(ct => ({ player: ct.player, time: moment(ct.time).format('mm:ss.SSS') }));
         }
       }
 
-      if(isRefresh) {
+      if (isRefresh) {
         res.render('flight-track-detail', { course, times: courseTimes });
       } else {
         res.render('flight-track', { course, times: courseTimes });
