@@ -27,7 +27,7 @@ describe('FlightTrack Controller - Default', () => {
       .then(() => {
         expect(flightTrackPage.hasNotLoadedMainContent());
       })
-  )
+  );
 });
 
 describe('FlightTrack Controller - NoAdvancements', () => {
