@@ -63,6 +63,17 @@ minecraft server connection details on the leaderboard.
 The latest code works with Minecraft 1.12 and Advancements.  
 For earlier Minecraft servers use the [v1.11 release](https://github.com/nathancashmore/Leaderboard/releases/tag/v1.11).
 
+## Glider Rider Bukkit plugin ##
+The Leaderboard has been optimised to work with the Glider Rider Bukkit plugin which can be found on
+[Curse](https://mods.curse.com/bukkit-plugins/minecraft/278342-gliderrider)
+
+To use:
+
+* Download and install a [Spigot or CraftBukkit server](https://getbukkit.org/)
+* Create a course using the [GliderRider plugin](https://mods.curse.com/bukkit-plugins/minecraft/278342-gliderrider)
+* View the course leaderboard by going to:
+[http://127.0.0.1:25566/glider-rider/\<course-name\>](http://127.0.0.1:25566/glider-rider/<course-name>)
+
 ## Testing (UNIX / Mac OSX) ##
 
 ```

@@ -11,7 +11,7 @@ router.get('/:course', (req, res) => {
   const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
   let courseTimes = [];
 
-  serverHelper.getFlightTrackRecords()
+  serverHelper.getGliderRiderRecords()
     .then((records) => {
       if (records.length) {
         const courseRecord = records.find(cr => cr.course === course);
@@ -21,8 +21,11 @@ router.get('/:course', (req, res) => {
             .map(ct => ({ player: ct.player, time: moment(ct.time).format('mm:ss.SSS') }));
         }
       }
-if (isRefresh) {      res.render('flight-track-detail', { course, times: courseTimes });} else {
-        res.render('flight-track', { course, times: courseTimes });
+
+      if (isRefresh) {
+        res.render('glider-rider-detail', { course, times: courseTimes });
+      } else {
+        res.render('glider-rider', { course, times: courseTimes });
       }
     });
 });

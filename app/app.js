@@ -9,7 +9,7 @@ const Replay = require('replay');
 const i18n = require('./middleware/i18n');
 
 const indexController = require('./controllers/index-controller');
-const flightTrackController = require('./controllers/flight-track-controller');
+const GliderRiderController = require('./controllers/glider-rider-controller');
 
 Replay.mode = process.env.REPLAY || config.REPLAY;
 
@@ -47,7 +47,7 @@ app.use((req, res, next) => {
       layout: 'layouts/main',
       googleTagManager: 'partials/google-tag-manager',
       advancementTable: 'partials/advancement-table',
-      flightTrackDetail: 'partials/flight-track-detail',
+      gliderRiderDetail: 'partials/glider-rider-detail',
     },
   });
   next();
@@ -67,7 +67,7 @@ app.use(assetPath, express.static(path.join(__dirname, '..', 'dist', 'public')))
 
 app.use(`${basePath}/`, indexController);
 app.use(`${basePath}/leaderboard`, indexController);
-app.use(`${basePath}/flight-track`, flightTrackController);
+app.use(`${basePath}/glider-rider`, GliderRiderController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
