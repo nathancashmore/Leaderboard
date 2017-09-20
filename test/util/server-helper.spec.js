@@ -21,9 +21,9 @@ describe('Server Helper - Default', () => {
     });
   });
 
-  describe('FlightTrack Records', () => {
+  describe('GliderRider Records', () => {
     it('should return flight track data', () => {
-      serverHelper.getFlightTrackRecords()
+      serverHelper.getGliderRiderRecords()
         .then((result) => {
           expect(result[0].course).to.equal('TestCourse');
         });
@@ -34,9 +34,9 @@ describe('Server Helper - Default', () => {
 describe('Server Helper - NoAdvancements', () => {
   const serverHelper = new ServerHelper(helper.config.MC_SERVER_PATH, 'myhostname.com');
 
-  describe('FlightTrack Records', () => {
+  describe('GliderRider Records', () => {
     it('should return empty list when no records file present', () => {
-      serverHelper.getFlightTrackRecords()
+      serverHelper.getGliderRiderRecords()
         .then(result => expect(result).to.be.empty);
     });
   });

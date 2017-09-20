@@ -20,8 +20,8 @@ module.exports = class ServerHelper {
     return Object.assign(props.getAllProperties(), { ip: this.host, connecturl, motd });
   }
 
-  getFlightTrackRecords() {
-    const pathToData = `${this.serverPath}plugins/FlightTrack/record.json`;
+  getGliderRiderRecords() {
+    const pathToData = `${this.serverPath}plugins/GliderRider/record.json`;
 
     return readFile(pathToData)
       .then(data => JSON.parse(data))

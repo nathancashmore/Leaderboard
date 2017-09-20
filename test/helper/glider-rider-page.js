@@ -1,9 +1,9 @@
 
-const FlightTrackPage = function FlightTrackPage(browser) {
+const GliderRiderPage = function GliderRiderPage(browser) {
   this.browser = browser;
 
-  this.visit = course => browser.visit(`/flight-track/${course}`);
-  this.refresh = course => browser.visit(`/flight-track/${course}?refresh=true`);
+  this.visit = course => browser.visit(`/glider-rider/${course}`);
+  this.refresh = course => browser.visit(`/glider-rider/${course}?refresh=true`);
   this.course = () => browser.text('[data-test="course"]');
   this.playerInPosition = ((number) => {
     const players = browser.text('[data-test="player-name"]');
@@ -17,4 +17,4 @@ const FlightTrackPage = function FlightTrackPage(browser) {
   this.hasNotLoadedMainContent = () => browser.assert.elements('[data-test="main-content"]', 0);
 };
 
-module.exports = FlightTrackPage;
+module.exports = GliderRiderPage;

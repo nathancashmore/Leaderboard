@@ -11,7 +11,7 @@ router.get('/:course', (req, res) => {
   const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
   let courseTimes = [];
 
-  serverHelper.getFlightTrackRecords()
+  serverHelper.getGliderRiderRecords()
     .then((records) => {
       if (records.length) {
         const courseRecord = records.find(cr => cr.course === course);
@@ -23,9 +23,9 @@ router.get('/:course', (req, res) => {
       }
 
       if (isRefresh) {
-        res.render('flight-track-detail', { course, times: courseTimes });
+        res.render('glider-rider-detail', { course, times: courseTimes });
       } else {
-        res.render('flight-track', { course, times: courseTimes });
+        res.render('glider-rider', { course, times: courseTimes });
       }
     });
 });
