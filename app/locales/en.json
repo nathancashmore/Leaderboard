@@ -36,36 +36,47 @@
           "create_full_beacon": "Beaconator​"
         },
         "end": {
-          "root":"The End​",
-          "kill_dragon":"Free the End​",
-          "dragon_egg":"The Next Generation​",
-          "enter_end_gateway":"  Remote Getaway​",
-          "respawn_dragon":"The End... Again...​",
-          "dragon_breath":" You Need a Mint​",
-          "find_end_city":" The City at the End of the Game​",
-          "elytra":"Sky's the Limit​",
-          "levitate":"Great View From Up Here​"
+          "root": "The End​",
+          "kill_dragon": "Free the End​",
+          "dragon_egg": "The Next Generation​",
+          "enter_end_gateway": "  Remote Getaway​",
+          "respawn_dragon": "The End... Again...​",
+          "dragon_breath": " You Need a Mint​",
+          "find_end_city": " The City at the End of the Game​",
+          "elytra": "Sky's the Limit​",
+          "levitate": "Great View From Up Here​"
         },
         "adventure": {
-          "root":"Adventure​",
-          "kill_a_mob":"Monster Hunter​",
-          "trade":"What a Deal!​",
-          "sleep_in_bed":"Sweet dreams​",
-          "shoot_arrow":"Take Aim​",
-          "kill_all_mobs":"Monsters Hunted​",
-          "totem_of_undying":"Postmortal​",
-          "summon_iron_golem":"Hired Help​",
-          "adventuring_time":"Adventuring Time​",
-          "sniper_duel":"Sniper duel​"
+          "root": "Adventure​",
+          "kill_a_mob": "Monster Hunter​",
+          "trade": "What a Deal!​",
+          "sleep_in_bed": "Sweet dreams​",
+          "shoot_arrow": "Take Aim​",
+          "kill_all_mobs": "Monsters Hunted​",
+          "totem_of_undying": "Postmortal​",
+          "summon_iron_golem": "Hired Help​",
+          "adventuring_time": "Adventuring Time​",
+          "sniper_duel": "Sniper duel​",
+          "voluntary_exile": "Voluntary Exile",
+          "ol_besty": "Ol' Betsy",
+          "hero_of_the_village": "Hero of the village",
+          "throw_trident": "A Throwaway Joke",
+          "two_birds_one_arrow": "Two Birds, One Arrow",
+          "whos_the_pillager_now": "Who's the Pillager Now?",
+          "arbalistic": "Arbalistic",
+          "very_very_frightening": "Very Very Frightening"
         },
         "husbandry": {
-          "root":"Husbandry​",
-          "breed_an_animal":"The Parrots and the Bats​",
-          "tame_an_animal":"Best Friends Forever​",
-          "plant_seed":"A Seedy Place​",
-          "breed_all_animals":"Two by Two​",
-          "balanced_diet":"A Balanced Diet​",
-          "break_diamond_hoe":"Serious Dedication​"
+          "root": "Husbandry​",
+          "breed_an_animal": "The Parrots and the Bats​",
+          "tame_an_animal": "Best Friends Forever​",
+          "plant_seed": "A Seedy Place​",
+          "bred_all_animals": "Two by Two​",
+          "balanced_diet": "A Balanced Diet​",
+          "break_diamond_hoe": "Serious Dedication​",
+          "fishy_business": "Fishy Business",
+          "complete_catalogue": "A Complete Catalogue",
+          "tactical_fishing": "Tactical Fishing"
         }
       }
     },
@@ -125,16 +136,27 @@
           "totem_of_undying": "Use a Totem of Undying to cheat death​",
           "summon_iron_golem": "Summon an Iron Golem to help defend a village​",
           "adventuring_time": "Discover every biome​",
-          "sniper_duel": "Kill a skeleton with an arrow from more than 50 meters"
+          "sniper_duel": "Kill a skeleton with an arrow from more than 50 meters",
+          "voluntary_exile": "Kill a raid captain.  Maybe consider staying away from villages for the time being...",
+          "ol_besty": "Shoot a crossbow",
+          "hero_of_the_village" : "Successfully defend a village from a raid",
+          "throw_trident" : "Throw a trident at something",
+          "two_birds_one_arrow": "Kill two Phantoms with a piercing arrow",
+          "whos_the_pillager_now": "Give a Pillager a taste of their own medicine",
+          "arbalistic": "Kill five unique mobs with one crossbow shot",
+          "very_very_frightening": "Strike a Villager with lightning"
         },
         "husbandry": {
           "root": "The world is full of friends and food​",
           "breed_an_animal": "Breed two animals together​",
           "tame_an_animal": "Tame an animal​",
           "plant_seed": "Plant a seed and watch it grow​",
-          "breed_all_animals": "Breed all the animals!​",
+          "bred_all_animals": "Breed all the animals!​",
           "balanced_diet": "Eat everything that is edible, even if it's not good for you​",
-          "break_diamond_hoe": "Completely use up a diamond hoe, and then reevaluate your life choices"
+          "break_diamond_hoe": "Completely use up a diamond hoe, and then reevaluate your life choices",
+          "fishy_business": "Catch a fish",
+          "complete_catalogue": "Tame all cat variants!",
+          "tactical_fishing": "Catch a fish... without a fishing rod!"
         }
       }
     }
