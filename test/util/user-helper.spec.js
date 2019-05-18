@@ -109,15 +109,26 @@ describe('User Helper - Default', () => {
               'minecraft:adventure/summon_iron_golem',
               'minecraft:adventure/adventuring_time',
               'minecraft:adventure/sniper_duel',
+              'minecraft:adventure/voluntary_exile',
+              'minecraft:adventure/ol_besty',
+              'minecraft:adventure/hero_of_the_village',
+              'minecraft:adventure/throw_trident',
+              'minecraft:adventure/two_birds_one_arrow',
+              'minecraft:adventure/whos_the_pillager_now',
+              'minecraft:adventure/arbalistic',
+              'minecraft:adventure/very_very_frightening',
               'minecraft:husbandry/root',
               'minecraft:husbandry/breed_an_animal',
               'minecraft:husbandry/tame_an_animal',
               'minecraft:husbandry/plant_seed',
-              'minecraft:husbandry/breed_all_animals',
+              'minecraft:husbandry/bred_all_animals',
               'minecraft:husbandry/balanced_diet',
-              'minecraft:husbandry/break_diamond_hoe'
+              'minecraft:husbandry/break_diamond_hoe',
+              'minecraft:husbandry/fishy_business',
+              'minecraft:husbandry/complete_catalogue',
+              'minecraft:husbandry/tactical_fishing'
             ],
-            score: 550
+            score: 660
           },
           {
             userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',

@@ -105,10 +105,15 @@ table {
   display: inline-block;
   background-repeat: no-repeat;
   background-image: url('../images/InvSprite.png');
-  background-color: RGB(170, 126, 15);
+  background-color: white;
   width: 32px;
   height: 32px;
   vertical-align: super;
+  border-style: outset;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
 }
 
 .minecraft-story-root{
@@ -189,6 +194,30 @@ table {
 }
 .minecraft-adventure-sniper_duel{
   background-position:-576px -1248px;
+}
+.minecraft-adventure-voluntary_exile{
+  background-position:-96px -2464px
+}
+.minecraft-adventure-ol_besty{
+  background-position:-416px -2368px
+}
+.minecraft-adventure-hero_of_the_village{
+  background-position:-96px -2464px
+}
+.minecraft-adventure-throw_trident{
+  background-position:-608px -1696px
+}
+.minecraft-adventure-two_birds_one_arrow{
+  background-position:-416px -2368px
+}
+.minecraft-adventure-whos_the_pillager_now{
+  background-position:-416px -2368px
+}
+.minecraft-adventure-arbalistic{
+  background-position:-416px -2368px
+}
+.minecraft-adventure-very_very_frightening{
+  background-position:-608px -1696px
 }
 
 .minecraft-nether-root{
@@ -271,7 +300,7 @@ table {
 .minecraft-husbandry-plant_seed{
   background-position:-544px -832px;
 }
-.minecraft-husbandry-breed_all_animals{
+.minecraft-husbandry-bred_all_animals{
   background-position:-640px -640px;
 }
 .minecraft-husbandry-balanced_diet{
@@ -279,6 +308,15 @@ table {
 }
 .minecraft-husbandry-break_diamond_hoe{
   background-position:-480px -1184px;
+}
+.minecraft-husbandry-fishy_business{
+  background-position:-448px -3552px
+}
+.minecraft-husbandry-complete_catalogue{
+  background-position:-896px -1664px
+}
+.minecraft-husbandry-tactical_fishing{
+  background-position:-704px -1664px
 }
 
 

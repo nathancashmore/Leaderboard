@@ -2,6 +2,7 @@ const expect = require('chai').expect;
 const helper = require('../test-helper');
 const links = require('../../app/assets/json/link');
 const content = require('../../app/locales/en');
+const points = require('../../app/assets/json/points');
 
 const indexPage = helper.indexPage;
 
@@ -78,6 +79,43 @@ describe('Index Controller - Default', () => {
         expect(indexPage.playerInPosition(2)).to.equal('MajorSlackmore');
       })
   );
+});
+
+function getAdvancementDetails() {
+  const detailsArray = [];
+  const totalAch = Object.keys(points).length;
+
+  for (let i = 0; i < totalAch; i += 1) {
+    const rawEntry = Object.keys(points)[i];
+    const topic = rawEntry.split(':')[1].split('/')[0];
+    const achievement = rawEntry.split(':')[1].split('/')[1];
+    const domain = rawEntry.split(':')[0];
+
+    detailsArray.push({ name: `advancement-${domain}-${topic}-${achievement}`, link: `${domain}-${topic}`, content: [`${domain}`, `${topic}`, `${achievement}`] });
+  }
+
+  return detailsArray;
+}
+
+describe('Index Controller - ALL Advancements', () => {
+  const allAdvancementPlayer = 'MinorSlackmore';
+  const advDetails = getAdvancementDetails();
+
+  advDetails.forEach((adv) => {
+    it(`should display the advancement ${adv.name}`, () =>
+        indexPage.visit()
+          .then(() => {
+            const advancement = indexPage.advancement(allAdvancementPlayer, adv.name);
+            const titleContent =
+              content.advancement.title[adv.content[0]][adv.content[1]][adv.content[2]];
+            const descriptionContent =
+              content.advancement.description[adv.content[0]][adv.content[1]][adv.content[2]];
+
+            expect(advancement.href).to.equal(links[adv.link]);
+            expect(advancement.title).to.equal(`${titleContent} : ${descriptionContent}`);
+          })
+      );
+  });
 });
 
 describe('Index Controller Stats Only - Default', () => {

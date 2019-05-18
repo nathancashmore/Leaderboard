@@ -287,6 +287,54 @@
     },
     "done": true
   },
+  "minecraft:adventure/voluntary_exile": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/ol_besty": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/hero_of_the_village": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/throw_trident": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/two_birds_one_arrow": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/whos_the_pillager_now": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/arbalistic": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/very_very_frightening": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
   "minecraft:husbandry/root": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
@@ -311,7 +359,7 @@
     },
     "done": true
   },
-  "minecraft:husbandry/breed_all_animals": {
+  "minecraft:husbandry/bred_all_animals": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
     },
@@ -324,6 +372,24 @@
     "done": true
   },
   "minecraft:husbandry/break_diamond_hoe": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/fishy_business": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/complete_catalogue": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/tactical_fishing": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
     },
