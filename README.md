@@ -25,7 +25,7 @@ npm start
 ## Start up - Custom ##
 You can change any of the run parameters on the command line at startup:
 ```
-MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" npm run watch
+MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" npm start
 ```
 
 ## Start up - Config file ##
@@ -60,7 +60,7 @@ prismarine
 minecraft server connection details on the leaderboard.
   
 ## Release (< 1.11) ##
-The latest code works with Minecraft 1.12 and Advancements.  
+The latest code works with Minecraft 1.14 and Advancements.
 For earlier Minecraft servers use the [v1.11 release](https://github.com/nathancashmore/Leaderboard/releases/tag/v1.11).
 
 ## Glider Rider Bukkit plugin ##

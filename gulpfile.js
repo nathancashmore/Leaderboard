@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify');
 
 let node;
 
-gulp.task('browserify', () => {
+gulp.task('browserify', (done) => {
   browserify('app/assets/javascript/main.js')
     .bundle()
     .on('error', function (err) {
@@ -24,17 +24,19 @@ gulp.task('browserify', () => {
     .pipe(streamify(babel({ presets: ['es2015'] }))) // babel doesn't support streaming
     .pipe(streamify(uglify())) // uglify doesn't support streaming
     .pipe(gulp.dest('dist/public/javascript'));
+  done();
 });
 
-gulp.task('js-vendor', () => {
+gulp.task('js-vendor', (done) => {
   gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
   ]).pipe(gulp.dest('dist/public/javascript'));
+  done();
 });
 
-gulp.task('javascript', ['browserify', 'js-vendor']);
+gulp.task('javascript', gulp.parallel(['browserify', 'js-vendor']));
 
-gulp.task('css', () => {
+gulp.task('css', (done) => {
   gulp.src('app/assets/stylesheets/*.scss')
     .pipe(plumber())
     .pipe(
@@ -44,21 +46,24 @@ gulp.task('css', () => {
         ],
       }))
     .pipe(gulp.dest('dist/public/stylesheets/'));
+  done();
 });
 
-gulp.task('fonts', () => {
+gulp.task('fonts', (done) => {
   gulp.src('app/assets/fonts/**/*.*')
     .pipe(plumber())
     .pipe(gulp.dest('dist/public/fonts'));
+  done();
 });
 
-gulp.task('images', () => {
+gulp.task('images', (done) => {
   gulp.src('app/assets/images/*.*')
     .pipe(plumber())
     .pipe(gulp.dest('dist/public/images'));
+  done();
 });
 
-gulp.task('server', () => {
+gulp.task('server', (done) => {
   if (node) node.kill();
   node = spawn('node', ['bin/www'], { stdio: 'inherit' });
   node.on('close', (code) => {
@@ -66,16 +71,19 @@ gulp.task('server', () => {
       gulp.log('Error detected, waiting for changes...');
     }
   });
+  done();
 });
 
-gulp.task('watch', ['javascript', 'css', 'fonts', 'images', 'server'], () => {
+gulp.task('watch', gulp.parallel(['javascript', 'css', 'fonts', 'images', 'server'], (done) => {
   gulp.watch(['app/**/*.js', 'bin/www'], ['server']);
   gulp.watch('app/assets/stylesheets/*.scss', ['css']);
   gulp.watch('app/assets/javascript/**/*.js', ['browserify']);
   gulp.watch('app/assets/fonts/**/*.*', ['fonts']);
   gulp.watch('app/assets/images/*.*', ['images']);
-});
+  done();
+}));
 
+gulp.task('default', gulp.parallel(['javascript', 'css', 'fonts', 'images']));
 
 // clean up if an error goes unhandled.
 process.on('exit', () => {
