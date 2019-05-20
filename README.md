@@ -6,8 +6,13 @@ This is calculated by assigning points to each achievement gained within Minecra
 ## Setup ##
 
 * Install [NodeJs](https://nodejs.org/en/) v10.11.0
+> If installing on Windows make sure you install windows build tools first :
+
+> ```npm install --global --production windows-build-tools```
+
 * Clone this project
 * Install dependencies
+
 
 ```
 npm install

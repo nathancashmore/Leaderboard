@@ -110,7 +110,7 @@ describe('User Helper - Default', () => {
               'minecraft:adventure/adventuring_time',
               'minecraft:adventure/sniper_duel',
               'minecraft:adventure/voluntary_exile',
-              'minecraft:adventure/ol_besty',
+              'minecraft:adventure/ol_betsy',
               'minecraft:adventure/hero_of_the_village',
               'minecraft:adventure/throw_trident',
               'minecraft:adventure/two_birds_one_arrow',
