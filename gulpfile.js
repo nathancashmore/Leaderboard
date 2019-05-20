@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify');
 
 let node;
 
-gulp.task('browserify', (done) => {
+gulp.task('browserify', () =>
   browserify('app/assets/javascript/main.js')
     .bundle()
     .on('error', function (err) {
@@ -23,20 +23,18 @@ gulp.task('browserify', (done) => {
     .pipe(source('main.js'))
     .pipe(streamify(babel({ presets: ['es2015'] }))) // babel doesn't support streaming
     .pipe(streamify(uglify())) // uglify doesn't support streaming
-    .pipe(gulp.dest('dist/public/javascript'));
-  done();
-});
+    .pipe(gulp.dest('dist/public/javascript'))
+);
 
-gulp.task('js-vendor', (done) => {
+gulp.task('js-vendor', () =>
   gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
-  ]).pipe(gulp.dest('dist/public/javascript'));
-  done();
-});
+  ]).pipe(gulp.dest('dist/public/javascript'))
+);
 
 gulp.task('javascript', gulp.parallel(['browserify', 'js-vendor']));
 
-gulp.task('css', (done) => {
+gulp.task('css', () =>
   gulp.src('app/assets/stylesheets/*.scss')
     .pipe(plumber())
     .pipe(
@@ -45,23 +43,20 @@ gulp.task('css', (done) => {
           'src/assets/stylesheets',
         ],
       }))
-    .pipe(gulp.dest('dist/public/stylesheets/'));
-  done();
-});
+    .pipe(gulp.dest('dist/public/stylesheets/'))
+);
 
-gulp.task('fonts', (done) => {
+gulp.task('fonts', () =>
   gulp.src('app/assets/fonts/**/*.*')
     .pipe(plumber())
-    .pipe(gulp.dest('dist/public/fonts'));
-  done();
-});
+    .pipe(gulp.dest('dist/public/fonts'))
+);
 
-gulp.task('images', (done) => {
+gulp.task('images', () =>
   gulp.src('app/assets/images/*.*')
     .pipe(plumber())
-    .pipe(gulp.dest('dist/public/images'));
-  done();
-});
+    .pipe(gulp.dest('dist/public/images'))
+);
 
 gulp.task('server', (done) => {
   if (node) node.kill();
@@ -74,7 +69,7 @@ gulp.task('server', (done) => {
   done();
 });
 
-gulp.task('watch', gulp.parallel(['javascript', 'css', 'fonts', 'images', 'server'], (done) => {
+gulp.task('watch', gulp.series(['javascript', 'css', 'fonts', 'images', 'server'], (done) => {
   gulp.watch(['app/**/*.js', 'bin/www'], ['server']);
   gulp.watch('app/assets/stylesheets/*.scss', ['css']);
   gulp.watch('app/assets/javascript/**/*.js', ['browserify']);
