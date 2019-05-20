@@ -5,9 +5,14 @@ This is calculated by assigning points to each achievement gained within Minecra
 
 ## Setup ##
 
-* Install [NodeJs](https://nodejs.org/en/) v6.1.0
+* Install [NodeJs](https://nodejs.org/en/) v10.11.0
+> If installing on Windows make sure you install windows build tools first :
+
+> ```npm install --global --production windows-build-tools```
+
 * Clone this project
 * Install dependencies
+
 
 ```
 npm install
@@ -25,7 +30,7 @@ npm start
 ## Start up - Custom ##
 You can change any of the run parameters on the command line at startup:
 ```
-MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" npm run watch
+MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" npm start
 ```
 
 ## Start up - Config file ##
@@ -60,7 +65,7 @@ prismarine
 minecraft server connection details on the leaderboard.
   
 ## Release (< 1.11) ##
-The latest code works with Minecraft 1.12 and Advancements.  
+The latest code works with Minecraft 1.14 and Advancements.
 For earlier Minecraft servers use the [v1.11 release](https://github.com/nathancashmore/Leaderboard/releases/tag/v1.11).
 
 ## Glider Rider Bukkit plugin ##
