@@ -335,6 +335,12 @@
     },
     "done": true
   },
+  "minecraft:adventure/honey_block_slide": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
   "minecraft:husbandry/root": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
@@ -390,6 +396,18 @@
     "done": true
   },
   "minecraft:husbandry/tactical_fishing": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/safely_harvest_honey": {
+    "criteria": {
+      "has_the_recipe": "2017-07-19 19:08:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/silk_touch_nest": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
     },
