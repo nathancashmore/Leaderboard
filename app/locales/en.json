@@ -64,7 +64,8 @@
           "two_birds_one_arrow": "Two Birds, One Arrow",
           "whos_the_pillager_now": "Who's the Pillager Now?",
           "arbalistic": "Arbalistic",
-          "very_very_frightening": "Very Very Frightening"
+          "very_very_frightening": "Very Very Frightening",
+          "honey_block_slide": "Sticky Situation"
         },
         "husbandry": {
           "root": "Husbandry​",
@@ -76,7 +77,9 @@
           "break_diamond_hoe": "Serious Dedication​",
           "fishy_business": "Fishy Business",
           "complete_catalogue": "A Complete Catalogue",
-          "tactical_fishing": "Tactical Fishing"
+          "tactical_fishing": "Tactical Fishing",
+          "safely_harvest_honey": "Bee Our Guest",
+          "silk_touch_nest": "Total Beelocation"
         }
       }
     },
@@ -144,7 +147,8 @@
           "two_birds_one_arrow": "Kill two Phantoms with a piercing arrow",
           "whos_the_pillager_now": "Give a Pillager a taste of their own medicine",
           "arbalistic": "Kill five unique mobs with one crossbow shot",
-          "very_very_frightening": "Strike a Villager with lightning"
+          "very_very_frightening": "Strike a Villager with lightning",
+          "honey_block_slide": "Jump into a Honey Block to break your fall"
         },
         "husbandry": {
           "root": "The world is full of friends and food​",
@@ -156,7 +160,9 @@
           "break_diamond_hoe": "Completely use up a diamond hoe, and then reevaluate your life choices",
           "fishy_business": "Catch a fish",
           "complete_catalogue": "Tame all cat variants!",
-          "tactical_fishing": "Catch a fish... without a fishing rod!"
+          "tactical_fishing": "Catch a fish... without a fishing rod!",
+          "safely_harvest_honey": "Use a Campfire to collect Honey from a Beehive using a Bottle without aggravating the bees",
+          "silk_touch_nest": "Move a Bee Nest, with 3 bees inside, using Silk Touch"
         }
       }
     }

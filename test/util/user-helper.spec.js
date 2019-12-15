@@ -117,6 +117,7 @@ describe('User Helper - Default', () => {
               'minecraft:adventure/whos_the_pillager_now',
               'minecraft:adventure/arbalistic',
               'minecraft:adventure/very_very_frightening',
+              'minecraft:adventure/honey_block_slide',
               'minecraft:husbandry/root',
               'minecraft:husbandry/breed_an_animal',
               'minecraft:husbandry/tame_an_animal',
@@ -126,9 +127,11 @@ describe('User Helper - Default', () => {
               'minecraft:husbandry/break_diamond_hoe',
               'minecraft:husbandry/fishy_business',
               'minecraft:husbandry/complete_catalogue',
-              'minecraft:husbandry/tactical_fishing'
+              'minecraft:husbandry/tactical_fishing',
+              'minecraft:husbandry/safely_harvest_honey',
+              'minecraft:husbandry/silk_touch_nest'
             ],
-            score: 660
+            score: 690
           },
           {
             userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',
