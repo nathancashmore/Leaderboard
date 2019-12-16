@@ -24,12 +24,20 @@ tr {
 
 td {
   width: 25%;
-  font-size: x-large;
+  font-size: 2.5vw;
 }
 
 h1, h3, table {
   text-align: center;
   padding: 10px 0 10px 0;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+h1 img {
+	width: 70%;
 }
 
 table {
@@ -48,6 +56,10 @@ table {
   display: none;
 }
 
+.copyright img {
+  width: 50%;
+}
+
 #container
 {
   width: 300px;
@@ -60,6 +72,33 @@ table {
   background-repeat: no-repeat;
   background-position-x: 50%;
   padding-top: 320px;
+}
+
+/* Stats */
+
+.stat {
+  display: inline-block;
+  vertical-align: text-top;
+  background-repeat: no-repeat;
+  background-image: url('../images/StatSpriteMap.png');
+  width: 64px;
+  height: 64px;
+}
+
+.avatar {
+  width: 50%;
+}
+
+.playerKills {
+  background-position: 0px 0px;
+}
+
+.useItem_minecraft_diamond_sword {
+  background-position: -64px -0px;
+}
+
+.deaths {
+  background-position: -128px -0px;
 }
 
 /* Background */
@@ -328,29 +367,6 @@ a, a:visited, a:hover, a:active {
   background-position:-992px -32px
 }
 
-
-/* Stats */
-
-.stat {
-  display: inline-block;
-  vertical-align: text-top;
-  background-repeat: no-repeat;
-  background-image: url('../images/StatSpriteMap.png');
-  width: 64px;
-  height: 64px;
-}
-
-.playerKills {
-  background-position: 0px 0px;
-}
-
-.useItem_minecraft_diamond_sword {
-  background-position: -64px -0px;
-}
-
-.deaths {
-  background-position: -128px -0px;
-}
 
 
 
