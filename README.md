@@ -5,7 +5,7 @@ This is calculated by assigning points to each achievement gained within Minecra
 
 ## Setup ##
 
-* Install [NodeJs](https://nodejs.org/en/) v10.11.0
+* Install [NodeJs](https://nodejs.org/en/) v10
 > If installing on Windows make sure you install windows build tools first :
 
 > ```npm install --global --production windows-build-tools```
@@ -23,6 +23,8 @@ To start the application with the default values:
 * MC_SERVER_PATH = ```../MinecraftServer```
 * BACKGROUND = ```obsidian```
 * DISPLAY_SERVERNAME = ```true```
+* BANNER = ```leaderboard.png```
+
 ```
 npm start
 ```
@@ -30,7 +32,7 @@ npm start
 ## Start up - Custom ##
 You can change any of the run parameters on the command line at startup:
 ```
-MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" npm start
+MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" BANNER="myownbanner.png" npm start
 ```
 
 ## Start up - Config file ##
@@ -63,7 +65,9 @@ prismarine
 ```
 * DISPLAY_SERVERNAME can be set to ```true``` or ```false``` if you want to also show the 
 minecraft server connection details on the leaderboard.
-  
+* BANNER can be set to an alternative image file to be displayed at the top of the leaderboard.  
+Add the file you want to use to ```app/assets/images/``` directory.
+
 ## Release (< 1.11) ##
 The latest code works with Minecraft 1.14 and Advancements.
 For earlier Minecraft servers use the [v1.11 release](https://github.com/nathancashmore/Leaderboard/releases/tag/v1.11).

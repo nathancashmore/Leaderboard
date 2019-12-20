@@ -15,6 +15,7 @@ const GliderRiderPage = function GliderRiderPage(browser) {
   });
   this.noRecords = () => browser.assert.element('[data-test="no-records"]');
   this.hasNotLoadedMainContent = () => browser.assert.elements('[data-test="main-content"]', 0);
+  this.bannerImage = () => browser.query('[data-test="banner"]').src;
 };
 
 module.exports = GliderRiderPage;

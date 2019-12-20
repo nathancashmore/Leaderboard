@@ -9,6 +9,13 @@ const indexPage = helper.indexPage;
 describe('Index Controller - Default', () => {
   const expectedPlayer = 'MajorSlackmore';
 
+  it('should display the correct banner image', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.bannerImage()).to.contain('/images/glider_rider.png');
+      })
+  );
+
   it('should display the correct template', () =>
     indexPage.visit()
       .then(() => {

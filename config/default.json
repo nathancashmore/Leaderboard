@@ -4,5 +4,6 @@
   "REPLAY": "bloody",
   "BASE_PATH": "",
   "BACKGROUND": "obsidian",
-  "DISPLAY_SERVERNAME": true
+  "DISPLAY_SERVERNAME": true,
+  "BANNER": "leaderboard.png"
 }
