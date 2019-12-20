@@ -4,6 +4,13 @@ const helper = require('../test-helper');
 const gliderRiderPage = helper.gliderRiderPage;
 
 describe('GliderRider Controller - Default', () => {
+  it('should display the correct banner image', () =>
+    gliderRiderPage.visit('TestCourse')
+      .then(() => {
+        expect(gliderRiderPage.bannerImage()).to.contain('/images/glider_rider.png');
+      })
+  );
+
   it('should display the correct values', () =>
     gliderRiderPage.visit('TestCourse')
       .then(() => {
