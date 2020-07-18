@@ -10,7 +10,6 @@ const points = require('../assets/json/points.json');
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["getNameFromExternal"] }] */
 
 module.exports = class UserHelper {
-
   constructor(serverPath, levelName) {
     this.serverPath = serverPath;
     this.levelName = levelName;
@@ -21,11 +20,11 @@ module.exports = class UserHelper {
       .map(key => Object.assign({ name: key, done: advancements[key].done }))
       .filter(y => y.done === true)
       .filter(x =>
-      x.name.includes(':story') ||
-      x.name.includes(':adventure') ||
-      x.name.includes(':husbandry') ||
-      x.name.includes(':nether') ||
-      x.name.includes(':end'))
+        x.name.includes(':story') ||
+        x.name.includes(':adventure') ||
+        x.name.includes(':husbandry') ||
+        x.name.includes(':nether') ||
+        x.name.includes(':end'))
       .map(z => z.name);
   }
 
@@ -34,8 +33,8 @@ module.exports = class UserHelper {
       return 0;
     }
     return achievementList
-        .map(x => points[`${x}`])
-        .reduce((prev, curr) => prev + curr);
+      .map(x => points[`${x}`])
+      .reduce((prev, curr) => prev + curr);
   }
 
   getNameFromExternal(userId) {
