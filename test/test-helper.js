@@ -5,6 +5,7 @@ const browser = new Zombie();
 
 const IndexPage = require('./helper/index-page');
 const GliderRiderPage = require('./helper/glider-rider-page');
+const ExportPage = require('./helper/export-page');
 
 const config = require('getconfig');
 
@@ -15,6 +16,7 @@ require('../bin/www'); // This starts the web server, and ensures it is only
 module.exports = {
   indexPage: new IndexPage(browser),
   gliderRiderPage: new GliderRiderPage(browser),
+  exportPage: new ExportPage(browser),
   browser,
   config
 };

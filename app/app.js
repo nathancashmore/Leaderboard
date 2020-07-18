@@ -10,6 +10,7 @@ const i18n = require('./middleware/i18n');
 
 const indexController = require('./controllers/index-controller');
 const GliderRiderController = require('./controllers/glider-rider-controller');
+const ExportController = require('./controllers/export-controller');
 
 Replay.mode = process.env.REPLAY || config.REPLAY;
 
@@ -70,6 +71,7 @@ app.use(assetPath, express.static(path.join(__dirname, '..', 'dist', 'public')))
 app.use(`${basePath}/`, indexController);
 app.use(`${basePath}/leaderboard`, indexController);
 app.use(`${basePath}/glider-rider`, GliderRiderController);
+app.use(`${basePath}/export`, ExportController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
