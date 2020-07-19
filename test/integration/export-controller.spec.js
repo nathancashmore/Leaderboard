@@ -20,6 +20,7 @@ describe('Export Controller - Default', () => {
     }
   });
 
+  /* eslint-disable no-unused-expressions */
   it('should produce and return image file', () =>
     exportPage.visit()
       .then(() => {
