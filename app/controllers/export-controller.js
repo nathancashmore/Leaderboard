@@ -1,9 +1,32 @@
 const express = require('express');
+const phantomjs = require('phantomjs-prebuilt')
+const path = require('path')
 
 const router = new express.Router();
 
 router.get('/', (req, res) => {
-  res.json({ status: 'OK' });
+
+  const script = path.join(__dirname, '../middleware/exportLeaderboardAsImage.js')
+  const url = `http://localhost:${req.app.get('port')}/leaderboard`
+  const filename = path.join(__dirname, '../data/export.png')
+
+  const program = phantomjs.exec(script, url, filename);
+
+  program.stdout.pipe(process.stdout)
+  program.stderr.pipe(process.stderr)
+
+  program.on('exit', code => {
+    if ( code === 0) {
+      console.log(`Success - file written to ${filename}`)
+    } else {
+      console.log('Error when attempting to output file : ' + code)
+    }
+  })
+
+  setTimeout(() => {
+    console.log('Sending file')
+    res.download(filename);
+    }, 4000);
 });
 
 module.exports = router;
