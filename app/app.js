@@ -33,6 +33,7 @@ const displayServerDetails = process.env.DISPLAY_SERVERNAME || config.DISPLAY_SE
 const banner = process.env.BANNER || config.BANNER;
 
 app.locals.mcServerPath = process.env.MC_SERVER_PATH || config.MC_SERVER_PATH;
+app.locals.exportPath = process.env.EXPORT_PATH || config.EXPORT_PATH;
 
 // Middleware to set default layouts.
 // This must be done per request (and not via app.locals) as the Consolidate.js
