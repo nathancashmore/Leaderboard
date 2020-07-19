@@ -1,4 +1,5 @@
 const Zombie = require('zombie');
+const fs = require('fs');
 
 Zombie.site = 'http://localhost:25599';
 const browser = new Zombie();
@@ -13,11 +14,18 @@ require('../bin/www'); // This starts the web server, and ensures it is only
 // started once. It is a misuse of "require", and
 // should be improved.
 
+function removeFile(filename) {
+  if (fs.existsSync(filename)) {
+    fs.unlinkSync(filename);
+  }
+}
+
 module.exports = {
   indexPage: new IndexPage(browser),
   gliderRiderPage: new GliderRiderPage(browser),
   exportPage: new ExportPage(browser),
   browser,
-  config
+  config,
+  removeFile
 };
 
