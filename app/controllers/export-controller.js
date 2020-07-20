@@ -8,7 +8,7 @@ const router = new express.Router();
 router.get('/', (req, res) => {
   const script = path.join(__dirname, '../middleware/exportLeaderboardAsImage.js');
   const url = `http://localhost:${req.app.get('port')}/leaderboard`;
-  const filename = `${req.app.locals.exportPath}/export.png`;
+  const filename = `${req.app.locals.exportPath}/leaderboard.png`;
 
   const program = phantomjs.exec(script, url, filename);
 
