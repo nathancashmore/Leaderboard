@@ -71,8 +71,8 @@ minecraft server connection details on the leaderboard.
 Add the file you want to use to ```app/assets/images/``` directory.
 * EXPORT_PATH can be set to change the location where an image of the current leaderboard will be saved 
 when the [http://127.0.0.1:25566/export](http://127.0.0.1:25566/export) endpoint is requested.
-* EXPORT_FREQUENCY can be set to a number representing the number of minutes between exports
-of the leaderboard to the EXPORT_PATH directory (Default 0 - No Export)
+* EXPORT_AS_IMAGE if set to true will export the leaderboard as an image every 5 minutes and
+save it in the EXPORT_PATH directory.
 
 ## Release (< 1.11) ##
 The latest code works with Minecraft 1.14 and Advancements.
