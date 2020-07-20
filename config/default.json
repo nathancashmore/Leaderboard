@@ -1,7 +1,7 @@
 {
   "MC_SERVER_PATH": "../MinecraftServer",
   "EXPORT_PATH": "./app/data",
-  "EXPORT_FREQUENCY": 0,
+  "EXPORT_AS_IMAGE": false,
   "PORT": 25566,
   "REPLAY": "bloody",
   "BASE_PATH": "",
