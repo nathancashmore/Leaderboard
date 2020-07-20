@@ -22,7 +22,7 @@ describe('Export Controller - Default', () => {
     exportPage.visit()
       .then(() => {
         expect(file(exportFilename)).to.exist;
-        expect(md5(exportPage.body())).to.equal('f9ff56104ba25b7b6591543f3a2177c0');
+        expect(md5(exportPage.body())).to.equal('5139048834431f05072ddbf3351444f2');
       })
   ).timeout(8000);
 });

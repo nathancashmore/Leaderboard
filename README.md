@@ -97,19 +97,19 @@ To do this:
 * Create a [Spigot](https://www.spigotmc.org/wiki/spigot-installation/) Minecraft server
 * Add the [ImageMaps](https://dev.bukkit.org/projects/imagemaps) plugin
 * Change the ```EXPORT_PATH``` to be that of the ImageMaps input directory
-e.g. ```./MinecraftServer/plugins/ImageMaps/images``` 
+e.g. ```../MinecraftServer/plugins/ImageMaps/images``` 
 * Change the ```EXPORT_AS_IMAGE``` to be ```true```
 
 When you now start up the Leaderboard, every 5 mins it will export the Leaderboard
 as an image to the ImageMaps input directory.  In the game you will then be able to
 add the image to a block e.g.
  
-```imagemap leaderboard.png```
+```/imagemap leaderboard.png```
 
 You should then setup a commandblock to periodically reload the image in the game
 so it is kept upto date e.g.
 
-```imagemap leaderboard.png reload```
+```/imagemap leaderboard.png reload```
 
 
 ## Testing (UNIX / Mac OSX) ##
