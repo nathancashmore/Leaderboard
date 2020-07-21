@@ -1,7 +1,10 @@
 const chai = require('chai');
 const chaiFiles = require('chai-files');
 const path = require('path');
-const md5 = require('md5');
+const fs = require('fs');
+const PNG = require('pngjs').PNG;
+const pixelmatch = require('pixelmatch');
+const http = require('http')
 
 chai.use(chaiFiles);
 
@@ -9,20 +12,46 @@ const expect = chai.expect;
 const file = chaiFiles.file;
 const helper = require('../test-helper');
 
-const exportPage = helper.exportPage;
 const exportFilename = path.join(__dirname, '../../app/data/leaderboard.png');
+const tmpDownloadFile = path.join(__dirname, '../../app/data/download.tmp.png');
 
 describe('Export Controller - Default', () => {
-  after(() =>
+  after(() => {
     helper.removeFile(exportFilename)
-  );
+    helper.removeFile(tmpDownloadFile)
+  });
 
   /* eslint-disable no-unused-expressions */
-  it('should produce and return image file', () =>
-    exportPage.visit()
-      .then(() => {
-        expect(file(exportFilename)).to.exist;
-        expect(md5(exportPage.body())).to.equal('5139048834431f05072ddbf3351444f2');
-      })
-  ).timeout(8000);
+  it('should produce and return image file', async () => {
+
+    // Download the image from the new endpoint and save in temporary file
+    await downloadFromUrl('http://localhost:25599/export', tmpDownloadFile)
+
+    // Check the resulting image file exists on the filesystem
+    expect(file(exportFilename)).to.exist;
+
+    // Compare the image on the filesystem to the downloaded image
+    const fsImage = PNG.sync.read(fs.readFileSync(exportFilename));
+    const {width, height} = fsImage;
+    const downloadedImage = PNG.sync.read(fs.readFileSync(tmpDownloadFile));
+
+    pixelmatch(downloadedImage.data, fsImage.data, null, width, height, {threshold: 0});
+
+  }).timeout(8000);
 });
+
+function downloadFromUrl(url, dest) {
+  const file = fs.createWriteStream(dest);
+  return new Promise((resolve, reject) => {
+    http.get(url, response => {
+      response.pipe(file);
+      file.on('finish', () =>{
+        file.close(() => {
+          resolve();
+        });
+      });
+    }).on('error', err => {
+      reject(err);
+    });
+  })
+}
