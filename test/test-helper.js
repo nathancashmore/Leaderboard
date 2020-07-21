@@ -1,5 +1,6 @@
 const Zombie = require('zombie');
 const fs = require('fs');
+const http = require('http');
 
 Zombie.site = 'http://localhost:25599';
 const browser = new Zombie();
@@ -20,12 +21,29 @@ function removeFile(filename) {
   }
 }
 
+function downloadFromUrl(url, dest) {
+  const file = fs.createWriteStream(dest);
+  return new Promise((resolve, reject) => {
+    http.get(Zombie.site + url, (response) => {
+      response.pipe(file);
+      file.on('finish', () => {
+        file.close(() => {
+          resolve();
+        });
+      });
+    }).on('error', (err) => {
+      reject(err);
+    });
+  });
+}
+
 module.exports = {
   indexPage: new IndexPage(browser),
   gliderRiderPage: new GliderRiderPage(browser),
   exportPage: new ExportPage(browser),
   browser,
   config,
-  removeFile
+  removeFile,
+  downloadFromUrl
 };
 
