@@ -10,6 +10,7 @@ const i18n = require('./middleware/i18n');
 
 const indexController = require('./controllers/index-controller');
 const GliderRiderController = require('./controllers/glider-rider-controller');
+const ExportController = require('./controllers/export-controller');
 
 Replay.mode = process.env.REPLAY || config.REPLAY;
 
@@ -32,6 +33,7 @@ const displayServerDetails = process.env.DISPLAY_SERVERNAME || config.DISPLAY_SE
 const banner = process.env.BANNER || config.BANNER;
 
 app.locals.mcServerPath = process.env.MC_SERVER_PATH || config.MC_SERVER_PATH;
+app.locals.exportPath = process.env.EXPORT_PATH || config.EXPORT_PATH;
 
 // Middleware to set default layouts.
 // This must be done per request (and not via app.locals) as the Consolidate.js
@@ -70,6 +72,7 @@ app.use(assetPath, express.static(path.join(__dirname, '..', 'dist', 'public')))
 app.use(`${basePath}/`, indexController);
 app.use(`${basePath}/leaderboard`, indexController);
 app.use(`${basePath}/glider-rider`, GliderRiderController);
+app.use(`${basePath}/export`, ExportController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

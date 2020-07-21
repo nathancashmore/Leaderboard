@@ -57,18 +57,18 @@ describe('Index Controller - Default', () => {
   ]
     .forEach((adv) => {
       it(`should display the advancement ${adv.name}`, () =>
-      indexPage.visit()
-        .then(() => {
-          const advancement = indexPage.advancement(expectedPlayer, adv.name);
-          const titleContent =
-            content.advancement.title[adv.content[0]][adv.content[1]][adv.content[2]];
-          const descriptionContent =
-            content.advancement.description[adv.content[0]][adv.content[1]][adv.content[2]];
+        indexPage.visit()
+          .then(() => {
+            const advancement = indexPage.advancement(expectedPlayer, adv.name);
+            const titleContent =
+              content.advancement.title[adv.content[0]][adv.content[1]][adv.content[2]];
+            const descriptionContent =
+              content.advancement.description[adv.content[0]][adv.content[1]][adv.content[2]];
 
-          expect(advancement.href).to.equal(links[adv.link]);
-          expect(advancement.title).to.equal(`${titleContent} : ${descriptionContent}`);
-        })
-    );
+            expect(advancement.href).to.equal(links[adv.link]);
+            expect(advancement.title).to.equal(`${titleContent} : ${descriptionContent}`);
+          })
+      );
     });
 
   it('should display the correct score', () =>
@@ -104,24 +104,24 @@ function getAdvancementDetails() {
   return detailsArray;
 }
 
-describe('Index Controller - ALL Advancements', () => {
+describe('Index Controller - Default', () => {
   const allAdvancementPlayer = 'MinorSlackmore';
   const advDetails = getAdvancementDetails();
 
   advDetails.forEach((adv) => {
     it(`should display the advancement ${adv.name}`, () =>
-        indexPage.visit()
-          .then(() => {
-            const advancement = indexPage.advancement(allAdvancementPlayer, adv.name);
-            const titleContent =
+      indexPage.visit()
+        .then(() => {
+          const advancement = indexPage.advancement(allAdvancementPlayer, adv.name);
+          const titleContent =
               content.advancement.title[adv.content[0]][adv.content[1]][adv.content[2]];
-            const descriptionContent =
+          const descriptionContent =
               content.advancement.description[adv.content[0]][adv.content[1]][adv.content[2]];
 
-            expect(advancement.href).to.equal(links[adv.link]);
-            expect(advancement.title).to.equal(`${titleContent} : ${descriptionContent}`);
-          })
-      );
+          expect(advancement.href).to.equal(links[adv.link]);
+          expect(advancement.title).to.equal(`${titleContent} : ${descriptionContent}`);
+        })
+    );
   });
 });
 

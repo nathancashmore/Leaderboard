@@ -20,6 +20,8 @@ npm install
 ## Start up - Quick ##
 To start the application with the default values:
 * PORT = ```25566```
+* EXPORT_PATH = ```./app/data"```
+* EXPORT_FREQUENCY = ```0```
 * MC_SERVER_PATH = ```../MinecraftServer```
 * BACKGROUND = ```obsidian```
 * DISPLAY_SERVERNAME = ```true```
@@ -67,6 +69,10 @@ prismarine
 minecraft server connection details on the leaderboard.
 * BANNER can be set to an alternative image file to be displayed at the top of the leaderboard.  
 Add the file you want to use to ```app/assets/images/``` directory.
+* EXPORT_PATH can be set to change the location where an image of the current leaderboard will be saved 
+when the [http://127.0.0.1:25566/export](http://127.0.0.1:25566/export) endpoint is requested.
+* EXPORT_AS_IMAGE if set to true will export the leaderboard as an image every 5 minutes and
+save it in the EXPORT_PATH directory.
 
 ## Release (< 1.11) ##
 The latest code works with Minecraft 1.14 and Advancements.
@@ -82,6 +88,29 @@ To use:
 * Create a course using the [GliderRider plugin](https://mods.curse.com/bukkit-plugins/minecraft/278342-gliderrider)
 * View the course leaderboard by going to:
 [http://127.0.0.1:25566/glider-rider/\<course-name\>](http://127.0.0.1:25566/glider-rider/<course-name>)
+
+## View the Leaderboard in Minecraft ##
+It is now possible to view the Leaderboard in Minecraft itself with the help of the 
+[ImageMaps](https://dev.bukkit.org/projects/imagemaps) plugin running on a Spigot server.
+
+To do this:
+* Create a [Spigot](https://www.spigotmc.org/wiki/spigot-installation/) Minecraft server
+* Add the [ImageMaps](https://dev.bukkit.org/projects/imagemaps) plugin
+* Change the ```EXPORT_PATH``` to be that of the ImageMaps input directory
+e.g. ```../MinecraftServer/plugins/ImageMaps/images``` 
+* Change the ```EXPORT_AS_IMAGE``` to be ```true```
+
+When you now start up the Leaderboard, every 5 mins it will export the Leaderboard
+as an image to the ImageMaps input directory.  In the game you will then be able to
+add the image to a block e.g.
+ 
+```/imagemap leaderboard.png```
+
+You should then setup a commandblock to periodically reload the image in the game
+so it is kept upto date e.g.
+
+```/imagemap leaderboard.png reload```
+
 
 ## Testing (UNIX / Mac OSX) ##
 

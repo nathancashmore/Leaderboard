@@ -10,11 +10,13 @@ var http = require('http');
 var config = require('getconfig');
 
 /**
- * Get port from environment and store in Express.
+ * Setup environment variables from config
  */
 
 var port = normalizePort(process.env.PORT || config.PORT);
 app.set('port', port);
+
+var exportAsImage = normalizePort(process.env.EXPORT_AS_IMAGE || config.EXPORT_AS_IMAGE)
 
 /**
  * Create HTTP server.
@@ -88,6 +90,40 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   console.log('Listening on ' + bind);
+
+  config.PORT = port;
+  config.EXPORT_AS_IMAGE = exportAsImage;
+
   console.log("Started with the following config:");
   console.log(config)
+
+  if (exportAsImage) {
+    runExportPoller()
+  }
+}
+
+function runExportPoller() {
+    var rest_options = {
+        host: 'localhost',
+        port: port,
+        path: '/export',
+        method: 'GET'
+    };
+
+    console.log("Run export poller with following config every 5 min(s) :");
+    console.log(rest_options)
+
+    setInterval(function () {
+        var request = http.request(rest_options, function(response) {
+            response.on('end', function() {
+                console.log("Endpoint /export polled");
+            });
+        });
+
+        request.on('error', function(error) {
+            console.log("Error while calling endpoint.", error);
+        });
+
+        request.end();
+    }, 5 * 60 * 1000);
 }

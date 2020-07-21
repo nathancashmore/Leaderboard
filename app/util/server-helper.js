@@ -4,7 +4,6 @@ const readFile = require('fs-readfile-promise');
 const colorCharRegEx = /\\u00A7./g;
 
 module.exports = class ServerHelper {
-
   constructor(serverPath, host) {
     this.serverPath = serverPath;
     this.host = host;
