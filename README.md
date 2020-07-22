@@ -21,7 +21,7 @@ npm install
 To start the application with the default values:
 * PORT = ```25566```
 * EXPORT_PATH = ```./app/data"```
-* EXPORT_FREQUENCY = ```0```
+* EXPORT_AS_IMAGE = ```false```
 * MC_SERVER_PATH = ```../MinecraftServer```
 * BACKGROUND = ```obsidian```
 * DISPLAY_SERVERNAME = ```true```
