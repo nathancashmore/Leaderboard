@@ -79,12 +79,15 @@
     "test-mocha-no-internet": "mocha 'test/**/*.spec*' --grep NoInternet --exit",
     "test-mocha-no-data": "mocha 'test/**/*.spec*' --grep NoData --exit",
     "test-mocha-other-config": "mocha 'test/**/*.spec*' --grep OtherConfig --exit",
+    "test-mocha-image-compare": "mocha 'test/**/*.spec*' --grep ImageCompare --exit",
     "test-with-players": "NODE_ENV=test npm run test-mocha-with-players",
     "test-no-players": "NODE_ENV=testNoPlayers npm run test-mocha-no-players",
     "test-no-cache": "NODE_ENV=testNoCache npm run test-mocha-no-cache",
     "test-no-internet": "NODE_ENV=testNoInternet npm run test-mocha-no-internet",
     "test-no-data": "NODE_ENV=testNoData npm run test-mocha-no-data",
     "test-other-config": "NODE_ENV=testOtherConfig npm run test-mocha-other-config",
-    "test": "npm run test-with-players && npm run test-no-players && npm run test-no-cache && npm run test-no-internet && npm run test-no-data && npm run test-other-config"
+    "test-image-compare": "NODE_ENV=test npm run test-mocha-image-compare",
+    "test": "npm run test-with-players && npm run test-no-players && npm run test-no-cache && npm run test-no-internet && npm run test-no-data && npm run test-other-config && npm run test-image-compare",
+    "test-exclude-image-compare": "npm run test-with-players && npm run test-no-players && npm run test-no-cache && npm run test-no-internet && npm run test-no-data && npm run test-other-config"
   }
 }

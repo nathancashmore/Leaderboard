@@ -19,7 +19,7 @@ const expectedCourseImageA = path.join(__dirname, '../data/export/glider-rider-T
 const courseImageB = path.join(__dirname, '../../app/data/glider-rider-TestCourseB.png');
 const expectedCourseImageB = path.join(__dirname, '../data/export/glider-rider-TestCourseB.png');
 
-describe('Export Controller - Default', () => {
+describe('Export Controller - ImageCompare', () => {
   afterEach(() => {
     helper.removeFile(leaderboardImage);
     helper.removeFile(courseImageA);
