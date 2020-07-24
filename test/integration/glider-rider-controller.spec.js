@@ -30,7 +30,7 @@ describe('GliderRider Controller - Default', () => {
   );
 });
 
-describe('GliderRider Controller - NoAdvancements', () => {
+describe('GliderRider Controller - NoData', () => {
   it('should display waiting for course records', () =>
     gliderRiderPage.visit('TestCourse')
       .then(() => {

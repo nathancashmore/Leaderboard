@@ -31,7 +31,7 @@ describe('Server Helper - Default', () => {
   });
 });
 
-describe('Server Helper - NoAdvancements', () => {
+describe('Server Helper - NoData', () => {
   const serverHelper = new ServerHelper(helper.config.MC_SERVER_PATH, 'myhostname.com');
 
   describe('GliderRider Records', () => {

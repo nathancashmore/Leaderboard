@@ -183,7 +183,7 @@ describe('User Helper - NoPlayers', () => {
   });
 });
 
-describe('User Helper - NoAdvancements', () => {
+describe('User Helper - NoData', () => {
   describe('Advancements', () => {
     const userHelper = new UserHelper(config.MC_SERVER_PATH, 'world');
 
