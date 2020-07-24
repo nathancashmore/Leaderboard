@@ -5,16 +5,16 @@ const gliderRiderPage = helper.gliderRiderPage;
 
 describe('GliderRider Controller - Default', () => {
   it('should display the correct banner image', () =>
-    gliderRiderPage.visit('TestCourse')
+    gliderRiderPage.visit('TestCourseA')
       .then(() => {
         expect(gliderRiderPage.bannerImage()).to.contain('/images/glider_rider.png');
       })
   );
 
   it('should display the correct values', () =>
-    gliderRiderPage.visit('TestCourse')
+    gliderRiderPage.visit('TestCourseA')
       .then(() => {
-        expect(gliderRiderPage.course()).to.equal('TestCourse');
+        expect(gliderRiderPage.course()).to.equal('TestCourseA');
         expect(gliderRiderPage.playerInPosition(0)).to.equal('MajorSlackmore');
         expect(gliderRiderPage.timeInPosition(0)).to.equal('00:09.123');
         expect(gliderRiderPage.playerInPosition(1)).to.equal('MiniSlackmore');
@@ -23,7 +23,7 @@ describe('GliderRider Controller - Default', () => {
   );
 
   it('should only display part of the page if refresh', () =>
-    gliderRiderPage.refresh('TestCourse')
+    gliderRiderPage.refresh('TestCourseA')
       .then(() => {
         expect(gliderRiderPage.hasNotLoadedMainContent());
       })
@@ -32,7 +32,7 @@ describe('GliderRider Controller - Default', () => {
 
 describe('GliderRider Controller - NoData', () => {
   it('should display waiting for course records', () =>
-    gliderRiderPage.visit('TestCourse')
+    gliderRiderPage.visit('TestCourseA')
       .then(() => {
         expect(gliderRiderPage.noRecords());
       })

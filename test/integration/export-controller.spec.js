@@ -8,28 +8,29 @@ const expect = chai.expect;
 const file = chaiFiles.file;
 const helper = require('../test-helper');
 
-const leaderboardExportFilename = path.join(__dirname, '../../app/data/leaderboard.png');
+const leaderboardImage = path.join(__dirname, '../../app/data/leaderboard.png');
 const expectedLeaderboardImage = path.join(__dirname, '../data/export/leaderboard.png');
 
-const gliderRiderCourseExportFilename = path.join(__dirname, '../../app/data/glider-rider-TestCourse.png');
-const expectedGliderRiderCourseImage = path.join(__dirname, '../data/export/glider-rider-TestCourse.png');
+const courseImage = path.join(__dirname, '../../app/data/glider-rider-TestCourseA.png');
+const expectedCourseImage = path.join(__dirname, '../data/export/glider-rider-TestCourseA.png');
 
 describe('Export Controller - Default', () => {
-  after(() => {
-    helper.removeFile(leaderboardExportFilename);
-    helper.removeFile(gliderRiderCourseExportFilename);
+  afterEach(() => {
+    helper.removeFile(leaderboardImage);
+    helper.removeFile(courseImage);
   });
 
   /* eslint-disable no-unused-expressions */
   it('should produce and return image file for leaderboard', async () => {
-    await helper.downloadFromUrl('/export/leaderboard', leaderboardExportFilename);
-    expect(file(leaderboardExportFilename)).to.exist;
-    helper.compareImages(leaderboardExportFilename, expectedLeaderboardImage);
+    await helper.downloadFromUrl('/export/leaderboard', leaderboardImage);
+    expect(file(leaderboardImage)).to.exist;
+    expect(helper.pixelImageDiff(leaderboardImage, expectedLeaderboardImage)).to.equal(0);
   });
 
+  /* eslint-disable no-unused-expressions */
   it('should produce and return image file for glider-rider course', async () => {
-    await helper.downloadFromUrl('/export/glider-rider/TestCourse', gliderRiderCourseExportFilename);
-    expect(file(gliderRiderCourseExportFilename)).to.exist;
-    helper.compareImages(gliderRiderCourseExportFilename, expectedGliderRiderCourseImage);
+    await helper.downloadFromUrl('/export/glider-rider/TestCourseA', courseImage);
+    expect(file(courseImage)).to.exist;
+    expect(helper.pixelImageDiff(courseImage, expectedCourseImage)).to.equal(0);
   });
 });

@@ -20,7 +20,7 @@ module.exports = class ServerHelper {
   }
 
   getGliderRiderRecords() {
-    const pathToData = `${this.serverPath}plugins/GliderRider/record.json`;
+    const pathToData = `${this.serverPath}/plugins/GliderRider/record.json`;
 
     return readFile(pathToData)
       .then(data => JSON.parse(data))

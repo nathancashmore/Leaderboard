@@ -39,12 +39,12 @@ function downloadFromUrl(url, dest) {
   });
 }
 
-function compareImages(imageAFilename, imageBFilename) {
+function pixelImageDiff(imageAFilename, imageBFilename) {
   const imageA = PNG.sync.read(fs.readFileSync(imageAFilename));
   const { width, height } = imageA;
   const imageB = PNG.sync.read(fs.readFileSync(imageBFilename));
 
-  pixelmatch(imageA.data, imageB.data, null, width, height, { threshold: 0 });
+  return pixelmatch(imageA.data, imageB.data, null, width, height, { threshold: 0 });
 }
 
 module.exports = {
@@ -55,6 +55,6 @@ module.exports = {
   config,
   removeFile,
   downloadFromUrl,
-  compareImages
+  pixelImageDiff
 };
 
