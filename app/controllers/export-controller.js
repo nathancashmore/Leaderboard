@@ -3,6 +3,8 @@ const logger = require('winston');
 const phantomjs = require('phantomjs-prebuilt');
 const path = require('path');
 
+const ServerHelper = require('../util/server-helper');
+
 const router = new express.Router();
 
 async function downloadFile(url, filename) {
@@ -27,12 +29,25 @@ async function downloadFile(url, filename) {
 }
 
 router.get('/', async (req, res) => {
-  const leaderboardUrl = `http://localhost:${req.app.get('port')}/leaderboard`;
-  const leaderboardFilename = `${req.app.locals.exportPath}/leaderboard.png`;
+  const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
 
-  await downloadFile(leaderboardUrl, leaderboardFilename);
-  res.status(200).end()
-})
+  let url = `http://localhost:${req.app.get('port')}/leaderboard`;
+  let filename = `${req.app.locals.exportPath}/leaderboard.png`;
+
+  await downloadFile(url, filename);
+
+  const courseList = await serverHelper.getGliderRiderCourses();
+
+  const promiseList = [];
+  courseList.forEach((course) => {
+    url = `http://localhost:${req.app.get('port')}/glider-rider/${course}`;
+    filename = `${req.app.locals.exportPath}/glider-rider-${course}.png`;
+    promiseList.push(downloadFile(url, filename));
+  });
+
+  await Promise.all(promiseList);
+  res.status(200).end();
+});
 
 router.get('/leaderboard', async (req, res) => {
   const url = `http://localhost:${req.app.get('port')}/leaderboard`;

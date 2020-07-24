@@ -40,15 +40,15 @@ describe('Export Controller - Default', () => {
     expect(helper.pixelImageDiff(courseImageA, expectedCourseImageA)).to.equal(0);
   });
 
-  it('should produce an image file for all courses', async() => {
+  it('should produce an image file for all courses', async () => {
     await exportPage.visit();
 
     expect(file(leaderboardImage)).to.exist;
-    // expect(file(courseImageA)).to.exist;
-    // expect(file(courseImageB)).to.exist;
+    expect(file(courseImageA)).to.exist;
+    expect(file(courseImageB)).to.exist;
 
     expect(helper.pixelImageDiff(leaderboardImage, expectedLeaderboardImage)).to.equal(0);
-    // expect(helper.pixelImageDiff(courseImageA, expectedCourseImageA)).to.equal(0);
-    // expect(helper.pixelImageDiff(courseImageB, expectedCourseImageB)).to.equal(0);
-  }).timeout(10000)
+    expect(helper.pixelImageDiff(courseImageA, expectedCourseImageA)).to.equal(0);
+    expect(helper.pixelImageDiff(courseImageB, expectedCourseImageB)).to.equal(0);
+  }).timeout(10000);
 });
