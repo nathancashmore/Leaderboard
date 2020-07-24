@@ -34,4 +34,13 @@ router.get('/leaderboard', async (req, res) => {
   res.download(filename);
 });
 
+router.get('/glider-rider/:course', async (req, res) => {
+  const course = req.params.course;
+  const url = `http://localhost:${req.app.get('port')}/glider-rider/${course}`;
+  const filename = `${req.app.locals.exportPath}/glider-rider-${course}.png`;
+
+  await downloadFile(url, filename);
+  res.download(filename);
+});
+
 module.exports = router;
