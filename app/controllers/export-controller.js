@@ -26,6 +26,14 @@ async function downloadFile(url, filename) {
   }));
 }
 
+router.get('/', async (req, res) => {
+  const leaderboardUrl = `http://localhost:${req.app.get('port')}/leaderboard`;
+  const leaderboardFilename = `${req.app.locals.exportPath}/leaderboard.png`;
+
+  await downloadFile(leaderboardUrl, leaderboardFilename);
+  res.status(200).end()
+})
+
 router.get('/leaderboard', async (req, res) => {
   const url = `http://localhost:${req.app.get('port')}/leaderboard`;
   const filename = `${req.app.locals.exportPath}/leaderboard.png`;
