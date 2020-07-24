@@ -70,6 +70,7 @@
     "compile": "gulp",
     "watch": "gulp watch",
     "lint": "eslint .",
+    "fix": "eslint . --fix",
     "pretest": "eslint . && npm run compile",
     "test-mocha-no-players": "mocha 'test/**/*.spec*' --grep NoPlayers --exit",
     "test-mocha-with-players": "mocha 'test/**/*.spec*' --grep Default --exit",
