@@ -22,9 +22,9 @@ describe('Export Controller - Default', () => {
   });
 
   /* eslint-disable no-unused-expressions */
-  it('should produce and return image file', async () => {
+  it('should produce and return image file for leaderboard', async () => {
     // Download the image from the new endpoint and save in temporary file
-    await helper.downloadFromUrl('/export', tmpDownloadFile);
+    await helper.downloadFromUrl('/export/leaderboard', tmpDownloadFile);
 
     // Check the resulting image file exists on the filesystem
     expect(file(exportFilename)).to.exist;

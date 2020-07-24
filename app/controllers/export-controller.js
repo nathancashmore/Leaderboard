@@ -26,7 +26,7 @@ async function downloadFile(url, filename) {
   }));
 }
 
-router.get('/', async (req, res) => {
+router.get('/leaderboard', async (req, res) => {
   const url = `http://localhost:${req.app.get('port')}/leaderboard`;
   const filename = `${req.app.locals.exportPath}/leaderboard.png`;
 
