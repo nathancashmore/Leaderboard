@@ -1,0 +1,73 @@
+checkpoint:
+- ==: uk.co.staticvoid.gliderrider.domain.Checkpoint
+  name: point1
+  course: TestCourseA
+  location:
+    ==: uk.co.staticvoid.gliderrider.domain.Location
+    world: world
+    x: -256
+    y: 64
+    z: 112
+    direction: W
+  type: START
+  radius: 4
+- ==: uk.co.staticvoid.gliderrider.domain.Checkpoint
+  name: point2
+  course: TestCourseA
+  location:
+    ==: uk.co.staticvoid.gliderrider.domain.Location
+    world: world
+    x: -262
+    y: 64
+    z: 112
+    direction: W
+  type: STAGE
+  radius: 4
+- ==: uk.co.staticvoid.gliderrider.domain.Checkpoint
+  name: point3
+  course: TestCourseA
+  location:
+    ==: uk.co.staticvoid.gliderrider.domain.Location
+    world: world
+    x: -269
+    y: 64
+    z: 112
+    direction: W
+  type: FINISH
+  radius: 4
+- ==: uk.co.staticvoid.gliderrider.domain.Checkpoint
+  name: point1
+  course: TestCourseB
+  location:
+    ==: uk.co.staticvoid.gliderrider.domain.Location
+    world: world
+    x: -273
+    y: 64
+    z: -25
+    direction: S
+  type: START
+  radius: 4
+- ==: uk.co.staticvoid.gliderrider.domain.Checkpoint
+  name: point2
+  course: TestCourseB
+  location:
+    ==: uk.co.staticvoid.gliderrider.domain.Location
+    world: world
+    x: -273
+    y: 64
+    z: -17
+    direction: S
+  type: STAGE
+  radius: 4
+- ==: uk.co.staticvoid.gliderrider.domain.Checkpoint
+  name: point3
+  course: TestCourseB
+  location:
+    ==: uk.co.staticvoid.gliderrider.domain.Location
+    world: world
+    x: -272
+    y: 64
+    z: -10
+    direction: S
+  type: FINISH
+  radius: 4
