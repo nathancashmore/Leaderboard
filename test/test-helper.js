@@ -1,6 +1,8 @@
 const Zombie = require('zombie');
 const fs = require('fs');
 const http = require('http');
+const PNG = require('pngjs').PNG;
+const pixelmatch = require('pixelmatch');
 
 Zombie.site = 'http://localhost:25599';
 const browser = new Zombie();
@@ -37,6 +39,14 @@ function downloadFromUrl(url, dest) {
   });
 }
 
+function compareImages(imageAFilename, imageBFilename) {
+  const imageA = PNG.sync.read(fs.readFileSync(imageAFilename));
+  const { width, height } = imageA;
+  const imageB = PNG.sync.read(fs.readFileSync(imageBFilename));
+
+  pixelmatch(imageA.data, imageB.data, null, width, height, { threshold: 0 });
+}
+
 module.exports = {
   indexPage: new IndexPage(browser),
   gliderRiderPage: new GliderRiderPage(browser),
@@ -44,6 +54,7 @@ module.exports = {
   browser,
   config,
   removeFile,
-  downloadFromUrl
+  downloadFromUrl,
+  compareImages
 };
 
