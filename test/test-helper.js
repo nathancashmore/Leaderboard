@@ -44,7 +44,7 @@ function pixelImageDiff(imageAFilename, imageBFilename) {
   const { width, height } = imageA;
   const imageB = PNG.sync.read(fs.readFileSync(imageBFilename));
 
-  return pixelmatch(imageA.data, imageB.data, null, width, height, { threshold: 0 });
+  return pixelmatch(imageA.data, imageB.data, null, width, height, { threshold: 0.3 });
 }
 
 module.exports = {
