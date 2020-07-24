@@ -1,5 +1,6 @@
 const PropertiesReader = require('properties-reader');
 const readFile = require('fs-readfile-promise');
+const yaml = require('js-yaml');
 
 const colorCharRegEx = /\\u00A7./g;
 
@@ -20,10 +21,18 @@ module.exports = class ServerHelper {
   }
 
   getGliderRiderRecords() {
-    const pathToData = `${this.serverPath}plugins/GliderRider/record.json`;
+    const pathToData = `${this.serverPath}/plugins/GliderRider/record.json`;
 
     return readFile(pathToData)
       .then(data => JSON.parse(data))
+      .catch(() => []);
+  }
+
+  getGliderRiderCourses() {
+    const pathToData = `${this.serverPath}/plugins/GliderRider/checkpoint.yml`;
+
+    return readFile(pathToData)
+      .then(data => [...new Set(yaml.safeLoad(data).checkpoint.map(x => x.course))])
       .catch(() => []);
   }
 };

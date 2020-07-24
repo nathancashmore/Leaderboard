@@ -1,5 +1,5 @@
 {
-  "MC_SERVER_PATH": "./test/data/serverNoAdvancements/",
+  "MC_SERVER_PATH": "./test/data/serverNoData/",
   "REPLAY": "replay",
   "PORT": 25599,
   "BACKGROUND": "obsidian",

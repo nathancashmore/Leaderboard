@@ -1,10 +1,6 @@
 const chai = require('chai');
 const chaiFiles = require('chai-files');
 const path = require('path');
-const fs = require('fs');
-const PNG = require('pngjs').PNG;
-const pixelmatch = require('pixelmatch');
-
 
 chai.use(chaiFiles);
 
@@ -12,28 +8,47 @@ const expect = chai.expect;
 const file = chaiFiles.file;
 const helper = require('../test-helper');
 
-const exportFilename = path.join(__dirname, '../../app/data/leaderboard.png');
-const tmpDownloadFile = path.join(__dirname, '../../app/data/download.tmp.png');
+const exportPage = helper.exportPage;
 
-describe('Export Controller - Default', () => {
-  after(() => {
-    helper.removeFile(exportFilename);
-    helper.removeFile(tmpDownloadFile);
+const leaderboardImage = path.join(__dirname, '../../app/data/leaderboard.png');
+const expectedLeaderboardImage = path.join(__dirname, '../data/export/leaderboard.png');
+
+const courseImageA = path.join(__dirname, '../../app/data/glider-rider-TestCourseA.png');
+const expectedCourseImageA = path.join(__dirname, '../data/export/glider-rider-TestCourseA.png');
+
+const courseImageB = path.join(__dirname, '../../app/data/glider-rider-TestCourseB.png');
+const expectedCourseImageB = path.join(__dirname, '../data/export/glider-rider-TestCourseB.png');
+
+describe('Export Controller - ImageCompare', () => {
+  afterEach(() => {
+    helper.removeFile(leaderboardImage);
+    helper.removeFile(courseImageA);
+    helper.removeFile(courseImageB);
   });
 
   /* eslint-disable no-unused-expressions */
-  it('should produce and return image file', async () => {
-    // Download the image from the new endpoint and save in temporary file
-    await helper.downloadFromUrl('/export', tmpDownloadFile);
+  it('should produce and return image file for leaderboard', async () => {
+    await helper.downloadFromUrl('/export/leaderboard', leaderboardImage);
+    expect(file(leaderboardImage)).to.exist;
+    expect(helper.pixelImageDiff(leaderboardImage, expectedLeaderboardImage)).to.equal(0);
+  });
 
-    // Check the resulting image file exists on the filesystem
-    expect(file(exportFilename)).to.exist;
+  /* eslint-disable no-unused-expressions */
+  it('should produce and return image file for glider-rider course', async () => {
+    await helper.downloadFromUrl('/export/glider-rider/TestCourseA', courseImageA);
+    expect(file(courseImageA)).to.exist;
+    expect(helper.pixelImageDiff(courseImageA, expectedCourseImageA)).to.equal(0);
+  });
 
-    // Compare the image on the filesystem to the downloaded image
-    const fsImage = PNG.sync.read(fs.readFileSync(exportFilename));
-    const { width, height } = fsImage;
-    const downloadedImage = PNG.sync.read(fs.readFileSync(tmpDownloadFile));
+  it('should produce an image file for all courses', async () => {
+    await exportPage.visit();
 
-    pixelmatch(downloadedImage.data, fsImage.data, null, width, height, { threshold: 0 });
-  }).timeout(8000);
+    expect(file(leaderboardImage)).to.exist;
+    expect(file(courseImageA)).to.exist;
+    expect(file(courseImageB)).to.exist;
+
+    expect(helper.pixelImageDiff(leaderboardImage, expectedLeaderboardImage)).to.equal(0);
+    expect(helper.pixelImageDiff(courseImageA, expectedCourseImageA)).to.equal(0);
+    expect(helper.pixelImageDiff(courseImageB, expectedCourseImageB)).to.equal(0);
+  }).timeout(10000);
 });
