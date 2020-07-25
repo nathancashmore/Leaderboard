@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('winston');
 const phantomjs = require('phantomjs-prebuilt');
 const path = require('path');
+const fs = require('fs');
 
 const ServerHelper = require('../util/server-helper');
 
