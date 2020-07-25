@@ -25,6 +25,7 @@ To start the application with the default values:
 * MC_SERVER_PATH = ```../MinecraftServer```
 * BACKGROUND = ```obsidian```
 * DISPLAY_SERVERNAME = ```true```
+* DISPLAY_LIMIT = ```10```
 * BANNER = ```leaderboard.png```
 
 ```
@@ -34,7 +35,7 @@ npm start
 ## Start up - Custom ##
 You can change any of the run parameters on the command line at startup:
 ```
-MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" BANNER="myownbanner.png" npm start
+MC_SERVER_PATH="../MyNewShinyServer/" PORT=25575 BASE_PATH="/leaderboard" BACKGROUND="lapis" DISPLAY_SERVERNAME="false" DISPLAY_LIMIT=5 BANNER="myownbanner.png" npm start
 ```
 
 ## Start up - Config file ##
@@ -67,6 +68,9 @@ prismarine
 ```
 * DISPLAY_SERVERNAME can be set to ```true``` or ```false``` if you want to also show the 
 minecraft server connection details on the leaderboard.
+* DISPLAY_LIMIT has a default of 10 meaning it will display only the first 10 people on the 
+leaderboard.  Reduce or increase as you see fit although changes to this will affect the image
+output if you are also using the EXPORT_AS_IMAGE option.
 * BANNER can be set to an alternative image file to be displayed at the top of the leaderboard.  
 Add the file you want to use to ```app/assets/images/``` directory.
 * EXPORT_PATH can be set to change the location where an image of the current leaderboard will be saved 
@@ -100,9 +104,9 @@ To do this:
 e.g. ```../MinecraftServer/plugins/ImageMaps/images``` 
 * Change the ```EXPORT_AS_IMAGE``` to be ```true```
 
-When you now start up the Leaderboard, every 5 mins it will export the Leaderboard
-as an image to the ImageMaps input directory.  In the game you will then be able to
-add the image to a block e.g.
+When you now start up the Leaderboard, every 5 mins it will export the and course or 
+advancement leaderboards as an image to the ImageMaps input directory.  
+In the game you will then be able toadd the image to a block e.g.
  
 ```/imagemap leaderboard.png```
 

@@ -22,10 +22,11 @@ router.get('/:course', (req, res) => {
         }
       }
 
+      const times = courseTimes.slice(0, req.app.locals.displayLimit);
       if (isRefresh) {
-        res.render('glider-rider-detail', { course, times: courseTimes });
+        res.render('glider-rider-detail', { course, times });
       } else {
-        res.render('glider-rider', { course, times: courseTimes });
+        res.render('glider-rider', { course, times });
       }
     });
 });

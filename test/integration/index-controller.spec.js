@@ -204,5 +204,13 @@ describe('Index Controller - OtherConfig', () => {
     indexPage.visit()
       .then(() => expect(indexPage.serverDetails()).to.be.empty)
   );
+
+  it('should limit the number of displayed players', () =>
+    indexPage.visit()
+      .then(() => {
+        expect(indexPage.playerInPosition(0)).to.equal('MinorSlackmore');
+        expect(indexPage.playerInPosition(1)).to.equal(undefined);
+      })
+  );
 });
 

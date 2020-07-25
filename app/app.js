@@ -34,6 +34,7 @@ const banner = process.env.BANNER || config.BANNER;
 
 app.locals.mcServerPath = process.env.MC_SERVER_PATH || config.MC_SERVER_PATH;
 app.locals.exportPath = process.env.EXPORT_PATH || config.EXPORT_PATH;
+app.locals.displayLimit = process.env.DISPLAY_LIMIT || config.DISPLAY_LIMIT;
 
 // Middleware to set default layouts.
 // This must be done per request (and not via app.locals) as the Consolidate.js

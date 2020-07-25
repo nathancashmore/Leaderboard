@@ -39,3 +39,13 @@ describe('GliderRider Controller - NoData', () => {
   );
 });
 
+describe('GliderRider Controller - OtherConfig', () => {
+  it('should limit the number of displayed players', () =>
+    gliderRiderPage.visit('TestCourseA')
+      .then(() => {
+        expect(gliderRiderPage.course()).to.equal('TestCourseA');
+        expect(gliderRiderPage.playerInPosition(0)).to.equal('MajorSlackmore');
+        expect(gliderRiderPage.playerInPosition(1)).to.equal(undefined);
+      })
+  );
+});
