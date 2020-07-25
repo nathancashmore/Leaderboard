@@ -110,6 +110,9 @@ In the game you will then be able toadd the image to a block e.g.
  
 ```/imagemap leaderboard.png```
 
+If you want to limit the number of players appearing on the leaderboard then
+use the DISPLAY_LIMIT parameter to reduce the amount of players shown.
+
 You should then setup a commandblock to periodically reload the image in the game
 so it is kept upto date e.g.
 
