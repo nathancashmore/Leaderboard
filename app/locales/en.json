@@ -33,7 +33,17 @@
           "all_potions": "A Furious Cocktail​",
           "create_beacon": "Bring Home the Beacon​",
           "all_effects": "How Did We Get Here?​",
-          "create_full_beacon": "Beaconator​"
+          "create_full_beacon": "Beaconator​",
+          "obtain_crying_obsidian": "Who is Cutting Onions?",
+          "distract_piglin": "Oh Shiny",
+          "explore_nether": "Hot Tourist Destinations",
+          "ride_strider": "This Boat Has Legs",
+          "loot_bastion": "War Pigs",
+          "charge_respawn_anchor": "Not Quite \"Nine\" Lives",
+          "find_bastion": "Those Were the Days",
+          "obtain_ancient_debris": "Hidden in the Depths",
+          "use_lodestone": "Country Lode, Take Me Home",
+          "netherite_armor": "Cover Me in Debris"
         },
         "end": {
           "root": "The End​",
@@ -65,7 +75,8 @@
           "whos_the_pillager_now": "Who's the Pillager Now?",
           "arbalistic": "Arbalistic",
           "very_very_frightening": "Very Very Frightening",
-          "honey_block_slide": "Sticky Situation"
+          "honey_block_slide": "Sticky Situation",
+          "bullseye": "Bullseye"
         },
         "husbandry": {
           "root": "Husbandry​",
@@ -79,7 +90,8 @@
           "complete_catalogue": "A Complete Catalogue",
           "tactical_fishing": "Tactical Fishing",
           "safely_harvest_honey": "Bee Our Guest",
-          "silk_touch_nest": "Total Beelocation"
+          "silk_touch_nest": "Total Beelocation",
+          "obtain_netherite_hoe": "Serious Dedication"
         }
       }
     },
@@ -116,7 +128,17 @@
           "all_potions": "Have every potion effect applied at the same time​",
           "create_beacon": "Construct and place a Beacon​",
           "all_effects": "Have every effect applied at the same time​",
-          "create_full_beacon": "Bring a beacon to full power"
+          "create_full_beacon": "Bring a beacon to full power",
+          "obtain_crying_obsidian": "Obtain Crying Obsidian",
+          "distract_piglin": "Distract Piglins with gold",
+          "explore_nether": "Explore all Nether biomes",
+          "ride_strider": "Ride a Strider with a Warped Fungus on a Stick",
+          "loot_bastion": "Loot a chest in a Bastion Remnant",
+          "charge_respawn_anchor": "Charge a Respawn Anchor to the maximum",
+          "find_bastion": "Enter a Bastion Remnant",
+          "obtain_ancient_debris": "Obtain Ancient Debris",
+          "use_lodestone": "Use a compass on Lodestone",
+          "netherite_armor": "Get a full suit of Netherite armor"
         },
         "end": {
           "root": "Or the beginning?​",
@@ -142,13 +164,14 @@
           "sniper_duel": "Kill a skeleton with an arrow from more than 50 meters",
           "voluntary_exile": "Kill a raid captain.  Maybe consider staying away from villages for the time being...",
           "ol_betsy": "Shoot a crossbow",
-          "hero_of_the_village" : "Successfully defend a village from a raid",
-          "throw_trident" : "Throw a trident at something",
+          "hero_of_the_village": "Successfully defend a village from a raid",
+          "throw_trident": "Throw a trident at something",
           "two_birds_one_arrow": "Kill two Phantoms with a piercing arrow",
           "whos_the_pillager_now": "Give a Pillager a taste of their own medicine",
           "arbalistic": "Kill five unique mobs with one crossbow shot",
           "very_very_frightening": "Strike a Villager with lightning",
-          "honey_block_slide": "Jump into a Honey Block to break your fall"
+          "honey_block_slide": "Jump into a Honey Block to break your fall",
+          "bullseye": "Hit the bullseye of a Target block from at least 30 meters away"
         },
         "husbandry": {
           "root": "The world is full of friends and food​",
@@ -162,7 +185,8 @@
           "complete_catalogue": "Tame all cat variants!",
           "tactical_fishing": "Catch a fish... without a fishing rod!",
           "safely_harvest_honey": "Use a Campfire to collect Honey from a Beehive using a Bottle without aggravating the bees",
-          "silk_touch_nest": "Move a Bee Nest, with 3 bees inside, using Silk Touch"
+          "silk_touch_nest": "Move a Bee Nest, with 3 bees inside, using Silk Touch",
+          "obtain_netherite_hoe": "Use a Netherite ingot to upgrade a hoe, and then reevaluate your life choices"
         }
       }
     }

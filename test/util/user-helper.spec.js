@@ -90,6 +90,16 @@ describe('User Helper - Default', () => {
               'minecraft:nether/create_beacon',
               'minecraft:nether/all_effects',
               'minecraft:nether/create_full_beacon',
+              'minecraft:nether/obtain_crying_obsidian',
+              'minecraft:nether/distract_piglin',
+              'minecraft:nether/explore_nether',
+              'minecraft:nether/ride_strider',
+              'minecraft:nether/loot_bastion',
+              'minecraft:nether/charge_respawn_anchor',
+              'minecraft:nether/find_bastion',
+              'minecraft:nether/obtain_ancient_debris',
+              'minecraft:nether/use_lodestone',
+              'minecraft:nether/netherite_armor',
               'minecraft:end/root',
               'minecraft:end/kill_dragon',
               'minecraft:end/dragon_egg',
@@ -118,6 +128,7 @@ describe('User Helper - Default', () => {
               'minecraft:adventure/arbalistic',
               'minecraft:adventure/very_very_frightening',
               'minecraft:adventure/honey_block_slide',
+              'minecraft:adventure/bullseye',
               'minecraft:husbandry/root',
               'minecraft:husbandry/breed_an_animal',
               'minecraft:husbandry/tame_an_animal',
@@ -129,9 +140,10 @@ describe('User Helper - Default', () => {
               'minecraft:husbandry/complete_catalogue',
               'minecraft:husbandry/tactical_fishing',
               'minecraft:husbandry/safely_harvest_honey',
-              'minecraft:husbandry/silk_touch_nest'
+              'minecraft:husbandry/silk_touch_nest',
+              'minecraft:husbandry/obtain_netherite_hoe'
             ],
-            score: 690
+            score: 810
           },
           {
             userId: '6eb35f96-c2c7-4332-b0b9-3d1981edae78',
