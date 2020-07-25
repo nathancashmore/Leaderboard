@@ -75,7 +75,7 @@ output if you are also using the EXPORT_AS_IMAGE option.
 Add the file you want to use to ```app/assets/images/``` directory.
 * EXPORT_PATH can be set to change the location where an image of the current leaderboard will be saved 
 when the [http://127.0.0.1:25566/export](http://127.0.0.1:25566/export) endpoint is requested.
-* EXPORT_AS_IMAGE if set to true will export the leaderboard as an image every 5 minutes and
+* EXPORT_AS_IMAGE if set to true will export the leaderboard as an image every 2 minutes and
 save it in the EXPORT_PATH directory.
 
 ## Release (< 1.11) ##
@@ -104,7 +104,7 @@ To do this:
 e.g. ```../MinecraftServer/plugins/ImageMaps/images``` 
 * Change the ```EXPORT_AS_IMAGE``` to be ```true```
 
-When you now start up the Leaderboard, every 5 mins it will export the and course or 
+When you now start up the Leaderboard, every 2 mins it will export the and course or 
 advancement leaderboards as an image to the ImageMaps input directory.  
 In the game you will then be able toadd the image to a block e.g.
  
