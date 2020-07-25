@@ -11,7 +11,7 @@ const GAME = 1;
 const TYPE = 2;
 const NAME = 3;
 
-function getUserData(userHelper) {
+function getUserData(userHelper, displayLimit) {
   return userHelper.getAllAdvancements().then((users) => {
     const userNamePromises = [];
 
@@ -48,8 +48,7 @@ function getUserData(userHelper) {
         playerDataArray.push(Object.assign(playerData));
       });
 
-      // slice(0, DISPLAY_LIMIT)
-      return playerDataArray;
+      return playerDataArray.slice(0, displayLimit);
     });
   });
 }
@@ -60,7 +59,7 @@ router.get('/', (req, res, next) => {
 
   const userHelper = new UserHelper(req.app.locals.mcServerPath, serverDetails['level-name']);
 
-  return getUserData(userHelper).then((userData) => {
+  return getUserData(userHelper, req.app.locals.displayLimit).then((userData) => {
     res.render('index', Object.assign(
       { players: userData },
       { serverDetails },
