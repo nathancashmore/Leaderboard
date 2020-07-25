@@ -212,5 +212,14 @@ describe('Index Controller - OtherConfig', () => {
         expect(indexPage.playerInPosition(1)).to.equal(undefined);
       })
   );
+
+  it('should limit the number of displayed players on partial stats reload', () =>
+    indexPage.visitStats()
+      .then(() => {
+        expect(indexPage.playerInPosition(0)).to.equal('MinorSlackmore');
+        expect(indexPage.playerInPosition(1)).to.equal(undefined);
+      })
+  );
+
 });
 

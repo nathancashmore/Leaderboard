@@ -110,7 +110,7 @@ function runExportPoller() {
         method: 'GET'
     };
 
-    console.log("Run export poller with following config every 5 min(s) :");
+    console.log("Run export poller with following config every 2 mins :");
     console.log(rest_options)
 
     setInterval(function () {
@@ -125,5 +125,5 @@ function runExportPoller() {
         });
 
         request.end();
-    }, 5 * 60 * 1000);
+    }, 2 * 60 * 1000);
 }
