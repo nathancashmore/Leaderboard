@@ -74,7 +74,7 @@ router.get('/stats', (req, res, next) => {
 
   const userHelper = new UserHelper(req.app.locals.mcServerPath, serverDetails['level-name']);
 
-  return getUserData(userHelper).then((userData) => {
+  return getUserData(userHelper, req.app.locals.displayLimit).then((userData) => {
     res.render('advancements', { players: userData });
   })
     .catch(e => next(e));
