@@ -24,7 +24,7 @@ tr {
 
 td {
   width: 25%;
-  font-size: 2.5vw;
+  font-size: 4vw;
 }
 
 h1, h3, table {
@@ -261,6 +261,9 @@ a, a:visited, a:hover, a:active {
 .minecraft-adventure-honey_block_slide{
   background-position:-320px -96px
 }
+.minecraft-adventure-bullseye{
+  background-position:-96px -192px
+}
 
 .minecraft-nether-root{
   background-position:-704px -1344px;
@@ -300,6 +303,36 @@ a, a:visited, a:hover, a:active {
 }
 .minecraft-nether-create_full_beacon{
   background-position:-544px -1216px;
+}
+.minecraft-nether-obtain_crying_obsidian{
+  background-position:-128px -192px;
+}
+.minecraft-nether-distract_piglin{
+  background-position:-800px -3488px;
+}
+.minecraft-nether-explore_nether{
+  background-position:-416px -128px;
+}
+.minecraft-nether-ride_strider{
+  background-position:-992px -192px;
+}
+.minecraft-nether-loot_bastion{
+  background-position:-704px -1216px;
+}
+.minecraft-nether-charge_respawn_anchor{
+  background-position:-448px -192px;
+}
+.minecraft-nether-find_bastion{
+  background-position:-576px -256px;
+}
+.minecraft-nether-obtain_ancient_debris{
+  background-position:-160px -128px;
+}
+.minecraft-nether-use_lodestone{
+  background-position:-928px -192px;
+}
+.minecraft-nether-netherite_armor{
+  background-position:-448px -128px;
 }
 
 .minecraft-end-root{
@@ -366,8 +399,6 @@ a, a:visited, a:hover, a:active {
 .minecraft-husbandry-silk_touch_nest{
   background-position:-992px -32px
 }
-
-
-
-
-
+.minecraft-husbandry-obtain_netherite_hoe{
+  background-position:-288px -128px
+}

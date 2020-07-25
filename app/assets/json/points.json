@@ -28,6 +28,16 @@
     "minecraft:nether/create_beacon" : 10,
     "minecraft:nether/all_effects" : 10,
     "minecraft:nether/create_full_beacon" : 10,
+    "minecraft:nether/obtain_crying_obsidian" : 10,
+    "minecraft:nether/distract_piglin" : 10,
+    "minecraft:nether/explore_nether" : 10,
+    "minecraft:nether/ride_strider" : 10,
+    "minecraft:nether/loot_bastion" : 10,
+    "minecraft:nether/charge_respawn_anchor" : 10,
+    "minecraft:nether/find_bastion" : 10,
+    "minecraft:nether/obtain_ancient_debris" : 10,
+    "minecraft:nether/use_lodestone" : 10,
+    "minecraft:nether/netherite_armor" : 10,
     "minecraft:end/root" : 10,
     "minecraft:end/kill_dragon" : 10,
     "minecraft:end/dragon_egg" : 10,
@@ -56,6 +66,7 @@
     "minecraft:adventure/very_very_frightening" : 10,
     "minecraft:adventure/sniper_duel" : 10,
     "minecraft:adventure/honey_block_slide" : 10,
+    "minecraft:adventure/bullseye" : 10,
     "minecraft:husbandry/root" : 10,
     "minecraft:husbandry/breed_an_animal" : 10,
     "minecraft:husbandry/tame_an_animal" : 10,
@@ -67,5 +78,6 @@
     "minecraft:husbandry/balanced_diet" : 10,
     "minecraft:husbandry/break_diamond_hoe" : 10,
     "minecraft:husbandry/safely_harvest_honey" : 10,
-    "minecraft:husbandry/silk_touch_nest" : 10
+    "minecraft:husbandry/silk_touch_nest" : 10,
+    "minecraft:husbandry/obtain_netherite_hoe" : 10
 }

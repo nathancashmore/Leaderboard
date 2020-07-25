@@ -220,6 +220,5 @@ describe('Index Controller - OtherConfig', () => {
         expect(indexPage.playerInPosition(1)).to.equal(undefined);
       })
   );
-
 });
 

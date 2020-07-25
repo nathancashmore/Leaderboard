@@ -173,6 +173,74 @@
     },
     "done": true
   },
+  "minecraft:nether/obtain_crying_obsidian": {
+    "criteria": {
+      "crying_obsidian": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/distract_piglin": {
+    "criteria": {
+      "distract_piglin": "2020-07-25 16:12:42 +0100",
+      "distract_piglin_directly": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2020-07-25 16:12:42 +0100",
+      "minecraft:nether_wastes": "2020-07-25 16:12:42 +0100",
+      "minecraft:soul_sand_valley": "2020-07-25 16:12:42 +0100",
+      "minecraft:warped_forest": "2020-07-25 16:12:42 +0100",
+      "minecraft:basalt_deltas": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/ride_strider": {
+    "criteria": {
+      "used_warped_fungus_on_a_stick": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/loot_bastion": {
+    "criteria": {
+      "loot_bastion_other": "2020-07-25 16:12:42 +0100",
+      "loot_bastion_hoglin_stable": "2020-07-25 16:12:42 +0100",
+      "loot_bastion_treasure": "2020-07-25 16:12:42 +0100",
+      "loot_bastion_bridge": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/charge_respawn_anchor": {
+    "criteria": {
+      "charge_respawn_anchor": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_bastion": {
+    "criteria": {
+      "bastion": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_ancient_debris": {
+    "criteria": {
+      "ancient_debris": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/use_lodestone": {
+    "criteria": {
+      "use_lodestone": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/netherite_armor": {
+    "criteria": {
+      "netherite_armor": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:end/root": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
@@ -341,6 +409,12 @@
     },
     "done": true
   },
+  "minecraft:adventure/bullseye": {
+    "criteria": {
+      "bullseye": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:husbandry/root": {
     "criteria": {
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
@@ -412,6 +486,11 @@
       "has_the_recipe": "2017-07-19 19:08:06 +0100"
     },
     "done": true
+  },
+  "minecraft:husbandry/obtain_netherite_hoe": {
+    "criteria": {
+      "netherite_hoe": "2020-07-25 16:12:42 +0100"
+    },
+    "done": true
   }
 }
-
