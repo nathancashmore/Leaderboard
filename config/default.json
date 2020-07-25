@@ -7,5 +7,6 @@
   "BASE_PATH": "",
   "BACKGROUND": "obsidian",
   "DISPLAY_SERVERNAME": true,
+  "DISPLAY_LIMIT": 10,
   "BANNER": "leaderboard.png"
 }

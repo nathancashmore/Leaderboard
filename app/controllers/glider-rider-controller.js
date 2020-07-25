@@ -22,6 +22,7 @@ router.get('/:course', (req, res) => {
         }
       }
 
+      // slice(0, DISPLAY_LIMIT)
       if (isRefresh) {
         res.render('glider-rider-detail', { course, times: courseTimes });
       } else {

@@ -47,6 +47,8 @@ function getUserData(userHelper) {
 
         playerDataArray.push(Object.assign(playerData));
       });
+
+      // slice(0, DISPLAY_LIMIT)
       return playerDataArray;
     });
   });
