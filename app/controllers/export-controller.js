@@ -10,6 +10,10 @@ const router = new express.Router();
 async function downloadFile(url, filename) {
   const script = path.join(__dirname, '../middleware/exportPageAsImage.js');
 
+  if (fs.existsSync(filename)) {
+    fs.unlinkSync(filename);
+  }
+
   return new Promise(((resolve, reject) => {
     const program = phantomjs.exec(script, url, filename);
 
