@@ -30,9 +30,10 @@ async function downloadFile(url, filename) {
 
 router.get('/', async (req, res) => {
   const serverHelper = new ServerHelper(req.app.locals.mcServerPath, req.hostname);
+  const port = req.app.get('port');
 
-  let url = `http://localhost:${req.app.get('port')}/leaderboard`;
-  let filename = `${req.app.locals.exportPath}/${req.app.get('port')}-leaderboard.png`;
+  let url = `http://localhost:${port}/leaderboard`;
+  let filename = `${req.app.locals.exportPath}/${port}-leaderboard.png`;
 
   await downloadFile(url, filename);
 
@@ -40,8 +41,8 @@ router.get('/', async (req, res) => {
 
   const promiseList = [];
   courseList.forEach((course) => {
-    url = `http://localhost:${req.app.get('port')}/glider-rider/${course}`;
-    filename = `${req.app.locals.exportPath}/${req.app.get('port')}-course-${course}.png`;
+    url = `http://localhost:${port}/glider-rider/${course}`;
+    filename = `${req.app.locals.exportPath}/${port}-course-${course}.png`;
     promiseList.push(downloadFile(url, filename));
   });
 
@@ -59,8 +60,9 @@ router.get('/leaderboard', async (req, res) => {
 
 router.get('/glider-rider/:course', async (req, res) => {
   const course = req.params.course;
-  const url = `http://localhost:${req.app.get('port')}/glider-rider/${course}`;
-  const filename = `${req.app.locals.exportPath}/${req.app.get('port')}-course-${course}.png`;
+  const port = req.app.get('port');
+  const url = `http://localhost:${port}/glider-rider/${course}`;
+  const filename = `${req.app.locals.exportPath}/${port}-course-${course}.png`;
 
   await downloadFile(url, filename);
   res.download(filename);
