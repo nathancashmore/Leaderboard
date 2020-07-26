@@ -6,6 +6,7 @@ const pixelmatch = require('pixelmatch');
 
 Zombie.site = 'http://localhost:25599';
 const browser = new Zombie();
+browser.waitDuration = '60s';
 
 const IndexPage = require('./helper/index-page');
 const GliderRiderPage = require('./helper/glider-rider-page');
