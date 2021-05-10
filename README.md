@@ -89,7 +89,7 @@ The Leaderboard has been optimised to work with the Glider Rider Bukkit plugin w
 To use:
 
 * Download and install a [Spigot or CraftBukkit server](https://getbukkit.org/)
-* Create a course using the [GliderRider plugin](https://mods.curse.com/bukkit-plugins/minecraft/278342-gliderrider)
+* Create a course using the [GliderRider plugin](https://dev.bukkit.org/projects/gliderrider)
 * View the course leaderboard by going to:
 [http://127.0.0.1:25566/glider-rider/\<course-name\>](http://127.0.0.1:25566/glider-rider/<course-name>)
 
