@@ -34,7 +34,7 @@
     "jsonfile": "^2.4.0",
     "jsonfile-promised": "0.0.1",
     "logger": "0.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "morgan": "^1.9.1",
     "node-readfiles": "^0.2.0",
     "node-sass": "^4.14.1",
