@@ -42,7 +42,7 @@
     "phantomjs-prebuilt": "^2.1.16",
     "pixelmatch": "^5.2.1",
     "pngjs": "^5.0.0",
-    "properties-reader": "0.0.15",
+    "properties-reader": "2.2.0",
     "replay": "^2.4.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
