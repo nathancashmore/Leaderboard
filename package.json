@@ -21,7 +21,7 @@
     "fs-readfile-promise": "^3.0.0",
     "getconfig": "^3.0.0",
     "gulp": "^4.0.2",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^8.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "gulp-streamify": "^1.0.2",
